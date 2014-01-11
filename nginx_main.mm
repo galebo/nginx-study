@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1388815008672" MODIFIED="1389238347129" TEXT="nginx">
+<node CREATED="1388815008672" MODIFIED="1389442181828" TEXT="nginx">
 <hook NAME="accessories/plugins/RevisionPlugin.properties"/>
 <node CREATED="1389275126222" MODIFIED="1389275131039" POSITION="right" TEXT="&#x6587;&#x7ae0;">
 <node CREATED="1389275135399" FOLDED="true" LINK="http://www.linuxidc.com/Linux/2012-09/71243.htm" MODIFIED="1389275190124" TEXT="Nginx&#x6e90;&#x7801;&#x5206;&#x6790;&#x4e4b;&#x8bbe;&#x8ba1;&#x4e4b;&#x7f8e;">
@@ -176,7 +176,7 @@
 </html></richcontent>
 </node>
 </node>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389255436938" FOLDED="true" LINK="http://blog.sina.com.cn/s/blog_996d3ca10100w0ba.html" MODIFIED="1389255527646" TEXT="nginx&#x591a;&#x8fdb;&#x7a0b;&#x6a21;&#x578b;&#x4e4b;&#x70ed;&#x4ee3;&#x7801;&#x5e73;&#x6ed1;&#x5347;&#x7ea7;">
+<node CREATED="1389255436938" FOLDED="true" LINK="http://blog.sina.com.cn/s/blog_996d3ca10100w0ba.html" MODIFIED="1389447897451" TEXT="nginx&#x591a;&#x8fdb;&#x7a0b;&#x6a21;&#x578b;&#x4e4b;&#x70ed;&#x4ee3;&#x7801;&#x5e73;&#x6ed1;&#x5347;&#x7ea7;">
 <node BACKGROUND_COLOR="#ffff00" CREATED="1389255459711" MODIFIED="1389256201729">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -454,8 +454,8 @@
 </node>
 <node CREATED="1389073579240" MODIFIED="1389238336566" POSITION="right" TEXT="&#x53c2;&#x8003;">
 <node CREATED="1389073591719" LINK="http://blog.csdn.net/kenbinzhang?viewmode=contents " MODIFIED="1389073624444" TEXT="&#x5543;&#x997c;&#x7684;&#x6280;&#x672f;&#x535a;&#x5ba2;"/>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389239945627" LINK="http://blog.csdn.net/Marcky/article/category/747446" MODIFIED="1389239973052" TEXT="Marcky"/>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389256392595" LINK="http://www.pagefault.info" MODIFIED="1389256408501" TEXT="pagefault"/>
+<node CREATED="1389239945627" LINK="http://blog.csdn.net/Marcky/article/category/747446" MODIFIED="1389447897452" TEXT="Marcky"/>
+<node CREATED="1389256392595" LINK="http://www.pagefault.info" MODIFIED="1389447897453" TEXT="pagefault"/>
 </node>
 <node CREATED="1388930950170" FOLDED="true" MODIFIED="1389150103872" POSITION="right" TEXT="main">
 <node CREATED="1388930885650" FOLDED="true" LINK="http://blog.csdn.net/kenbinzhang/article/details/4681694" MODIFIED="1389070124192" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
@@ -1453,8 +1453,8 @@
 <node CREATED="1388817929857" MODIFIED="1388817933030" TEXT="ngx_delete_pidfile"/>
 <node CREATED="1388817944633" MODIFIED="1388817946582" TEXT="ngx_test_lockfile"/>
 <node CREATED="1388817970769" MODIFIED="1388817972741" TEXT="ngx_is_init_cycle"/>
-<node CREATED="1388929147249" MODIFIED="1389072436627" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
-<node CREATED="1388929162025" MODIFIED="1389145398528" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;1">
+<node CREATED="1388929147249" FOLDED="true" MODIFIED="1389072436627" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1388929162025" FOLDED="true" MODIFIED="1389145398528" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;1">
 <node CREATED="1388929222345" ID="ID_1428001477" MODIFIED="1389072506117">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -5336,7 +5336,53 @@
 </html></richcontent>
 </node>
 </node>
-<node BACKGROUND_COLOR="#9c7b7b" CREATED="1389087106865" FOLDED="true" LINK="#ID_552558133" MODIFIED="1389149808540" TEXT="ngx_events_module">
+<node CREATED="1389448454650" ID="ID_708401246" MODIFIED="1389448491989" TEXT="ngx_http_commands">
+<icon BUILTIN="full-2"/>
+<node CREATED="1389448512762" ID="ID_333242358" LINK="#ID_642383791" MODIFIED="1389448555083">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static ngx_command_t&#160;&#160;ngx_http_commands[] = {
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;{ ngx_string(&quot;http&quot;),
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;NGX_MAIN_CONF|NGX_CONF_BLOCK|NGX_CONF_NOARGS,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160; <font color="#ef0303">ngx_http_block</font>,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;0,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;0,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;NULL },
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;ngx_null_command
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node BACKGROUND_COLOR="#9c7b7b" CREATED="1389087106865" FOLDED="true" LINK="#ID_708401246" MODIFIED="1389448466539" TEXT="ngx_events_module">
 <icon BUILTIN="full-0"/>
 <node CREATED="1389088339104" MODIFIED="1389088375313">
 <richcontent TYPE="NODE"><html>
@@ -5451,8 +5497,61 @@
 <node CREATED="1389145685692" LINK="#ID_552558133" MODIFIED="1389145814075" TEXT="ngx_mail_module">
 <icon BUILTIN="full-0"/>
 </node>
-<node CREATED="1389145670892" LINK="#ID_552558133" MODIFIED="1389145817963" TEXT="ngx_http_module">
+<node CREATED="1389145670892" FOLDED="true" LINK="#ID_552558133" MODIFIED="1389145817963" TEXT="ngx_http_module">
 <icon BUILTIN="full-0"/>
+<node CREATED="1389448377956" MODIFIED="1389448397849">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      ngx_module_t&#160;&#160;ngx_http_module = {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;NGX_MODULE_V1,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&amp;ngx_http_module_ctx,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* module context */
+    </p>
+    <p>
+      &#160;&#160;&#160; <font color="#f00b0b">ngx_http_commands</font>,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* module directives */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;NGX_CORE_MODULE,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* module type */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;NULL,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* init master */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;NULL,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* init module */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;NULL,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* init process */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;NULL,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* init thread */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;NULL,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* exit thread */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;NULL,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* exit process */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;NULL,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* exit master */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;NGX_MODULE_V1_PADDING
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1389448447082" LINK="#ID_708401246" MODIFIED="1389448475939" TEXT="ngx_http_commands"/>
 </node>
 <node CREATED="1389145661380" LINK="#ID_552558133" MODIFIED="1389145833709" TEXT="ngx_core_module">
 <icon BUILTIN="full-0"/>
@@ -5464,11 +5563,11 @@
 <icon BUILTIN="full-0"/>
 </node>
 <node CREATED="1389145850457" MODIFIED="1389145852148" TEXT="ngx_conf_module"/>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389239835167" FOLDED="true" MODIFIED="1389239843542" TEXT="ngx_http_core_module">
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389239707484" MODIFIED="1389239841032" TEXT="ngx_http_core_module&#x4e2d;&#x7684;ctx">
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389239408855" MODIFIED="1389239410606" TEXT="ngx_http_core_main_conf_t"/>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389239243340" MODIFIED="1389239245284" TEXT="ngx_http_core_srv_conf_t"/>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389239294195" MODIFIED="1389239754220" TEXT="ngx_http_core_loc_conf_t"/>
+<node CREATED="1389239835167" FOLDED="true" MODIFIED="1389448052694" TEXT="ngx_http_core_module">
+<node CREATED="1389239707484" MODIFIED="1389448052694" TEXT="ngx_http_core_module&#x4e2d;&#x7684;ctx">
+<node CREATED="1389239408855" MODIFIED="1389448052694" TEXT="ngx_http_core_main_conf_t"/>
+<node CREATED="1389239243340" MODIFIED="1389448052694" TEXT="ngx_http_core_srv_conf_t"/>
+<node CREATED="1389239294195" MODIFIED="1389448052693" TEXT="ngx_http_core_loc_conf_t"/>
 </node>
 </node>
 </node>
@@ -7471,7 +7570,7 @@
 <icon BUILTIN="full-4"/>
 <node CREATED="1389105668972" MODIFIED="1389105681442" TEXT="typedef struct {&#xa;    ngx_int_t  (*add)(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags);&#xa;    ngx_int_t  (*del)(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags);&#xa;&#xa;    ngx_int_t  (*enable)(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags);&#xa;    ngx_int_t  (*disable)(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags);&#xa;&#xa;    ngx_int_t  (*add_conn)(ngx_connection_t *c);&#xa;    ngx_int_t  (*del_conn)(ngx_connection_t *c, ngx_uint_t flags);&#xa;&#xa;    ngx_int_t  (*process_changes)(ngx_cycle_t *cycle, ngx_uint_t nowait);&#xa;    ngx_int_t  (*process_events)(ngx_cycle_t *cycle, ngx_msec_t timer,&#xa;                   ngx_uint_t flags);&#xa;&#xa;    ngx_int_t  (*init)(ngx_cycle_t *cycle, ngx_msec_t timer);&#xa;    void       (*done)(ngx_cycle_t *cycle);&#xa;} ngx_event_actions_t;&#xa;"/>
 </node>
-<node CREATED="1389077677218" FOLDED="true" MODIFIED="1389107602567" TEXT="ngx_listening_s">
+<node CREATED="1389077677218" MODIFIED="1389107602567" TEXT="ngx_listening_s">
 <icon BUILTIN="full-4"/>
 <node CREATED="1389080693298" FOLDED="true" MODIFIED="1389098616925" TEXT="&#x7ed3;&#x6784;&#x5206;&#x6790;">
 <node CREATED="1389077685514" MODIFIED="1389077702504">
@@ -7817,7 +7916,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1389098396486" MODIFIED="1389107270268" TEXT=" ngx_channel_t">
+<node CREATED="1389098396486" FOLDED="true" MODIFIED="1389107270268" TEXT=" ngx_channel_t">
 <node CREATED="1389098399966" MODIFIED="1389098582120">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -8188,11 +8287,12 @@
 </node>
 </node>
 <node CREATED="1389151355314" MODIFIED="1389151369535" POSITION="right" TEXT="&#x56de;&#x8c03;&#x51fd;&#x6570;">
-<node CREATED="1389081320591" FOLDED="true" MODIFIED="1389151395438" TEXT="ngx_http_block">
+<node CREATED="1389081320591" ID="ID_642383791" LINK="#ID_333242358" MODIFIED="1389448567915" TEXT="ngx_http_block">
 <node CREATED="1389081514663" MODIFIED="1389081601261" TEXT="ngx_http_optimize_servers">
 <node CREATED="1389081531098" MODIFIED="1389081590302" TEXT="ngx_http_init_listening">
 <node CREATED="1389081652031" MODIFIED="1389081784382" TEXT="ngx_http_add_listening">
 <node CREATED="1389081664072" ID="ID_1397106292" LINK="#ID_866878198" MODIFIED="1389081813702" TEXT="ngx_create_listening"/>
+<node CREATED="1389448630667" ID="ID_64737652" LINK="#ID_113471940" MODIFIED="1389448723707" TEXT="ngx_http_init_connection"/>
 </node>
 </node>
 <node CREATED="1389081618658" MODIFIED="1389081620094" TEXT="ngx_http_optimize_servers"/>
@@ -8834,7 +8934,7 @@
 </html></richcontent>
 </node>
 </node>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389084519801" ID="ID_281294392" LINK="#ID_607686762" MODIFIED="1389345544794" TEXT="ngx_event_accept">
+<node CREATED="1389084519801" ID="ID_281294392" LINK="#ID_607686762" MODIFIED="1389447876153" TEXT="ngx_event_accept">
 <node CREATED="1389084532642" MODIFIED="1389084539986">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -8847,8 +8947,8 @@
   </body>
 </html></richcontent>
 </node>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389345764637" FOLDED="true" MODIFIED="1389345803019" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389345806379" MODIFIED="1389345952902">
+<node CREATED="1389345764637" FOLDED="true" MODIFIED="1389447850946" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389345806379" MODIFIED="1389448000970">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -9137,7 +9237,7 @@
       
     </p>
     <p>
-      &#36825;&#37324;&#21487;&#20197;&#30475;&#21040;&#26159;&#35843;&#29992;ls-&gt;handler(c)&#65292;&#32780;&#36825;&#20010;handler &#21069;&#20004;&#31687;blog &#25105;&#20204;&#30693;&#36947;&#26159;&#34987;&#21021;&#22987;&#21270;&#20026;ngx_http_init_connection&#65292;&#20063;&#23601;&#26159;&#26368;&#32456;&#20250;&#35843;&#29992;&#36825;&#20010;&#20989;&#25968;&#12290;
+      <font color="#f81313">&#36825;&#37324;&#21487;&#20197;&#30475;&#21040;&#26159;&#35843;&#29992;ls-&gt;handler(c)&#65292;&#32780;&#36825;&#20010;handler &#21069;&#20004;&#31687;blog &#25105;&#20204;&#30693;&#36947;&#26159;&#34987;&#21021;&#22987;&#21270;&#20026;ngx_http_init_connection</font>&#65292;&#20063;&#23601;&#26159;&#26368;&#32456;&#20250;&#35843;&#29992;&#36825;&#20010;&#20989;&#25968;&#12290;
     </p>
     <p>
       //&#22914;&#26524;&#19981;&#26159;epoll&#30340;&#35805;&#65292;&#23601;&#35843;&#29992;add_conn
@@ -9192,7 +9292,7 @@
 </richcontent>
 </node>
 </node>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389345958461" FOLDED="true" MODIFIED="1389346197782" TEXT="ngx_http_init_connection">
+<node CREATED="1389345958461" FOLDED="true" ID="ID_113471940" LINK="#ID_64737652" MODIFIED="1389448731059" TEXT="ngx_http_init_connection">
 <node BACKGROUND_COLOR="#ffff00" CREATED="1389345975790" MODIFIED="1389346322059">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -9329,10 +9429,9 @@
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389346235797" MODIFIED="1389346427134" TEXT="ngx_http_init_request">
+<node BACKGROUND_COLOR="#ffff00" CREATED="1389346235797" FOLDED="true" MODIFIED="1389346427134" TEXT="ngx_http_init_request">
 <node BACKGROUND_COLOR="#ffff00" CREATED="1389346241253" MODIFIED="1389346420784">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -9381,8 +9480,8 @@
 </node>
 </node>
 </node>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389242699632" ID="ID_1118410517" LINK="#ID_1345550578" MODIFIED="1389242762796" TEXT="ngx_signal_handler">
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389242707048" FOLDED="true" MODIFIED="1389242748797" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389242699632" ID="ID_1118410517" LINK="#ID_1345550578" MODIFIED="1389447876152" TEXT="ngx_signal_handler">
+<node CREATED="1389242707048" FOLDED="true" MODIFIED="1389447876150" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node BACKGROUND_COLOR="#ffff00" CREATED="1389242714057" MODIFIED="1389242724141">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -9820,8 +9919,8 @@
 </node>
 </node>
 </node>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389346235797" FOLDED="true" MODIFIED="1389346472164" TEXT="ngx_event_process_posted">
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389346241253" MODIFIED="1389346381693">
+<node CREATED="1389346235797" FOLDED="true" MODIFIED="1389447876151" TEXT="ngx_event_process_posted">
+<node CREATED="1389346241253" MODIFIED="1389447919931">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -9897,13 +9996,12 @@
       &#28982;&#21518;&#23601;&#26159;ngx_event_process_poste&#20989;&#25968;&#65292;&#36825;&#20010;&#20989;&#25968;&#24456;&#31616;&#21333;&#65292;&#23601;&#26159;&#36941;&#21382;event&#38431;&#21015;&#65292;&#28982;&#21518;&#35843;&#29992;event&#30340;handler&#20989;&#25968;&#65292;&#32780;&#25105;&#20204;&#36824;&#35760;&#24471;&#19978;&#38754;&#22312;ngx_http_init_connection&#20013;&#35774;&#32622;&#30340;handler&#23601;&#26159;ngx_http_init_request&#65292;&#36825;&#26679;&#23376;&#65292;&#25105;&#20204;&#23601;&#20877;&#19968;&#27425;&#36827;&#20837;request&#30340;&#22788;&#29702;&#65292;&#21487;&#26159;&#27492;&#26102;&#20381;&#26087;&#27809;&#26377;&#25346;&#36733;&#35835;&#20107;&#20214;&#21040;epoll&#12290;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389346235797" MODIFIED="1389346797684" TEXT="ngx_http_process_request_line">
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389346805641" FOLDED="true" MODIFIED="1389346815658" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389346241253" MODIFIED="1389346923435">
+<node CREATED="1389346235797" FOLDED="true" MODIFIED="1389447876151" TEXT="ngx_http_process_request_line">
+<node CREATED="1389346805641" MODIFIED="1389447876150" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389346241253" MODIFIED="1389447886251">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -10009,12 +10107,11 @@
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389346235797" FOLDED="true" MODIFIED="1389347008237" TEXT="ngx_http_read_request_header">
+<node CREATED="1389346235797" FOLDED="true" MODIFIED="1389447876151" TEXT="ngx_http_read_request_header">
 <node BACKGROUND_COLOR="#ffff00" CREATED="1389346805641" MODIFIED="1389346815658" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node BACKGROUND_COLOR="#ffff00" CREATED="1389346241253" MODIFIED="1389346970822">
 <richcontent TYPE="NODE"><html>
@@ -10104,12 +10201,11 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389346235797" FOLDED="true" MODIFIED="1389346994710" TEXT="ngx_http_process_request_headers">
+<node CREATED="1389346235797" FOLDED="true" MODIFIED="1389447876150" TEXT="ngx_http_process_request_headers">
 <node BACKGROUND_COLOR="#ffff00" CREATED="1389346805641" MODIFIED="1389346815658" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node BACKGROUND_COLOR="#ffff00" CREATED="1389346241253" MODIFIED="1389346989340">
 <richcontent TYPE="NODE"><html>
@@ -10250,14 +10346,13 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
 </node>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389238745504" FOLDED="true" MODIFIED="1389238758236" POSITION="left" TEXT="&#x547d;&#x540d;&#x89c4;&#x5219;">
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389238793279" MODIFIED="1389238811169">
+<node CREATED="1389238745504" FOLDED="true" MODIFIED="1389447897451" POSITION="left" TEXT="&#x547d;&#x540d;&#x89c4;&#x5219;">
+<node CREATED="1389238793279" MODIFIED="1389447908156">
 <richcontent TYPE="NODE"><html>
   <head>
     
