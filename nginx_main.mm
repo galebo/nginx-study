@@ -455,8 +455,9 @@
 <node CREATED="1389073591719" LINK="http://blog.csdn.net/kenbinzhang?viewmode=contents " MODIFIED="1389073624444" TEXT="&#x5543;&#x997c;&#x7684;&#x6280;&#x672f;&#x535a;&#x5ba2;"/>
 <node CREATED="1389239945627" LINK="http://blog.csdn.net/Marcky/article/category/747446" MODIFIED="1389447897452" TEXT="Marcky"/>
 <node CREATED="1389256392595" LINK="http://www.pagefault.info" MODIFIED="1389447897453" TEXT="pagefault"/>
+<node CREATED="1389703024647" LINK="http://tengine.taobao.org/book/" MODIFIED="1389704484323" TEXT="tengine"/>
 </node>
-<node CREATED="1388930950170" MODIFIED="1389150103872" POSITION="right" TEXT="main">
+<node CREATED="1388930950170" FOLDED="true" MODIFIED="1389150103872" POSITION="right" TEXT="main">
 <node CREATED="1388930885650" FOLDED="true" LINK="http://blog.csdn.net/kenbinzhang/article/details/4681694" MODIFIED="1389070124192" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1388930898050" MODIFIED="1388930910629" TEXT="main&#x51fd;&#x6570;&#x7684;&#x5904;&#x7406;&#x8fc7;&#x7a0b;&#x53ef;&#x4ee5;&#x5206;&#x4e3a;&#x4ee5;&#x4e0b;&#x6b65;&#x9aa4;&#xff1a;&#xa;&#xa;1&#x3001;&#x4ece;&#x63a7;&#x5236;&#x53f0;&#x83b7;&#x53d6;&#x53c2;&#x6570;&#x5e76;&#x5904;&#x7406;:ngx_get_options(argc, argv)&#xff1b;&#xa;&#xa;2&#x3001;&#x7b80;&#x5355;&#x521d;&#x59cb;&#x5316;&#xff0c;&#x521d;&#x59cb;&#x5316;&#x4e00;&#x4e9b;&#x6570;&#x636e;&#x7ed3;&#x6784;&#x548c;&#x6a21;&#x5757;:ngx_debug_init(),ngx_time_init(),ngx_regex_init(),ngx_log_init(),ngx_ssl_init()&#xff1b;&#xa;&#xa;3&#x3001;&#x521d;&#x59cb;&#x5316;&#x5c40;&#x90e8;&#x7684;ngx_cycle_t init_cycle&#x7ed3;&#x6784;&#x4f53;&#x53d8;&#x91cf;:&#xa;    ngx_memzero(&amp;init_cycle, sizeof(ngx_cycle_t));&#xa;    init_cycle.log = log;&#xa;    ngx_cycle = &amp;init_cycle;&#xa;&#xa;    init_cycle.pool = ngx_create_pool(1024, log);&#xa;    if (init_cycle.pool == NULL) {&#xa;        return 1;&#xa;    }    &#xa;&#xa;4&#x3001;&#x4fdd;&#x5b58;&#x53c2;&#x6570;&#xff0c;&#x8bbe;&#x7f6e;&#x51e0;&#x4e2a;&#x5168;&#x5c40;&#x53d8;&#x91cf;&#xff1a;ngx_argc,ngx_os_argv,ngx_argv,ngx_os_environ&#xff1b;&#xa;&#xa;5&#x3001;&#x8c03;&#x7528;ngx_process_options&#xff0c;&#x8bbe;&#x7f6e;init_cycle&#x7684;&#x4e00;&#x4e9b;&#x5b57;&#x6bb5;&#xff0c;&#x8fd9;&#x4e9b;&#x5b57;&#x6bb5;&#x662f;&#x4ece;&#x63a7;&#x5236;&#x53f0;&#x7684;&#x547d;&#x4ee4;&#x4e2d;&#x53d6;&#x5f97;&#x7684;&#xff1a;conf_prefix&#xff08;config prefix path&#xff09;&#x3001;prefix&#xff08;prefix path:-p prefix&#xff09;&#x3001;conf_file&#xff08;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x8def;&#x5f84;:-c filenname&#xff09;&#x3001;conf_param(-g directives)&#xff0c;&#x53e6;&#x5916;&#x8fd8;&#x628a;init_cycle.log.log_level&#x8bbe;&#x7f6e;&#x4e3a;NGX_LOG_INFO&#xff1b;&#xa;&#xa;6&#x3001;&#x8c03;&#x7528;ngx_os_init&#xff0c;&#x8fd9;&#x4e2a;&#x8c03;&#x7528;&#x4f1a;&#x8bbe;&#x7f6e;&#x4e00;&#x4e9b;&#x5168;&#x5c40;&#x53d8;&#x91cf;&#xff0c;&#x8fd9;&#x4e9b;&#x5168;&#x5c40;&#x53d8;&#x91cf;&#x548c;&#x64cd;&#x4f5c;&#x7cfb;&#x7edf;&#x76f8;&#x5173;&#xff0c;&#x6bd4;&#x5982;:ngx_pagesize,ngx_cacheline_size,ngx_ncpu,ngx_cpuinfo(),ngx_max_sockets&#x7b49;&#xff1b;&#xa;&#xa;7&#x3001;&#x8c03;&#x7528;&#x521d;&#x59cb;&#x5316;&#x51fd;&#x6570;ngx_crc32_table_init()&#xff1b;&#xa;&#xa;8&#x3001;&#x8c03;&#x7528;ngx_set_inherited_sockets(&amp;init_cycle)&#xff0c;&#x521d;&#x59cb;&#x5316;init_cycle.listening&#xff0c;&#x8fd9;&#x662f;&#x4e00;&#x4e2a;ngx_listening_t&#x7684;&#x7ed3;&#x6784;&#x6570;&#x7ec4;&#xff0c;&#x5176;socket_fd&#x662f;&#x4ece;&#x73af;&#x5883;&#x53d8;&#x91cf;NGINX&#x4e2d;&#x8bfb;&#x53d6;&#x7684;&#xff1b;&#xa;&#xa;9&#x3001;&#x5bf9;&#x7cfb;&#x7edf;&#x6240;&#x6709;&#x6a21;&#x5757;&#x70b9;&#x4e00;&#x4e0b;&#x6570;&#xff0c;&#x7136;&#x540e;&#x8fdb;&#x5165;ngx_init_cycle&#x4f5c;&#x4e3b;&#x8981;&#x7684;&#x6a21;&#x5757;&#x76f8;&#x5173;&#x7684;&#x521d;&#x59cb;&#x5316;&#xff0c;init_cycle&#x4f5c;&#x4e3a;&#x65e7;&#x7684;&#x5168;&#x5c40;&#x8bbe;&#x7f6e;&#x4f20;&#x8fdb;&#x53bb;&#xff0c;&#x8fd9;&#x4e2a;&#x51fd;&#x6570;&#x4f1a;&#x521b;&#x5efa;&#x4e00;&#x4e0b;&#x65b0;&#x7684;ngx_cycle_t&#x53d8;&#x91cf;&#xff0c;&#x5e76;&#x8fd4;&#x56de;&#x5176;&#x6307;&#x9488;&#xff1a;&#xa;    ngx_max_module = 0;&#xa;    for (i = 0; ngx_modules[i]; i++) {&#xa;        ngx_modules[i]-&gt;index = ngx_max_module++;&#xa;    }    &#xa;&#xa;    cycle = ngx_init_cycle(&amp;init_cycle);&#xa;&#xa;10&#x3001;&#x4e0e;&#x4fe1;&#x53f7;&#x91cf;&#x76f8;&#x5173;&#x7684;&#x4e00;&#x4e9b;&#x64cd;&#x4f5c;&#x4ee3;&#x7801;&#xff1b;&#xa;&#xa;11&#x3001;&#x591a;&#x8fdb;&#x7a0b;&#x7684;&#x60c5;&#x51b5;&#x4e0b;&#xff0c;&#x8c03;&#x7528;ngx_master_process_cycle(cycle)&#xff0c;&#x5355;&#x8fdb;&#x7a0b;&#x60c5;&#x51b5;&#x4e0b;&#x8c03;&#x7528;ngx_single_process_cycle&#x5b8c;&#x6210;&#x6700;&#x540e;&#x7684;&#x542f;&#x52a8;&#x5de5;&#x4f5c;&#x3002;"/>
 </node>
@@ -2220,7 +2221,7 @@
 <edge COLOR="#808080" STYLE="bezier" WIDTH="thin"/>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1388815607274" MODIFIED="1389591710581" TEXT="ngx_single_process_cycle"/>
-<node BACKGROUND_COLOR="#3b9627" CREATED="1388815615217" FOLDED="true" ID="ID_259231819" MODIFIED="1389591627714" TEXT="ngx_master_process_cycle">
+<node BACKGROUND_COLOR="#3b9627" CREATED="1388815615217" ID="ID_259231819" MODIFIED="1389591627714" TEXT="ngx_master_process_cycle">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1388931843778" FOLDED="true" LINK="http://blog.csdn.net/kenbinzhang/article/details/4696730" MODIFIED="1389099255989" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node BACKGROUND_COLOR="#ffff00" CREATED="1388931863641" MODIFIED="1389244046412">
@@ -3501,7 +3502,7 @@
 </node>
 <node CREATED="1388930272346" MODIFIED="1389103420782" TEXT="ngx_worker_process_cycle">
 <arrowlink DESTINATION="ID_259231819" ENDARROW="Default" ENDINCLINATION="-62;-102;" ID="Arrow_ID_1060630299" STARTARROW="Default" STARTINCLINATION="171;-33;"/>
-<node CREATED="1388932573234" FOLDED="true" LINK="http://blog.csdn.net/kenbinzhang/article/details/4696742" MODIFIED="1389104713978" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1388932573234" LINK="http://blog.csdn.net/kenbinzhang/article/details/4696742" MODIFIED="1389104713978" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node BACKGROUND_COLOR="#ffff00" CREATED="1388932593882" ID="ID_1961689213" MODIFIED="1389246091156">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -5207,18 +5208,18 @@
 <node CREATED="1389063262403" FOLDED="true" MODIFIED="1389144359124" TEXT="ngx_channel">
 <node CREATED="1389065217030" MODIFIED="1389065219571" TEXT="// &#x7528;&#x4e8e;&#x76d1;&#x542c;&#x53ef;&#x8bfb;&#x4e8b;&#x4ef6;&#x7684;socket"/>
 </node>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389244249178" LINK="#ID_1961689213" MODIFIED="1389244318799" TEXT="ngx_process">
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389244258209" MODIFIED="1389244303131" TEXT="&#x6307;&#x793a;&#x8fdb;&#x7a0b;&#x7c7b;&#x522b;"/>
+<node CREATED="1389244249178" FOLDED="true" LINK="#ID_1961689213" MODIFIED="1389702972756" TEXT="ngx_process">
+<node CREATED="1389244258209" MODIFIED="1389702972755" TEXT="&#x6307;&#x793a;&#x8fdb;&#x7a0b;&#x7c7b;&#x522b;"/>
 </node>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389245186936" LINK="#ID_1502592810" MODIFIED="1389245231942" TEXT="ngx_channel">
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389245224142" MODIFIED="1389245225687" TEXT="&#x7528;&#x4e8e;&#x76d1;&#x542c;&#x53ef;&#x8bfb;&#x4e8b;&#x4ef6;&#x7684;socket"/>
+<node CREATED="1389245186936" FOLDED="true" LINK="#ID_1502592810" MODIFIED="1389702972757" TEXT="ngx_channel">
+<node CREATED="1389245224142" MODIFIED="1389702972755" TEXT="&#x7528;&#x4e8e;&#x76d1;&#x542c;&#x53ef;&#x8bfb;&#x4e8b;&#x4ef6;&#x7684;socket"/>
 </node>
 </node>
 <node CREATED="1389105507572" MODIFIED="1389105518458" TEXT="&#x4e8b;&#x4ef6;&#x76f8;&#x5173;">
 <node CREATED="1389105522876" LINK="#ID_1076558626" MODIFIED="1389105726262" TEXT="ngx_event_actions"/>
 </node>
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389242555502" MODIFIED="1389242557616" TEXT="signals">
-<node BACKGROUND_COLOR="#ffff00" CREATED="1389242576749" ID="ID_1345550578" LINK="#ID_1118410517" MODIFIED="1389242793270" TEXT="ngx_signal_handler"/>
+<node CREATED="1389242555502" MODIFIED="1389702972755" TEXT="signals">
+<node CREATED="1389242576749" ID="ID_1345550578" LINK="#ID_1118410517" MODIFIED="1389702972756" TEXT="ngx_signal_handler"/>
 </node>
 </node>
 <node CREATED="1389106372749" MODIFIED="1389151945772" POSITION="left" TEXT="&#x7ed3;&#x6784;&#x4f53;&#x5b9e;&#x4f8b;">
@@ -5434,7 +5435,7 @@
 </html></richcontent>
 </node>
 </node>
-<node BACKGROUND_COLOR="#9c7b7b" CREATED="1389084135274" LINK="#ID_552558133" MODIFIED="1389150823772" TEXT="ngx_event_core_module">
+<node BACKGROUND_COLOR="#9c7b7b" CREATED="1389084135274" FOLDED="true" LINK="#ID_552558133" MODIFIED="1389150823772" TEXT="ngx_event_core_module">
 <icon BUILTIN="full-0"/>
 <node CREATED="1389084139984" MODIFIED="1389084669333">
 <richcontent TYPE="NODE"><html>
@@ -5568,7 +5569,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1388928033225" MODIFIED="1389151944412" POSITION="left" TEXT="&#x7ed3;&#x6784;&#x4f53;">
+<node CREATED="1388928033225" FOLDED="true" MODIFIED="1389151944412" POSITION="left" TEXT="&#x7ed3;&#x6784;&#x4f53;">
 <node CREATED="1388928059241" FOLDED="true" ID="ID_552558133" MODIFIED="1389149735662" TEXT="ngx_module_t">
 <icon BUILTIN="full-0"/>
 <node CREATED="1388928269427" FOLDED="true" LINK="http://blog.csdn.net/kenbinzhang/article/details/4656815" MODIFIED="1389146397452" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
@@ -10286,7 +10287,7 @@
 <node CREATED="1389594444537" MODIFIED="1389594479348" TEXT="/*init_process*/">
 <node CREATED="1389151285281" ID="ID_579592898" LINK="#ID_440555041" MODIFIED="1389591857479" TEXT="ngx_event_process_init">
 <node CREATED="1389345764637" FOLDED="true" LINK="http://www.pagefault.info/?p=201" MODIFIED="1389595382350" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
-<node CREATED="1389345806379" MODIFIED="1389595368351">
+<node CREATED="1389345806379" MODIFIED="1389702830409">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -10665,7 +10666,7 @@
       //&#35774;&#32622;listen&#21477;&#26564;&#30340;&#20107;&#20214;&#22238;&#35843;&#65292;&#36825;&#20010;&#22238;&#35843;&#37324;&#38754;&#20250;accept&#65292;&#28982;&#21518;&#36827;&#34892;&#21518;&#32493;&#22788;&#29702;&#65292;&#36825;&#20010;&#20989;&#25968;&#26159;nginx&#20107;&#20214;&#39537;&#21160;&#30340;&#31532;&#19968;&#20010;&#20989;&#25968;
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;rev-&gt;handler = ngx_event_accept;
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;rev-&gt;handler = <font color="#fc1010">ngx_event_accept</font>;
     </p>
     <p>
       //&#22914;&#26524;&#40664;&#35748;&#20351;&#29992;mutex&#65292;&#21017;&#20250;&#32487;&#32493;&#19979;&#38754;&#25805;&#20316;&#12290;
@@ -11172,7 +11173,7 @@
 <node CREATED="1389591672409" LINK="#ID_1159741802" MODIFIED="1389591728633" TEXT="&#xa0;ngx_conf_parse"/>
 </node>
 <node CREATED="1389081320591" ID="ID_642383791" LINK="#ID_333242358" MODIFIED="1389448567915" TEXT="ngx_http_block">
-<node CREATED="1389081514663" MODIFIED="1389081601261" TEXT="ngx_http_optimize_servers">
+<node CREATED="1389081514663" FOLDED="true" MODIFIED="1389081601261" TEXT="ngx_http_optimize_servers">
 <node CREATED="1388929162025" FOLDED="true" MODIFIED="1389145398528" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;1">
 <node CREATED="1388929222345" MODIFIED="1389593181195">
 <richcontent TYPE="NODE"><html>
