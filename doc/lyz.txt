@@ -1,0 +1,5 @@
+./configure --with-http_concat_module
+sudo apt-get install libpcre3 libpcre3-dev  
+sudo ./objs/nginx -s reload 
+
+pkill -9 nginx

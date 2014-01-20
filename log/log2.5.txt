@@ -1,0 +1,13 @@
+
+2014/01/11 21:01:09 [debug] 7009#0: worker cycle
+2014/01/11 21:01:09 [debug] 7009#0: epoll timer: 65000
+2014/01/11 21:01:09 [debug] 7009#0: epoll: fd:6 ev:0001 d:087D7700
+2014/01/11 21:01:09 [debug] 7009#0: accept on 0.0.0.0:80, ready: 0
+2014/01/11 21:01:09 [debug] 7009#0: posix_memalign: 087C5D30:256 @16
+2014/01/11 21:01:09 [debug] 7009#0: *4 accept: 127.0.0.1 fd:9
+2014/01/11 21:01:09 [debug] 7009#0: event dummy accept filter
+2014/01/11 21:01:09 [debug] 7009#0: *4 event timer add: 9: 60000:2170892930
+2014/01/11 21:01:09 [debug] 7009#0: *4 reusable connection: 1
+2014/01/11 21:01:09 [debug] 7009#0: *4 epoll add event: fd:9 op:1 ev:80000001
+2014/01/11 21:01:09 [debug] 7009#0: timer delta: 1
+2014/01/11 21:01:09 [debug] 7009#0: posted events 00000000

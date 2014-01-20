@@ -1,0 +1,87 @@
+
+
+
+2014/01/11 21:01:09 [debug] 7009#0: worker cycle
+2014/01/11 21:01:09 [debug] 7009#0: epoll timer: 60000
+2014/01/11 21:01:09 [debug] 7009#0: epoll: fd:3 ev:0001 d:087D77C9
+2014/01/11 21:01:09 [debug] 7009#0: *3 http wait request handler
+2014/01/11 21:01:09 [debug] 7009#0: *3 malloc: 087C5D18:1024
+2014/01/11 21:01:09 [debug] 7009#0: *3 recv: fd:3 423 of 1024
+2014/01/11 21:01:09 [debug] 7009#0: *3 reusable connection: 0
+2014/01/11 21:01:09 [debug] 7009#0: *3 posix_memalign: 087C6120:4096 @16
+2014/01/11 21:01:09 [debug] 7009#0: *3 http process request line
+2014/01/11 21:01:09 [debug] 7009#0: *3 http request line: "GET /index.html HTTP/1.1"
+2014/01/11 21:01:09 [debug] 7009#0: *3 http uri: "/index.html"
+2014/01/11 21:01:09 [debug] 7009#0: *3 http args: ""
+2014/01/11 21:01:09 [debug] 7009#0: *3 http exten: "html"
+2014/01/11 21:01:09 [debug] 7009#0: *3 http process request header line
+2014/01/11 21:01:09 [debug] 7009#0: *3 http header: "Host: localhost"
+2014/01/11 21:01:09 [debug] 7009#0: *3 http header: "User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:26.0) Gecko/20100101 Firefox/26.0"
+2014/01/11 21:01:09 [debug] 7009#0: *3 http header: "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+2014/01/11 21:01:09 [debug] 7009#0: *3 http header: "Accept-Language: zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3"
+2014/01/11 21:01:09 [debug] 7009#0: *3 http header: "Accept-Encoding: gzip, deflate"
+2014/01/11 21:01:09 [debug] 7009#0: *3 http header: "Connection: keep-alive"
+2014/01/11 21:01:09 [debug] 7009#0: *3 http header: "If-Modified-Since: Sat, 11 Jan 2014 12:54:35 GMT"
+2014/01/11 21:01:09 [debug] 7009#0: *3 http header: "If-None-Match: "52d13f0b-293""
+2014/01/11 21:01:09 [debug] 7009#0: *3 http header: "Cache-Control: max-age=0"
+2014/01/11 21:01:09 [debug] 7009#0: *3 http header done
+2014/01/11 21:01:09 [debug] 7009#0: *3 event timer del: 3: 2170892787
+2014/01/11 21:01:09 [debug] 7009#0: *3 rewrite phase: 0
+2014/01/11 21:01:09 [debug] 7009#0: *3 test location: "/"
+2014/01/11 21:01:09 [debug] 7009#0: *3 test location: "50x.html"
+2014/01/11 21:01:09 [debug] 7009#0: *3 using configuration "/"
+2014/01/11 21:01:09 [debug] 7009#0: *3 http cl:-1 max:1048576
+2014/01/11 21:01:09 [debug] 7009#0: *3 rewrite phase: 2
+2014/01/11 21:01:09 [debug] 7009#0: *3 post rewrite phase: 3
+2014/01/11 21:01:09 [debug] 7009#0: *3 generic phase: 4
+2014/01/11 21:01:09 [debug] 7009#0: *3 generic phase: 5
+2014/01/11 21:01:09 [debug] 7009#0: *3 generic phase: 6
+2014/01/11 21:01:09 [debug] 7009#0: *3 access phase: 7
+2014/01/11 21:01:09 [debug] 7009#0: *3 access phase: 8
+2014/01/11 21:01:09 [debug] 7009#0: *3 post access phase: 9
+2014/01/11 21:01:09 [debug] 7009#0: *3 content phase: 10
+2014/01/11 21:01:09 [debug] 7009#0: *3 content phase: 11
+2014/01/11 21:01:09 [debug] 7009#0: *3 content phase: 12
+2014/01/11 21:01:09 [debug] 7009#0: *3 http filename: "/usr/local/nginx/html/index.html"
+2014/01/11 21:01:09 [debug] 7009#0: *3 add cleanup: 087C6944
+2014/01/11 21:01:09 [debug] 7009#0: *3 http static fd: 9
+2014/01/11 21:01:09 [debug] 7009#0: *3 http set discard body
+2014/01/11 21:01:09 [debug] 7009#0: *3 http ims:1389444875 lm:1389444875
+2014/01/11 21:01:09 [debug] 7009#0: *3 http im:""52d13f0b-293"" etag:"52d13f0b-293"
+2014/01/11 21:01:09 [debug] 7009#0: *3 HTTP/1.1 304 Not Modified
+Server: Tengine/2.0.0
+Date: Sat, 11 Jan 2014 13:01:09 GMT
+Last-Modified: Sat, 11 Jan 2014 12:54:35 GMT
+Connection: keep-alive
+ETag: "52d13f0b-293"
+
+2014/01/11 21:01:09 [debug] 7009#0: *3 write new buf t:1 f:0 087C6A6C, pos 087C6A6C, size: 181 file: 0, size: 0
+2014/01/11 21:01:09 [debug] 7009#0: *3 http write filter: l:1 f:0 s:181
+2014/01/11 21:01:09 [debug] 7009#0: *3 http write filter limit 0
+2014/01/11 21:01:09 [debug] 7009#0: *3 writev: 181
+2014/01/11 21:01:09 [debug] 7009#0: *3 http write filter 00000000
+2014/01/11 21:01:09 [debug] 7009#0: *3 http finalize request: 0, "/index.html?" a:1, c:1
+2014/01/11 21:01:09 [debug] 7009#0: *3 set http keepalive handler
+2014/01/11 21:01:09 [debug] 7009#0: *3 http close request
+2014/01/11 21:01:09 [debug] 7009#0: *3 http log handler
+2014/01/11 21:01:09 [debug] 7009#0: *3 http status: request_time 0
+2014/01/11 21:01:09 [debug] 7009#0: *3 run cleanup: 087C6944
+2014/01/11 21:01:09 [debug] 7009#0: *3 file cleanup: fd:9
+2014/01/11 21:01:09 [debug] 7009#0: *3 free: 087C6120, unused: 1340
+2014/01/11 21:01:09 [debug] 7009#0: *3 free: 087C5D18
+2014/01/11 21:01:09 [debug] 7009#0: *3 hc free: 00000000 0
+2014/01/11 21:01:09 [debug] 7009#0: *3 hc busy: 00000000 0
+2014/01/11 21:01:09 [debug] 7009#0: *3 tcp_nodelay
+2014/01/11 21:01:09 [debug] 7009#0: *3 reusable connection: 1
+2014/01/11 21:01:09 [debug] 7009#0: *3 event timer add: 3: 65000:2170897788
+2014/01/11 21:01:09 [debug] 7009#0: *3 post event 087F0770
+2014/01/11 21:01:09 [debug] 7009#0: timer delta: 1
+2014/01/11 21:01:09 [debug] 7009#0: posted events 087F0770
+2014/01/11 21:01:09 [debug] 7009#0: posted event 087F0770
+2014/01/11 21:01:09 [debug] 7009#0: *3 delete posted event 087F0770
+2014/01/11 21:01:09 [debug] 7009#0: *3 http keepalive handler
+2014/01/11 21:01:09 [debug] 7009#0: *3 malloc: 087C5D18:1024
+2014/01/11 21:01:09 [debug] 7009#0: *3 recv: fd:3 -1 of 1024
+2014/01/11 21:01:09 [debug] 7009#0: *3 recv() not ready (11: Resource temporarily unavailable)
+2014/01/11 21:01:09 [debug] 7009#0: *3 free: 087C5D18
+2014/01/11 21:01:09 [debug] 7009#0: posted event 00000000

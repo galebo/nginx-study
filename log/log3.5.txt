@@ -1,0 +1,25 @@
+2014/01/11 21:01:09 [debug] 7009#0: worker cycle
+2014/01/11 21:01:09 [debug] 7009#0: epoll timer: 60000
+2014/01/11 21:01:14 [debug] 7009#0: epoll: fd:9 ev:0001 d:087D782D
+2014/01/11 21:01:14 [debug] 7009#0: *4 http wait request handler
+2014/01/11 21:01:14 [debug] 7009#0: *4 malloc: 087C5E48:1024
+2014/01/11 21:01:14 [debug] 7009#0: *4 recv: fd:9 0 of 1024
+2014/01/11 21:01:14 [info] 7009#0: *4 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:80
+2014/01/11 21:01:14 [debug] 7009#0: *4 close http connection: 9
+2014/01/11 21:01:14 [debug] 7009#0: *4 event timer del: 9: 2170892930
+2014/01/11 21:01:14 [debug] 7009#0: *4 reusable connection: 0
+2014/01/11 21:01:14 [debug] 7009#0: *4 free: 087C5E48
+2014/01/11 21:01:14 [debug] 7009#0: *4 free: 087C5D30, unused: 48
+2014/01/11 21:01:14 [debug] 7009#0: timer delta: 5001
+2014/01/11 21:01:14 [debug] 7009#0: posted events 00000000
+2014/01/11 21:01:14 [debug] 7009#0: worker cycle
+2014/01/11 21:01:14 [debug] 7009#0: epoll timer: 599992014/01/11 21:02:14 [debug] 7009#0: timer delta: 60035
+2014/01/11 21:02:14 [debug] 7009#0: *3 event timer del: 3: 2170897930
+2014/01/11 21:02:14 [debug] 7009#0: *3 http keepalive handler
+2014/01/11 21:02:14 [debug] 7009#0: *3 close http connection: 3
+2014/01/11 21:02:14 [debug] 7009#0: *3 reusable connection: 0
+2014/01/11 21:02:14 [debug] 7009#0: *3 free: 00000000
+2014/01/11 21:02:14 [debug] 7009#0: *3 free: 087BFBA0, unused: 48
+2014/01/11 21:02:14 [debug] 7009#0: posted events 00000000
+2014/01/11 21:02:14 [debug] 7009#0: worker cycle
+2014/01/11 21:02:14 [debug] 7009#0: epoll timer: -1

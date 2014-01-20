@@ -1,0 +1,10 @@
+2014/01/11 21:01:09 [debug] 7009#0: epoll: fd:6 ev:0001 d:087D7700              ngx_epoll_process_events
+2014/01/11 21:01:09 [debug] 7009#0: accept on 0.0.0.0:80, ready: 0              ngx_event_accept
+2014/01/11 21:01:09 [debug] 7009#0: posix_memalign: 087BFBA0:256 @16            ngx_create_pool
+2014/01/11 21:01:09 [debug] 7009#0: *3 accept: 127.0.0.1 fd:3                   ngx_event_accept
+2014/01/11 21:01:09 [debug] 7009#0: event dummy accept filter                   ngx_events_block
+2014/01/11 21:01:09 [debug] 7009#0: *3 event timer add: 3: 60000:2170892787     ngx_event_add_timer
+2014/01/11 21:01:09 [debug] 7009#0: *3 reusable connection: 1
+2014/01/11 21:01:09 [debug] 7009#0: *3 epoll add event: fd:3 op:1 ev:80000001   ngx_epoll_add_event
+2014/01/11 21:01:09 [debug] 7009#0: timer delta: 22894                          ngx_process_events_and_timers
+2014/01/11 21:01:09 [debug] 7009#0: posted events 00000000                      ngx_process_events_and_timers
