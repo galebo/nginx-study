@@ -26,24 +26,24 @@
 2014/01/11 21:01:09 [debug] 7009#0: *3 http header: "Cache-Control: max-age=0"
 2014/01/11 21:01:09 [debug] 7009#0: *3 http header done
 2014/01/11 21:01:09 [debug] 7009#0: *3 event timer del: 3: 2170892787
-2014/01/11 21:01:09 [debug] 7009#0: *3 rewrite phase: 0
+2014/01/11 21:01:09 [debug] 7009#0: *3              rewrite phase      :            0
 2014/01/11 21:01:09 [debug] 7009#0: *3 test location: "/"
 2014/01/11 21:01:09 [debug] 7009#0: *3 test location: "50x.html"
 2014/01/11 21:01:09 [debug] 7009#0: *3 using configuration "/"
 2014/01/11 21:01:09 [debug] 7009#0: *3 http cl:-1 max:1048576
-2014/01/11 21:01:09 [debug] 7009#0: *3 rewrite phase: 2
-2014/01/11 21:01:09 [debug] 7009#0: *3 post rewrite phase: 3
-2014/01/11 21:01:09 [debug] 7009#0: *3 generic phase: 4
-2014/01/11 21:01:09 [debug] 7009#0: *3 generic phase: 5
-2014/01/11 21:01:09 [debug] 7009#0: *3 generic phase: 6
-2014/01/11 21:01:09 [debug] 7009#0: *3 access phase: 7
-2014/01/11 21:01:09 [debug] 7009#0: *3 access phase: 8
-2014/01/11 21:01:09 [debug] 7009#0: *3 post access phase: 9
-2014/01/11 21:01:09 [debug] 7009#0: *3 content phase: 10
-2014/01/11 21:01:09 [debug] 7009#0: *3 content phase: 11
-2014/01/11 21:01:09 [debug] 7009#0: *3 content phase: 12
+2014/01/11 21:01:09 [debug] 7009#0: *3              rewrite phase      :            2
+2014/01/11 21:01:09 [debug] 7009#0: *3              post rewrite phase :            3
+2014/01/11 21:01:09 [debug] 7009#0: *3              generic phase      :            4
+2014/01/11 21:01:09 [debug] 7009#0: *3              generic phase      :            5
+2014/01/11 21:01:09 [debug] 7009#0: *3              generic phase      :            6
+2014/01/11 21:01:09 [debug] 7009#0: *3              access phase       :            7
+2014/01/11 21:01:09 [debug] 7009#0: *3              access phase       :            8
+2014/01/11 21:01:09 [debug] 7009#0: *3              post access phase  :            9
+2014/01/11 21:01:09 [debug] 7009#0: *3              content phase      :            10
+2014/01/11 21:01:09 [debug] 7009#0: *3              content phase      :            11
+2014/01/11 21:01:09 [debug] 7009#0: *3              content phase      :            12
 2014/01/11 21:01:09 [debug] 7009#0: *3 http filename: "/usr/local/nginx/html/index.html"
-2014/01/11 21:01:09 [debug] 7009#0: *3 add cleanup: 087C6944
+2014/01/11 21:01:09 [debug] 7009#0: *3            add cleanup: 087C6944
 2014/01/11 21:01:09 [debug] 7009#0: *3 http static fd: 9
 2014/01/11 21:01:09 [debug] 7009#0: *3 http set discard body
 2014/01/11 21:01:09 [debug] 7009#0: *3 http ims:1389444875 lm:1389444875
@@ -65,7 +65,7 @@ ETag: "52d13f0b-293"
 2014/01/11 21:01:09 [debug] 7009#0: *3 http close request
 2014/01/11 21:01:09 [debug] 7009#0: *3 http log handler
 2014/01/11 21:01:09 [debug] 7009#0: *3 http status: request_time 0
-2014/01/11 21:01:09 [debug] 7009#0: *3 run cleanup: 087C6944
+2014/01/11 21:01:09 [debug] 7009#0: *3           run cleanup: 087C6944
 2014/01/11 21:01:09 [debug] 7009#0: *3 file cleanup: fd:9
 2014/01/11 21:01:09 [debug] 7009#0: *3 free: 087C6120, unused: 1340
 2014/01/11 21:01:09 [debug] 7009#0: *3 free: 087C5D18
