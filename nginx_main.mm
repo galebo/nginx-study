@@ -489,13 +489,14 @@
 </node>
 </node>
 </node>
-<node CREATED="1389073579240" FOLDED="true" MODIFIED="1389238336566" POSITION="right" TEXT="&#x53c2;&#x8003;">
+<node CREATED="1389073579240" MODIFIED="1389238336566" POSITION="right" TEXT="&#x53c2;&#x8003;">
 <node CREATED="1389073591719" LINK="http://blog.csdn.net/kenbinzhang?viewmode=contents " MODIFIED="1389073624444" TEXT="&#x5543;&#x997c;&#x7684;&#x6280;&#x672f;&#x535a;&#x5ba2;"/>
 <node CREATED="1389239945627" LINK="http://blog.csdn.net/Marcky/article/category/747446" MODIFIED="1389447897452" TEXT="Marcky"/>
 <node CREATED="1389256392595" LINK="http://www.pagefault.info" MODIFIED="1389447897453" TEXT="pagefault"/>
 <node CREATED="1389703024647" LINK="http://tengine.taobao.org/book/" MODIFIED="1389704484323" TEXT="tengine"/>
 <node CREATED="1390226279332" LINK="http://blog.sina.com.cn/openresty" MODIFIED="1390226297325" TEXT="openresty"/>
 <node CREATED="1390227536656" LINK="http://lenky.info/" MODIFIED="1390227554051" TEXT="lenky"/>
+<node CREATED="1390272454501" LINK="http://my.oschina.net/fqing" MODIFIED="1390272490375" TEXT="&#x90a3;&#x4e00;&#x5251;&#x7684;&#x98ce;&#x60c5;"/>
 </node>
 <node CREATED="1388930950170" MODIFIED="1389150103872" POSITION="right" TEXT="main">
 <node CREATED="1388930885650" FOLDED="true" LINK="http://blog.csdn.net/kenbinzhang/article/details/4681694" MODIFIED="1389070124192" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
@@ -1487,7 +1488,7 @@
 <node CREATED="1388925990592" MODIFIED="1388926024814" TEXT="&#x5bf9;&#x5404;&#x4e2a;&#x6a21;&#x5757;&#x7684;index&#x5b57;&#x6bb5;&#x7684;&#x521d;&#x59cb;&#x5316;&#x662f;&#x5728;main&#x51fd;&#x6570;&#x4e2d;&#x8fdb;&#x884c;&#x7684;&#xff0c;&#x5982;&#x4e0b;&#x3002;&#xa; ngx_max_module = 0;  &#xa; for (i = 0; ngx_modules[i]; i++) {  &#xa;     ngx_modules[i]-&gt;index = ngx_max_module++;  &#xa; }  &#xa;&#xa;&#x53ef;&#x89c1;&#xff0c;&#x8be5;for-loop&#x6267;&#x884c;&#x540e;&#xff0c;&#x6bcf;&#x4e2a;&#x6a21;&#x5757;&#x7684;index&#x503c;&#x4fbf;&#x662f;&#x5176;&#x5728;ngx_modules[]&#x6570;&#x7ec4;&#x4e2d;&#x7684;&#x4e0b;&#x6807;&#x503c;&#xff0c;&#x4e14;&#x5168;&#x5c40;&#x53d8;&#x91cf;ngx_max_module&#x4e3a;&#x6a21;&#x5757;&#x4e2a;&#x6570;&#xff0c;&#x5bf9;&#x4e8e;&#x672c;&#x4f8b;&#x6765;&#x8bb2;&#xff0c;ngx_max_module=44&#x3002;"/>
 </node>
 </node>
-<node BACKGROUND_COLOR="#459b12" CREATED="1388815502394" FOLDED="true" MODIFIED="1389149868572" TEXT="ngx_init_cycle">
+<node BACKGROUND_COLOR="#459b12" CREATED="1388815502394" MODIFIED="1389149868572" TEXT="ngx_init_cycle">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1388817913231" MODIFIED="1388817916114" TEXT="ngx_create_pidfile"/>
 <node CREATED="1388817929857" MODIFIED="1388817933030" TEXT="ngx_delete_pidfile"/>
@@ -1840,7 +1841,7 @@
 </node>
 </node>
 <node CREATED="1388929486211" ID="ID_1159741802" MODIFIED="1389072278931" TEXT="ngx_conf_parse&#xa;(ngx_conf_file.c)">
-<node CREATED="1388929500354" MODIFIED="1389144861985" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1388929500354" FOLDED="true" MODIFIED="1389144861985" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1388929517993" MODIFIED="1389144858979">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -1855,15 +1856,15 @@
 </node>
 </node>
 <node CREATED="1388929868009" ID="ID_594437396" MODIFIED="1389107418214" TEXT="ngx_conf_handler">
-<node CREATED="1388929500354" FOLDED="true" MODIFIED="1389144821186" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
-<node CREATED="1388929517993" MODIFIED="1389072368210">
+<node CREATED="1388929500354" FOLDED="true" ID="ID_1418391254" LINK="http://my.oschina.net/fqing/blog/80867" MODIFIED="1390274441161" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1388929517993" MODIFIED="1390274734631">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      <font color="#0925fd"><b>ngx_conf_handler</b></font>
+      <b><font color="#0925fd">ngx_conf_handler</font></b>
     </p>
     <p>
       {
@@ -2139,16 +2140,16 @@
       
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (cmd-&gt;type &amp; NGX_DIRECT_CONF) {
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (<font color="#f20d0d">cmd-&gt;type</font>&#160; &amp; NGX_DIRECT_CONF) {/* direct&#25351;&#20196;&#65292;&#19968;&#33324;&#26159;core&#31867;&#22411;&#27169;&#22359;&#25351;&#20196;&#65292;&#27604;&#22914; daemon, work_processes */
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;conf = ((void **) cf-&gt;ctx)[ngx_modules[i]-&gt;index];
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;conf = ((void **) cf-&gt;ctx)[ngx_modules[i]-&gt;index];/* &#30452;&#25509;&#23384;&#20648;&#65292;&#27604;&#22914; ngx_core_conf_t */
     </p>
     <p>
       
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;} else if (cmd-&gt;type &amp; NGX_MAIN_CONF) {
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;} else if (cmd-&gt;type &amp; NGX_MAIN_CONF) {/* main&#25351;&#20196;&#65292;&#27604;&#22914; events, http&#65292;&#27492;&#26102;&#25351;&#21521;&#23427;&#30340;&#22320;&#22336;&#65292;&#36825;&#26679;&#25165;&#33021;&#20998;&#37197;&#25968;&#32452;&#25351;&#38024;&#65292;&#23384;&#20648;&#23646;&#20110;&#23427;&#30340;&#32467;&#26500;&#20307;&#20204;&#12290; */
     </p>
     <p>
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;conf = &amp;(((void **) cf-&gt;ctx)[ngx_modules[i]-&gt;index]);
@@ -2157,10 +2158,10 @@
       
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;} else if (cf-&gt;ctx) {
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;} else if (cf-&gt;ctx) {/* &#26377;&#31227;&#20301;&#30340;&#65292;&#22240;&#27492;http&#26377;&#19977;&#20010;&#37096;&#20998;&#65292;main, srv, conf&#65292;&#36825;&#20010;&#23601;&#20026;&#27492;&#32780;&#35774;&#35745;&#30340;&#65292;&#32487;&#32493;&#19979;&#38754;&#30340;sendfile&#25351;&#20196; */
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;confp = *(void **) ((char *) cf-&gt;ctx + cmd-&gt;conf);
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;confp = *(void **) ((char *) cf-&gt;ctx + <font color="#f50e0e">cmd-&gt;conf</font>);
     </p>
     <p>
       
@@ -2241,7 +2242,8 @@
       }
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 </node>
 </node>
@@ -3793,8 +3795,7 @@
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1388930301538" MODIFIED="1389244954104" TEXT="ngx_worker_process_init">
@@ -4121,7 +4122,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1389103358419" MODIFIED="1389105303945" TEXT="ngx_channel_handler">
+<node CREATED="1389103358419" FOLDED="true" MODIFIED="1389105303945" TEXT="ngx_channel_handler">
 <node CREATED="1389103381172" FOLDED="true" MODIFIED="1389106843180" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node BACKGROUND_COLOR="#ffff00" CREATED="1389103332523" ID="ID_280816995" MODIFIED="1389241117884">
 <richcontent TYPE="NODE"><html>
@@ -4663,8 +4664,7 @@
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1389085058082" ID="ID_356705254" LINK="#ID_458451428" MODIFIED="1390012073911" TEXT="ngx_process_events"/>
@@ -5398,7 +5398,7 @@
 </node>
 <node BACKGROUND_COLOR="#9c7b7b" CREATED="1389084135274" FOLDED="true" LINK="#ID_552558133" MODIFIED="1389150823772" TEXT="ngx_event_core_module">
 <icon BUILTIN="full-0"/>
-<node CREATED="1390252440495" FOLDED="true" MODIFIED="1390252448220" TEXT="&#x7ed3;&#x6784;&#x4f53;">
+<node CREATED="1390252440495" MODIFIED="1390252448220" TEXT="&#x7ed3;&#x6784;&#x4f53;">
 <node CREATED="1389084139984" MODIFIED="1389084669333">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -5451,9 +5451,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1389084640567" ID="ID_440555041" LINK="#ID_579592898" MODIFIED="1389591865631" TEXT="ngx_event_process_init">
-<node CREATED="1389084519801" ID="ID_607686762" LINK="#ID_281294392" MODIFIED="1389084784825" TEXT="ngx_event_accept"/>
-</node>
+<node CREATED="1389084640567" ID="ID_440555041" LINK="#ID_579592898" MODIFIED="1389591865631" TEXT="ngx_event_process_init"/>
 <node CREATED="1389145452145" MODIFIED="1389145453718" TEXT="ngx_event_module_init"/>
 </node>
 <node CREATED="1389145685692" LINK="#ID_552558133" MODIFIED="1389145814075" TEXT="ngx_mail_module">
@@ -6574,12 +6572,6 @@
 <node CREATED="1389072543587" MODIFIED="1389072547340" TEXT="index"/>
 <node CREATED="1389072558267" MODIFIED="1389072564991" TEXT="ctx_index"/>
 </node>
-<node CREATED="1388928327257" FOLDED="true" ID="ID_13477724" LINK="#ID_594437396" MODIFIED="1389107638080" TEXT="ngx_command_t">
-<icon BUILTIN="full-2"/>
-<node CREATED="1388928340305" FOLDED="true" LINK="http://blog.csdn.net/kenbinzhang/article/details/4658085" MODIFIED="1389105627234" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
-<node CREATED="1388928363577" MODIFIED="1388928399963" TEXT="&#x6a21;&#x5757;&#x7684;&#x6307;&#x4ee4;&#x5728;&#x6e90;&#x7801;&#x4e2d;&#x662f;ngx_command_t&#x7ed3;&#x6784;&#x7684;&#x53d8;&#x91cf;&#xff0c;ngx_command_t&#x7684;&#x58f0;&#x660e;&#x5728;src/core/ngx_conf_file.h&#x4e2d;:&#xa;&#xa;struct ngx_command_s {&#xa;    ngx_str_t             name;&#xa;    ngx_uint_t            type;&#xa;    char               *(*set)(ngx_conf_t *cf, ngx_command_t *cmd, void *conf);&#xa;    ngx_uint_t            conf;&#xa;    ngx_uint_t            offset;&#xa;    void                 *post;&#xa;};&#xa;&#xa;name&#x662f;&#x6307;&#x4ee4;&#x540d;&#x79f0;&#x7684;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x4e0d;&#x5305;&#x542b;&#x7a7a;&#x683c;&#x3002;&#xa;&#xa;type&#x662f;&#x6807;&#x8bc6;&#x7b26;&#x96c6;&#xff0c;&#x6807;&#x8bc6;&#x6307;&#x4ee4;&#x5728;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e2d;&#x7684;&#x5408;&#x6cd5;&#x4f4d;&#x7f6e;&#x548c;&#x6307;&#x4ee4;&#x7684;&#x53c2;&#x6570;&#x4e2a;&#x6570;&#x3002;&#x8fd9;&#x662f;&#x4e00;&#x4e2a;&#x81f3;&#x5c11;&#x6709;32bit&#x7684;&#x65e0;&#x7b26;&#x53f7;&#x6574;&#x5f62;&#xff0c;&#x524d;16bit&#x7528;&#x4e8e;&#x6807;&#x8bc6;&#x4f4d;&#x7f6e;&#xff0c;&#x540e;16bit&#x7528;&#x4e8e;&#x6807;&#x8bc6;&#x53c2;&#x6570;&#x3002;&#xa;&#xa;&#x5148;&#x770b;&#x770b;&#x53c2;&#x6570;&#x7684;&#x6807;&#x8bc6;&#xff0c;&#x5b8f;&#x5b9a;&#x4e49;&#x5728;src/core/ngx_conf_file.h&#x4e2d;:&#xa;&#xa;#define NGX_CONF_NOARGS      0x00000001 &#xff08;&#x6ca1;&#x6709;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE1       0x00000002 &#xff08;&#x6709;1&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE2       0x00000004 &#xff08;&#x6709;2&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE3       0x00000008 &#xff08;&#x6709;3&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE4       0x00000010 &#xff08;&#x6709;4&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE5       0x00000020 &#xff08;&#x6709;5&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE6       0x00000040 &#xff08;&#x6709;6&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE7       0x00000080 &#xff08;&#x6709;7&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;&#xa;#define NGX_CONF_MAX_ARGS    8&#xa;&#xa;#define NGX_CONF_TAKE12      (NGX_CONF_TAKE1|NGX_CONF_TAKE2) &#xff08;&#x6709;1&#x4e2a;&#x6216;&#x8005;&#x6709;2&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE13      (NGX_CONF_TAKE1|NGX_CONF_TAKE3)&#xa;&#xa;#define NGX_CONF_TAKE23      (NGX_CONF_TAKE2|NGX_CONF_TAKE3)&#xa;&#xa;#define NGX_CONF_TAKE123     (NGX_CONF_TAKE1|NGX_CONF_TAKE2|NGX_CONF_TAKE3)&#xa;#define NGX_CONF_TAKE1234    (NGX_CONF_TAKE1|NGX_CONF_TAKE2|NGX_CONF_TAKE3   /&#xa;                              |NGX_CONF_TAKE4)&#xa;&#xa;#define NGX_CONF_ARGS_NUMBER 0x000000ff&#xa;#define NGX_CONF_BLOCK       0x00000100  (&#x5757;&#x57df;&#xff0c;&#x540e;&#x9762;&#x8ddf;{...}&#xff0c;&#x4f8b;&#x5982;:events {...})&#xa;#define NGX_CONF_FLAG        0x00000200 &#xff08;&#x6709;&#x4e00;&#x4e2a;&#x5e03;&#x5c14;&#x578b;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_ANY         0x00000400&#xa;#define NGX_CONF_1MORE       0x00000800 &#xff08;&#x81f3;&#x591a;&#x6709;1&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_2MORE       0x00001000 &#xff08;&#x81f3;&#x591a;&#x6709;2&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_MULTI       0x00002000&#xa;&#xa;&#x518d;&#x770b;&#x770b;&#x4f4d;&#x7f6e;&#x7684;&#x6807;&#x8bc6;&#xff0c;&#x4f4d;&#x7f6e;&#x7684;&#x6807;&#x8bc6;&#x5b8f;&#x5b9a;&#x4e49;&#x5728;&#x51e0;&#x4e2a;&#x6587;&#x4ef6;&#x4e2d;:&#xa;&#xa;src/core/ngx_conf_file.h:&#xa;#define NGX_DIRECT_CONF      0x00010000&#xa;&#xa;#define NGX_MAIN_CONF        0x01000000&#xa;#define NGX_ANY_CONF         0x0F000000&#xa;&#xa;src/event/ngx_event.h:&#xa;#define NGX_EVENT_CONF        0x02000000&#xa;&#xa;src/http/ngx_http_config.h:&#xa;#define NGX_HTTP_MAIN_CONF        0x02000000&#xa;#define NGX_HTTP_SRV_CONF         0x04000000&#xa;#define NGX_HTTP_LOC_CONF         0x08000000&#xa;#define NGX_HTTP_UPS_CONF         0x10000000&#xa;#define NGX_HTTP_SIF_CONF         0x20000000&#xa;#define NGX_HTTP_LIF_CONF         0x40000000&#xa;#define NGX_HTTP_LMT_CONF         0x80000000&#xa;&#xa;src/mail/ngx_mail.h:&#xa;#define NGX_MAIL_MAIN_CONF      0x02000000&#xa;#define NGX_MAIL_SRV_CONF       0x04000000&#xa;&#xa;&#x8981;&#x7406;&#x89e3;&#x4e0a;&#x9762;&#x6240;&#x8c13;&#x7684;&#x5408;&#x6cd5;&#x4f4d;&#x7f6e;&#x7684;&#x771f;&#x6b63;&#x542b;&#x4e49;&#xff0c;&#x5c31;&#x8981;&#x4e86;&#x89e3;&#x4e00;&#x4e0b;nginx&#x7684;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e86;&#xff0c;&#x8fd9;&#x91cc;&#x5c31;&#x4e0d;&#x7d2f;&#x8ff0;&#x4e86;&#xff0c;&#x4e0d;&#x5f71;&#x54cd;&#x4e0b;&#x9762;&#x7684;&#x5206;&#x6790;&#xff0c;&#x6211;&#x4f1a;&#x5728;&#x5f88;&#x540e;&#x9762;&#x7684;&#x65f6;&#x5019;&#x5206;&#x6790;&#x4e00;&#x4e0b;nginx&#x7684;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#xff0c;&#x56e0;&#x4e3a;&#x90a3;&#x662f;&#x4e00;&#x4e2a;big topic&#x3002;&#xa;&#xa;set&#x662f;&#x4e00;&#x4e2a;&#x51fd;&#x6570;&#x6307;&#x9488;&#xff0c;&#x8fd9;&#x4e2a;&#x51fd;&#x6570;&#x4e3b;&#x8981;&#x662f;&#x4ece;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e2d;&#x628a;&#x8be5;&#x6307;&#x4ee4;&#x7684;&#x53c2;&#x6570;&#xff08;&#x5b58;&#x653e;&#x5728;ngx_conf_t&#x4e2d;&#xff09;&#x8f6c;&#x6362;&#x4e3a;&#x5408;&#x9002;&#x7684;&#x6570;&#x636e;&#x7c7b;&#x578b;&#x5e76;&#x5c06;&#x8f6c;&#x6362;&#x540e;&#x7684;&#x503c;&#x4fdd;&#x5b58;&#x5230;&#x6a21;&#x5757;&#x7684;&#x914d;&#x7f6e;&#x7ed3;&#x6784;&#x4f53;&#x4e2d;&#xff08;void *conf&#xff09;&#xff0c;&#x8fd9;&#x4e2a;&#x914d;&#x7f6e;&#x7ed3;&#x6784;&#x4f53;&#x53c8;&#x662f;&#x7528;void *&#x6307;&#x5411;&#x7684;&#xff0c;&#x5e94;&#x8be5;&#x53ef;&#x4ee5;&#x6599;&#x5230;&#x8fd9;&#x8bf4;&#x660e;&#x6bcf;&#x4e2a;&#x6a21;&#x5757;&#x7684;&#x914d;&#x7f6e;&#x7ed3;&#x6784;&#x4f53;&#x662f;&#x4e0d;&#x540c;&#x7684;&#xff0c;&#x8fd9;&#x4e9b;&#x7ed3;&#x6784;&#x4f53;&#x547d;&#x540d;&#x683c;&#x5f0f;&#x4e3a;:ngx_&lt;module name&gt;_conf_t&#xff0c;&#x81f3;&#x4e8e;&#x8981;&#x628a;&#x8f6c;&#x6362;&#x540e;&#x7684;&#x503c;&#x653e;&#x5230;&#x914d;&#x7f6e;&#x7ed3;&#x6784;&#x4f53;&#x7684;&#x4ec0;&#x4e48;&#x4f4d;&#x7f6e;&#xff0c;&#x5c31;&#x8981;&#x4f9d;&#x9760;offset&#x4e86;&#xff0c;offset&#x662f;&#x8c03;&#x7528;&#x4e86;offsetof&#x51fd;&#x6570;&#x8ba1;&#x7b97;&#x51fa;&#x7684;&#x7ed3;&#x6784;&#x4f53;&#x4e2d;&#x67d0;&#x4e2a;&#x6210;&#x5458;&#x7684;&#x504f;&#x79fb;&#x4f4d;&#x7f6e;&#x3002;&#xa;&#xa;&#x5e76;&#x4e0d;&#x662f;&#x6240;&#x6709;&#x7684;&#x6a21;&#x5757;&#x90fd;&#x8981;&#x5b9a;&#x4e49;&#x4e00;&#x4e2a;&#x914d;&#x7f6e;&#x7ed3;&#x6784;&#x4f53;&#xff0c;&#x56e0;&#x4e3a;set&#x4e5f;&#x53ef;&#x80fd;&#x662f;&#x4e00;&#x4e2a;&#x7b80;&#x5355;&#x7684;&#x64cd;&#x4f5c;&#x51fd;&#x6570;&#xff0c;&#x5b83;&#x53ef;&#x80fd;&#x53ea;&#x662f;&#x4ece;&#x914d;&#x7f6e;&#x4e2d;&#xff08;ngx_conf_t&#xff09;&#x8bfb;&#x53d6;&#x4e00;&#x4e9b;&#x6570;&#x636e;&#x8fdb;&#x884c;&#x7b80;&#x5355;&#x7684;&#x64cd;&#x4f5c;&#xff0c;&#x6bd4;&#x5982;errlog&#x6a21;&#x5757;&#x7684;&#x201c;error_log&#x201d;&#x6307;&#x4ee4;&#x5c31;&#x662f;&#x8c03;&#x7528;ngx_error_log&#x5199;&#x4e00;&#x6761;&#x65e5;&#x5fd7;&#xff0c;&#x5e76;&#x4e0d;&#x9700;&#x8981;&#x5b58;&#x50a8;&#x4ec0;&#x4e48;&#x914d;&#x7f6e;&#x6570;&#x636e;&#x3002;&#xa;&#xa;conf&#x548c;offset&#xff0c;offset&#x524d;&#x9762;&#x5df2;&#x7ecf;&#x63d0;&#x5230;&#xff0c;&#x5b83;&#x662f;&#x914d;&#x7f6e;&#x7ed3;&#x6784;&#x4f53;&#x4e2d;&#x6210;&#x5458;&#x7684;&#x504f;&#x79fb;&#x3002;conf&#x4e5f;&#x662f;&#x4e00;&#x4e2a;&#x504f;&#x79fb;&#x503c;&#xff0c;&#x4e0d;&#x8fc7;&#x5b83;&#x662f;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x7ed3;&#x6784;&#x4f53;&#x7684;&#xff08;ngx_conf_t&#xff09;&#x6210;&#x5458;ctx&#x7684;&#x6210;&#x5458;&#x7684;&#x504f;&#x79fb;&#xff0c;&#x4e00;&#x822c;&#x662f;&#x7528;&#x6765;&#x628a;ctx&#x4e2d;&#x6307;&#x5b9a;&#x504f;&#x79fb;&#x4f4d;&#x7f6e;&#x7684;&#x6210;&#x5458;&#x8d4b;&#x503c;&#x7ed9;void *conf&#x3002;&#xa;&#xa;post&#x6307;&#x5411;&#x6a21;&#x5757;&#x8bfb;&#x914d;&#x7f6e;&#x7684;&#x65f6;&#x5019;&#x9700;&#x8981;&#x7684;&#x4e00;&#x4e9b;&#x96f6;&#x788e;&#x53d8;&#x91cf;&#x3002;&#xa;&#xa;&#x4ece;&#x4e0a;&#x9762;&#x7684;&#x5206;&#x6790;&#x53ef;&#x4ee5;&#x770b;&#x51fa;&#xff0c;&#x6bcf;&#x4e2a;&#x6a21;&#x5757;&#x4f1a;&#x6620;&#x5c04;&#x5230;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e2d;&#x7684;&#x67d0;&#x4e2a;&#x4f4d;&#x7f6e;&#xff0c;&#x5168;&#x5c40;&#x4f4d;&#x7f6e;&#x7684;&#x914d;&#x7f6e;&#x4f1a;&#x88ab;&#x4e0b;&#x4e00;&#x7ea7;&#x7684;&#x914d;&#x7f6e;&#x7ee7;&#x627f;&#xff0c;&#x6bd4;&#x5982;http_main&#x4f1a;&#x88ab;http_svr&#x7ee7;&#x627f;&#xff0c;http_svr&#x4f1a;&#x88ab;http_loc&#x7ee7;&#x627f;&#xff0c;&#x8fd9;&#x4e9b;&#x7ee7;&#x627f;&#x5728;&#x6e90;&#x7801;&#x4e2d;&#x662f;&#x8c03;&#x7528;&#x6a21;&#x5757;&#x4e0a;&#x4e0b;&#x6587;&#x7684;&#x5408;&#x5e76;&#x914d;&#x7f6e;&#x7684;&#x63a5;&#x53e3;&#x5b8c;&#x6210;&#x7684;&#x3002;&#xa;&#xa;ngx_command_t&#x7684;set&#x6210;&#x5458;&#x4e5f;&#x53ef;&#x4ee5;&#x4f5c;&#x4e3a;&#x4e00;&#x4e2a;&#x56de;&#x8c03;&#x51fd;&#x6570;&#xff0c;&#x901a;&#x8fc7;&#x628a;&#x81ea;&#x5b9a;&#x4e49;&#x7684;&#x64cd;&#x4f5c;&#x51fd;&#x6570;&#x8d4b;&#x503c;&#x7ed9;set&#x6765;&#x6ce8;&#x518c;&#x4e00;&#x4e9b;&#x64cd;&#x4f5c;&#x3002;&#xa;&#xa;&#x5230;&#x76ee;&#x524d;&#x4e3a;&#x6b62;&#xff0c;&#x5df2;&#x7ecf;&#x4e86;&#x89e3;&#x4e0d;&#x5c11;&#x56de;&#x8c03;&#x51fd;&#x6570;&#x4e86;&#xff0c;&#x8fd9;&#x4e9b;&#x56de;&#x8c03;&#x51fd;&#x6570;&#x7528;&#x6765;&#x6ce8;&#x518c;&#x6a21;&#x5757;&#x7684;&#x81ea;&#x5b9a;&#x4e49;&#x64cd;&#x4f5c;&#xff0c;&#x6211;&#x6709;&#x65f6;&#x79f0;&#x5b83;&#x4e3a;&#x63a5;&#x53e3;&#xff0c;&#x6709;&#x65f6;&#x79f0;&#x5b83;&#x4e3a;&#x56de;&#x8c03;&#x51fd;&#x6570;&#xff0c;&#x6709;&#x70b9;&#x6df7;&#x4e71;&#xff0c;&#x63a5;&#x4e0b;&#x6765;&#x7684;&#x5206;&#x6790;&#x6587;&#x7ae0;&#x4e2d;&#xff0c;&#x8fdb;&#x884c;&#x4e00;&#x4e0b;&#x7edf;&#x4e00;&#xff0c;&#x5168;&#x90e8;&#x79f0;&#x4e3a;&#x94a9;&#x5b50;&#xff08;hook&#xff09;&#x3002;&#x628a;&#x73b0;&#x5728;&#x5df2;&#x7ecf;&#x5206;&#x6790;&#x8fc7;&#x7684;&#x94a9;&#x5b50;&#x7f57;&#x5217;&#x4e00;&#x4e0b;&#xff1a;&#xa;&#xa;ngx_module_t -&gt; init_master&#xa;ngx_module_t -&gt; init_module&#xa;ngx_module_t -&gt; init_process&#xa;ngx_module_t -&gt; init_thread&#xa;ngx_module_t -&gt; exit_thread&#xa;ngx_module_t -&gt; exit_process&#xa;ngx_module_t -&gt; exit_master&#xa;&#xa;ngx_command_t -&gt; set&#xa;&#xa;&#x4e0b;&#x4e00;&#x7bc7;&#x5256;&#x6790;&#x6a21;&#x5757;&#x4e0a;&#x4e0b;&#x6587;&#x7684;&#x65f6;&#x5019;&#xff0c;&#x4f1a;&#x6709;&#x66f4;&#x591a;&#x7684;&#x94a9;&#x5b50;&#xff0c;&#x8fd9;&#x5c31;&#x662f;&#x4e3a;&#x4ec0;&#x4e48;&#x8981;&#x5bf9;c&#x8bed;&#x8a00;&#x7684;&#x6307;&#x9488;&#x6df1;&#x5165;&#x7406;&#x89e3;&#x7684;&#x539f;&#x56e0;&#x4e86;&#xff0c;nginx&#x4e2d;&#x5230;&#x5904;&#x90fd;&#x662f;&#x94a9;&#x5b50;&#xff0c;&#x5047;&#x5982;&#x8981;&#x81ea;&#x5df1;&#x5199;&#x4e00;&#x4e2a;&#x6a21;&#x5757;&#xff0c;&#x53ef;&#x4ee5;&#x901a;&#x8fc7;&#x8fd9;&#x4e9b;&#x94a9;&#x5b50;&#x628a;&#x81ea;&#x5df1;&#x7684;&#x6a21;&#x5757;&#x6302;&#x5230;nginx&#x7684;&#x5904;&#x7406;&#x6d41;&#x4e2d;&#xff0c;&#x53c2;&#x4e0e;&#x5230;nginx&#x8fd0;&#x884c;&#x7684;&#x6bcf;&#x4e2a;&#x7279;&#x5b9a;&#x9636;&#x6bb5;&#xff0c;&#x5f53;&#x7136;&#xff0c;&#x4e5f;&#x4e0d;&#x662f;&#x968f;&#x610f;&#x7684;&#x5d4c;&#x5165;&#xff0c;&#x8981;&#x7cbe;&#x786e;&#x5b9a;&#x4e49;&#x6a21;&#x5757;&#x4f55;&#x65f6;&#x5982;&#x4f55;&#x4ea7;&#x751f;&#x4f5c;&#x7528;&#x624d;&#x662f;&#x6709;&#x610f;&#x4e49;&#x7684;&#xff0c;&#x8fd9;&#x4e0d;&#x662f;&#x4e00;&#x4ef6;&#x8f7b;&#x677e;&#x7684;&#x4e8b;&#x60c5;&#x3002;"/>
-</node>
-</node>
 <node CREATED="1389070818829" FOLDED="true" MODIFIED="1389149737862" TEXT="ngx_core_module_t">
 <icon BUILTIN="full-3"/>
 <node CREATED="1389146489892" MODIFIED="1389146502340" TEXT="&#x7ed3;&#x6784;&#x5206;&#x6790;">
@@ -6681,7 +6673,7 @@
 </node>
 <node CREATED="1389593983132" MODIFIED="1389594007644" TEXT="&#x5728;ngx_init_cycle&#x4e2d;&#x521d;&#x59cb;&#x5316;"/>
 </node>
-<node CREATED="1388928664866" MODIFIED="1389107626790" TEXT="ngx_http_module_t">
+<node CREATED="1388928664866" FOLDED="true" MODIFIED="1389107626790" TEXT="ngx_http_module_t">
 <icon BUILTIN="full-3"/>
 <node CREATED="1389592562109" FOLDED="true" MODIFIED="1389592568403" TEXT="&#x7ed3;&#x6784;&#x5206;&#x6790;">
 <node CREATED="1389071288907" MODIFIED="1389071304304">
@@ -6754,7 +6746,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1388928654001" ID="ID_1262072544" MODIFIED="1389600254890" TEXT="ngx_event_module_t">
+<node CREATED="1388928654001" FOLDED="true" ID="ID_1262072544" MODIFIED="1389600254890" TEXT="ngx_event_module_t">
 <icon BUILTIN="full-3"/>
 <node CREATED="1389146454989" FOLDED="true" MODIFIED="1389146530362" TEXT="&#x7ed3;&#x6784;&#x5206;&#x6790;">
 <node CREATED="1389071198024" MODIFIED="1389599930590">
@@ -7997,6 +7989,131 @@
 </node>
 </node>
 </node>
+<node CREATED="1388928327257" ID="ID_13477724" LINK="#ID_594437396" MODIFIED="1389107638080" TEXT="ngx_command_t">
+<icon BUILTIN="full-2"/>
+<node CREATED="1389150403890" FOLDED="true" MODIFIED="1389150477119" TEXT="&#x7ed3;&#x6784;&#x4f53;">
+<node CREATED="1389150422386" MODIFIED="1390274984137">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct ngx_command_s {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_str_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;name;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <font color="#f10a0a">type</font>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;char&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*(*set)(ngx_conf_t *cf, ngx_command_t *cmd, void *conf);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <font color="#f50606">conf</font>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;offset;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;void&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*post;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1390274754869" LINK="#ID_1418391254" MODIFIED="1390274920479" TEXT="type"/>
+<node CREATED="1390274754869" LINK="#ID_1418391254" MODIFIED="1390274927729" TEXT="conf"/>
+<node CREATED="1388928340305" FOLDED="true" LINK="http://blog.csdn.net/kenbinzhang/article/details/4658085" MODIFIED="1389105627234" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1388928363577" MODIFIED="1388928399963" TEXT="&#x6a21;&#x5757;&#x7684;&#x6307;&#x4ee4;&#x5728;&#x6e90;&#x7801;&#x4e2d;&#x662f;ngx_command_t&#x7ed3;&#x6784;&#x7684;&#x53d8;&#x91cf;&#xff0c;ngx_command_t&#x7684;&#x58f0;&#x660e;&#x5728;src/core/ngx_conf_file.h&#x4e2d;:&#xa;&#xa;struct ngx_command_s {&#xa;    ngx_str_t             name;&#xa;    ngx_uint_t            type;&#xa;    char               *(*set)(ngx_conf_t *cf, ngx_command_t *cmd, void *conf);&#xa;    ngx_uint_t            conf;&#xa;    ngx_uint_t            offset;&#xa;    void                 *post;&#xa;};&#xa;&#xa;name&#x662f;&#x6307;&#x4ee4;&#x540d;&#x79f0;&#x7684;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x4e0d;&#x5305;&#x542b;&#x7a7a;&#x683c;&#x3002;&#xa;&#xa;type&#x662f;&#x6807;&#x8bc6;&#x7b26;&#x96c6;&#xff0c;&#x6807;&#x8bc6;&#x6307;&#x4ee4;&#x5728;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e2d;&#x7684;&#x5408;&#x6cd5;&#x4f4d;&#x7f6e;&#x548c;&#x6307;&#x4ee4;&#x7684;&#x53c2;&#x6570;&#x4e2a;&#x6570;&#x3002;&#x8fd9;&#x662f;&#x4e00;&#x4e2a;&#x81f3;&#x5c11;&#x6709;32bit&#x7684;&#x65e0;&#x7b26;&#x53f7;&#x6574;&#x5f62;&#xff0c;&#x524d;16bit&#x7528;&#x4e8e;&#x6807;&#x8bc6;&#x4f4d;&#x7f6e;&#xff0c;&#x540e;16bit&#x7528;&#x4e8e;&#x6807;&#x8bc6;&#x53c2;&#x6570;&#x3002;&#xa;&#xa;&#x5148;&#x770b;&#x770b;&#x53c2;&#x6570;&#x7684;&#x6807;&#x8bc6;&#xff0c;&#x5b8f;&#x5b9a;&#x4e49;&#x5728;src/core/ngx_conf_file.h&#x4e2d;:&#xa;&#xa;#define NGX_CONF_NOARGS      0x00000001 &#xff08;&#x6ca1;&#x6709;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE1       0x00000002 &#xff08;&#x6709;1&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE2       0x00000004 &#xff08;&#x6709;2&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE3       0x00000008 &#xff08;&#x6709;3&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE4       0x00000010 &#xff08;&#x6709;4&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE5       0x00000020 &#xff08;&#x6709;5&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE6       0x00000040 &#xff08;&#x6709;6&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE7       0x00000080 &#xff08;&#x6709;7&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;&#xa;#define NGX_CONF_MAX_ARGS    8&#xa;&#xa;#define NGX_CONF_TAKE12      (NGX_CONF_TAKE1|NGX_CONF_TAKE2) &#xff08;&#x6709;1&#x4e2a;&#x6216;&#x8005;&#x6709;2&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE13      (NGX_CONF_TAKE1|NGX_CONF_TAKE3)&#xa;&#xa;#define NGX_CONF_TAKE23      (NGX_CONF_TAKE2|NGX_CONF_TAKE3)&#xa;&#xa;#define NGX_CONF_TAKE123     (NGX_CONF_TAKE1|NGX_CONF_TAKE2|NGX_CONF_TAKE3)&#xa;#define NGX_CONF_TAKE1234    (NGX_CONF_TAKE1|NGX_CONF_TAKE2|NGX_CONF_TAKE3   /&#xa;                              |NGX_CONF_TAKE4)&#xa;&#xa;#define NGX_CONF_ARGS_NUMBER 0x000000ff&#xa;#define NGX_CONF_BLOCK       0x00000100  (&#x5757;&#x57df;&#xff0c;&#x540e;&#x9762;&#x8ddf;{...}&#xff0c;&#x4f8b;&#x5982;:events {...})&#xa;#define NGX_CONF_FLAG        0x00000200 &#xff08;&#x6709;&#x4e00;&#x4e2a;&#x5e03;&#x5c14;&#x578b;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_ANY         0x00000400&#xa;#define NGX_CONF_1MORE       0x00000800 &#xff08;&#x81f3;&#x591a;&#x6709;1&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_2MORE       0x00001000 &#xff08;&#x81f3;&#x591a;&#x6709;2&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_MULTI       0x00002000&#xa;&#xa;&#x518d;&#x770b;&#x770b;&#x4f4d;&#x7f6e;&#x7684;&#x6807;&#x8bc6;&#xff0c;&#x4f4d;&#x7f6e;&#x7684;&#x6807;&#x8bc6;&#x5b8f;&#x5b9a;&#x4e49;&#x5728;&#x51e0;&#x4e2a;&#x6587;&#x4ef6;&#x4e2d;:&#xa;&#xa;src/core/ngx_conf_file.h:&#xa;#define NGX_DIRECT_CONF      0x00010000&#xa;&#xa;#define NGX_MAIN_CONF        0x01000000&#xa;#define NGX_ANY_CONF         0x0F000000&#xa;&#xa;src/event/ngx_event.h:&#xa;#define NGX_EVENT_CONF        0x02000000&#xa;&#xa;src/http/ngx_http_config.h:&#xa;#define NGX_HTTP_MAIN_CONF        0x02000000&#xa;#define NGX_HTTP_SRV_CONF         0x04000000&#xa;#define NGX_HTTP_LOC_CONF         0x08000000&#xa;#define NGX_HTTP_UPS_CONF         0x10000000&#xa;#define NGX_HTTP_SIF_CONF         0x20000000&#xa;#define NGX_HTTP_LIF_CONF         0x40000000&#xa;#define NGX_HTTP_LMT_CONF         0x80000000&#xa;&#xa;src/mail/ngx_mail.h:&#xa;#define NGX_MAIL_MAIN_CONF      0x02000000&#xa;#define NGX_MAIL_SRV_CONF       0x04000000&#xa;&#xa;&#x8981;&#x7406;&#x89e3;&#x4e0a;&#x9762;&#x6240;&#x8c13;&#x7684;&#x5408;&#x6cd5;&#x4f4d;&#x7f6e;&#x7684;&#x771f;&#x6b63;&#x542b;&#x4e49;&#xff0c;&#x5c31;&#x8981;&#x4e86;&#x89e3;&#x4e00;&#x4e0b;nginx&#x7684;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e86;&#xff0c;&#x8fd9;&#x91cc;&#x5c31;&#x4e0d;&#x7d2f;&#x8ff0;&#x4e86;&#xff0c;&#x4e0d;&#x5f71;&#x54cd;&#x4e0b;&#x9762;&#x7684;&#x5206;&#x6790;&#xff0c;&#x6211;&#x4f1a;&#x5728;&#x5f88;&#x540e;&#x9762;&#x7684;&#x65f6;&#x5019;&#x5206;&#x6790;&#x4e00;&#x4e0b;nginx&#x7684;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#xff0c;&#x56e0;&#x4e3a;&#x90a3;&#x662f;&#x4e00;&#x4e2a;big topic&#x3002;&#xa;&#xa;set&#x662f;&#x4e00;&#x4e2a;&#x51fd;&#x6570;&#x6307;&#x9488;&#xff0c;&#x8fd9;&#x4e2a;&#x51fd;&#x6570;&#x4e3b;&#x8981;&#x662f;&#x4ece;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e2d;&#x628a;&#x8be5;&#x6307;&#x4ee4;&#x7684;&#x53c2;&#x6570;&#xff08;&#x5b58;&#x653e;&#x5728;ngx_conf_t&#x4e2d;&#xff09;&#x8f6c;&#x6362;&#x4e3a;&#x5408;&#x9002;&#x7684;&#x6570;&#x636e;&#x7c7b;&#x578b;&#x5e76;&#x5c06;&#x8f6c;&#x6362;&#x540e;&#x7684;&#x503c;&#x4fdd;&#x5b58;&#x5230;&#x6a21;&#x5757;&#x7684;&#x914d;&#x7f6e;&#x7ed3;&#x6784;&#x4f53;&#x4e2d;&#xff08;void *conf&#xff09;&#xff0c;&#x8fd9;&#x4e2a;&#x914d;&#x7f6e;&#x7ed3;&#x6784;&#x4f53;&#x53c8;&#x662f;&#x7528;void *&#x6307;&#x5411;&#x7684;&#xff0c;&#x5e94;&#x8be5;&#x53ef;&#x4ee5;&#x6599;&#x5230;&#x8fd9;&#x8bf4;&#x660e;&#x6bcf;&#x4e2a;&#x6a21;&#x5757;&#x7684;&#x914d;&#x7f6e;&#x7ed3;&#x6784;&#x4f53;&#x662f;&#x4e0d;&#x540c;&#x7684;&#xff0c;&#x8fd9;&#x4e9b;&#x7ed3;&#x6784;&#x4f53;&#x547d;&#x540d;&#x683c;&#x5f0f;&#x4e3a;:ngx_&lt;module name&gt;_conf_t&#xff0c;&#x81f3;&#x4e8e;&#x8981;&#x628a;&#x8f6c;&#x6362;&#x540e;&#x7684;&#x503c;&#x653e;&#x5230;&#x914d;&#x7f6e;&#x7ed3;&#x6784;&#x4f53;&#x7684;&#x4ec0;&#x4e48;&#x4f4d;&#x7f6e;&#xff0c;&#x5c31;&#x8981;&#x4f9d;&#x9760;offset&#x4e86;&#xff0c;offset&#x662f;&#x8c03;&#x7528;&#x4e86;offsetof&#x51fd;&#x6570;&#x8ba1;&#x7b97;&#x51fa;&#x7684;&#x7ed3;&#x6784;&#x4f53;&#x4e2d;&#x67d0;&#x4e2a;&#x6210;&#x5458;&#x7684;&#x504f;&#x79fb;&#x4f4d;&#x7f6e;&#x3002;&#xa;&#xa;&#x5e76;&#x4e0d;&#x662f;&#x6240;&#x6709;&#x7684;&#x6a21;&#x5757;&#x90fd;&#x8981;&#x5b9a;&#x4e49;&#x4e00;&#x4e2a;&#x914d;&#x7f6e;&#x7ed3;&#x6784;&#x4f53;&#xff0c;&#x56e0;&#x4e3a;set&#x4e5f;&#x53ef;&#x80fd;&#x662f;&#x4e00;&#x4e2a;&#x7b80;&#x5355;&#x7684;&#x64cd;&#x4f5c;&#x51fd;&#x6570;&#xff0c;&#x5b83;&#x53ef;&#x80fd;&#x53ea;&#x662f;&#x4ece;&#x914d;&#x7f6e;&#x4e2d;&#xff08;ngx_conf_t&#xff09;&#x8bfb;&#x53d6;&#x4e00;&#x4e9b;&#x6570;&#x636e;&#x8fdb;&#x884c;&#x7b80;&#x5355;&#x7684;&#x64cd;&#x4f5c;&#xff0c;&#x6bd4;&#x5982;errlog&#x6a21;&#x5757;&#x7684;&#x201c;error_log&#x201d;&#x6307;&#x4ee4;&#x5c31;&#x662f;&#x8c03;&#x7528;ngx_error_log&#x5199;&#x4e00;&#x6761;&#x65e5;&#x5fd7;&#xff0c;&#x5e76;&#x4e0d;&#x9700;&#x8981;&#x5b58;&#x50a8;&#x4ec0;&#x4e48;&#x914d;&#x7f6e;&#x6570;&#x636e;&#x3002;&#xa;&#xa;conf&#x548c;offset&#xff0c;offset&#x524d;&#x9762;&#x5df2;&#x7ecf;&#x63d0;&#x5230;&#xff0c;&#x5b83;&#x662f;&#x914d;&#x7f6e;&#x7ed3;&#x6784;&#x4f53;&#x4e2d;&#x6210;&#x5458;&#x7684;&#x504f;&#x79fb;&#x3002;conf&#x4e5f;&#x662f;&#x4e00;&#x4e2a;&#x504f;&#x79fb;&#x503c;&#xff0c;&#x4e0d;&#x8fc7;&#x5b83;&#x662f;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x7ed3;&#x6784;&#x4f53;&#x7684;&#xff08;ngx_conf_t&#xff09;&#x6210;&#x5458;ctx&#x7684;&#x6210;&#x5458;&#x7684;&#x504f;&#x79fb;&#xff0c;&#x4e00;&#x822c;&#x662f;&#x7528;&#x6765;&#x628a;ctx&#x4e2d;&#x6307;&#x5b9a;&#x504f;&#x79fb;&#x4f4d;&#x7f6e;&#x7684;&#x6210;&#x5458;&#x8d4b;&#x503c;&#x7ed9;void *conf&#x3002;&#xa;&#xa;post&#x6307;&#x5411;&#x6a21;&#x5757;&#x8bfb;&#x914d;&#x7f6e;&#x7684;&#x65f6;&#x5019;&#x9700;&#x8981;&#x7684;&#x4e00;&#x4e9b;&#x96f6;&#x788e;&#x53d8;&#x91cf;&#x3002;&#xa;&#xa;&#x4ece;&#x4e0a;&#x9762;&#x7684;&#x5206;&#x6790;&#x53ef;&#x4ee5;&#x770b;&#x51fa;&#xff0c;&#x6bcf;&#x4e2a;&#x6a21;&#x5757;&#x4f1a;&#x6620;&#x5c04;&#x5230;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e2d;&#x7684;&#x67d0;&#x4e2a;&#x4f4d;&#x7f6e;&#xff0c;&#x5168;&#x5c40;&#x4f4d;&#x7f6e;&#x7684;&#x914d;&#x7f6e;&#x4f1a;&#x88ab;&#x4e0b;&#x4e00;&#x7ea7;&#x7684;&#x914d;&#x7f6e;&#x7ee7;&#x627f;&#xff0c;&#x6bd4;&#x5982;http_main&#x4f1a;&#x88ab;http_svr&#x7ee7;&#x627f;&#xff0c;http_svr&#x4f1a;&#x88ab;http_loc&#x7ee7;&#x627f;&#xff0c;&#x8fd9;&#x4e9b;&#x7ee7;&#x627f;&#x5728;&#x6e90;&#x7801;&#x4e2d;&#x662f;&#x8c03;&#x7528;&#x6a21;&#x5757;&#x4e0a;&#x4e0b;&#x6587;&#x7684;&#x5408;&#x5e76;&#x914d;&#x7f6e;&#x7684;&#x63a5;&#x53e3;&#x5b8c;&#x6210;&#x7684;&#x3002;&#xa;&#xa;ngx_command_t&#x7684;set&#x6210;&#x5458;&#x4e5f;&#x53ef;&#x4ee5;&#x4f5c;&#x4e3a;&#x4e00;&#x4e2a;&#x56de;&#x8c03;&#x51fd;&#x6570;&#xff0c;&#x901a;&#x8fc7;&#x628a;&#x81ea;&#x5b9a;&#x4e49;&#x7684;&#x64cd;&#x4f5c;&#x51fd;&#x6570;&#x8d4b;&#x503c;&#x7ed9;set&#x6765;&#x6ce8;&#x518c;&#x4e00;&#x4e9b;&#x64cd;&#x4f5c;&#x3002;&#xa;&#xa;&#x5230;&#x76ee;&#x524d;&#x4e3a;&#x6b62;&#xff0c;&#x5df2;&#x7ecf;&#x4e86;&#x89e3;&#x4e0d;&#x5c11;&#x56de;&#x8c03;&#x51fd;&#x6570;&#x4e86;&#xff0c;&#x8fd9;&#x4e9b;&#x56de;&#x8c03;&#x51fd;&#x6570;&#x7528;&#x6765;&#x6ce8;&#x518c;&#x6a21;&#x5757;&#x7684;&#x81ea;&#x5b9a;&#x4e49;&#x64cd;&#x4f5c;&#xff0c;&#x6211;&#x6709;&#x65f6;&#x79f0;&#x5b83;&#x4e3a;&#x63a5;&#x53e3;&#xff0c;&#x6709;&#x65f6;&#x79f0;&#x5b83;&#x4e3a;&#x56de;&#x8c03;&#x51fd;&#x6570;&#xff0c;&#x6709;&#x70b9;&#x6df7;&#x4e71;&#xff0c;&#x63a5;&#x4e0b;&#x6765;&#x7684;&#x5206;&#x6790;&#x6587;&#x7ae0;&#x4e2d;&#xff0c;&#x8fdb;&#x884c;&#x4e00;&#x4e0b;&#x7edf;&#x4e00;&#xff0c;&#x5168;&#x90e8;&#x79f0;&#x4e3a;&#x94a9;&#x5b50;&#xff08;hook&#xff09;&#x3002;&#x628a;&#x73b0;&#x5728;&#x5df2;&#x7ecf;&#x5206;&#x6790;&#x8fc7;&#x7684;&#x94a9;&#x5b50;&#x7f57;&#x5217;&#x4e00;&#x4e0b;&#xff1a;&#xa;&#xa;ngx_module_t -&gt; init_master&#xa;ngx_module_t -&gt; init_module&#xa;ngx_module_t -&gt; init_process&#xa;ngx_module_t -&gt; init_thread&#xa;ngx_module_t -&gt; exit_thread&#xa;ngx_module_t -&gt; exit_process&#xa;ngx_module_t -&gt; exit_master&#xa;&#xa;ngx_command_t -&gt; set&#xa;&#xa;&#x4e0b;&#x4e00;&#x7bc7;&#x5256;&#x6790;&#x6a21;&#x5757;&#x4e0a;&#x4e0b;&#x6587;&#x7684;&#x65f6;&#x5019;&#xff0c;&#x4f1a;&#x6709;&#x66f4;&#x591a;&#x7684;&#x94a9;&#x5b50;&#xff0c;&#x8fd9;&#x5c31;&#x662f;&#x4e3a;&#x4ec0;&#x4e48;&#x8981;&#x5bf9;c&#x8bed;&#x8a00;&#x7684;&#x6307;&#x9488;&#x6df1;&#x5165;&#x7406;&#x89e3;&#x7684;&#x539f;&#x56e0;&#x4e86;&#xff0c;nginx&#x4e2d;&#x5230;&#x5904;&#x90fd;&#x662f;&#x94a9;&#x5b50;&#xff0c;&#x5047;&#x5982;&#x8981;&#x81ea;&#x5df1;&#x5199;&#x4e00;&#x4e2a;&#x6a21;&#x5757;&#xff0c;&#x53ef;&#x4ee5;&#x901a;&#x8fc7;&#x8fd9;&#x4e9b;&#x94a9;&#x5b50;&#x628a;&#x81ea;&#x5df1;&#x7684;&#x6a21;&#x5757;&#x6302;&#x5230;nginx&#x7684;&#x5904;&#x7406;&#x6d41;&#x4e2d;&#xff0c;&#x53c2;&#x4e0e;&#x5230;nginx&#x8fd0;&#x884c;&#x7684;&#x6bcf;&#x4e2a;&#x7279;&#x5b9a;&#x9636;&#x6bb5;&#xff0c;&#x5f53;&#x7136;&#xff0c;&#x4e5f;&#x4e0d;&#x662f;&#x968f;&#x610f;&#x7684;&#x5d4c;&#x5165;&#xff0c;&#x8981;&#x7cbe;&#x786e;&#x5b9a;&#x4e49;&#x6a21;&#x5757;&#x4f55;&#x65f6;&#x5982;&#x4f55;&#x4ea7;&#x751f;&#x4f5c;&#x7528;&#x624d;&#x662f;&#x6709;&#x610f;&#x4e49;&#x7684;&#xff0c;&#x8fd9;&#x4e0d;&#x662f;&#x4e00;&#x4ef6;&#x8f7b;&#x677e;&#x7684;&#x4e8b;&#x60c5;&#x3002;"/>
+</node>
+</node>
+<node CREATED="1389150266269" FOLDED="true" MODIFIED="1390274182115" TEXT="ngx_conf_t">
+<icon BUILTIN="full-2"/>
+<node CREATED="1389150403890" MODIFIED="1389150477119" TEXT="&#x7ed3;&#x6784;&#x4f53;">
+<node CREATED="1389150422386" MODIFIED="1389601865680">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct ngx_conf_s {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;char&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*name;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_array_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*<font color="#f50202">args</font>;//&#22312;ngx_events_block&#20013;&#26377;&#20351;&#29992;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_cycle_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*cycle;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_pool_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*<font color="#f90606">pool</font>;//&#22312;ngx_events_block&#20013;&#26377;&#20351;&#29992;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_pool_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*temp_pool;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_conf_file_t&#160;&#160;&#160;&#160;&#160;&#160;*conf_file;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_log_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*log;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;void&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*<font color="#f90606">ctx</font>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<font color="#fb0404">module_type</font>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<font color="#fc0707">cmd_type</font>;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_conf_handler_pt&#160;&#160;<font color="#fd0e0e">&#160;handler</font>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;char&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*<font color="#f60909">handler_conf</font>;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1389150462109" LINK="#ID_260480348" MODIFIED="1389150511849" TEXT="module_type"/>
+<node CREATED="1389150475025" LINK="#ID_260480348" MODIFIED="1389150519033" TEXT="cmd_type"/>
+<node CREATED="1389150526944" LINK="#ID_260480348" MODIFIED="1389150536776" TEXT="ctx"/>
+<node CREATED="1389591316401" LINK="#ID_922869772" MODIFIED="1389591357546">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      handler
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1389591335905" LINK="#ID_922869772" MODIFIED="1389591362445" TEXT="handler_conf"/>
+<node CREATED="1389601875679" LINK="#ID_1181673648" MODIFIED="1389601900963" TEXT="args,pool"/>
+</node>
 <node CREATED="1389098147110" FOLDED="true" MODIFIED="1389106676267" TEXT="ngx_process_t">
 <node CREATED="1389098160431" MODIFIED="1389098355839">
 <richcontent TYPE="NODE"><html>
@@ -8270,87 +8387,6 @@
 </node>
 <node CREATED="1389144643593" LINK="#ID_429337595" MODIFIED="1389144653377" TEXT="listening"/>
 </node>
-<node CREATED="1389150266269" FOLDED="true" MODIFIED="1389151915292" TEXT="ngx_conf_t">
-<node CREATED="1389150403890" FOLDED="true" MODIFIED="1389150477119" TEXT="&#x7ed3;&#x6784;&#x4f53;">
-<node CREATED="1389150422386" MODIFIED="1389601865680">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct ngx_conf_s {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;char&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*name;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_array_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*<font color="#f50202">args</font>;//&#22312;ngx_events_block&#20013;&#26377;&#20351;&#29992;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_cycle_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*cycle;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_pool_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*<font color="#f90606">pool</font>;//&#22312;ngx_events_block&#20013;&#26377;&#20351;&#29992;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_pool_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*temp_pool;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_conf_file_t&#160;&#160;&#160;&#160;&#160;&#160;*conf_file;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_log_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*log;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;void&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*<font color="#f90606">ctx</font>;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<font color="#fb0404">module_type</font>;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<font color="#fc0707">cmd_type</font>;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_conf_handler_pt&#160;&#160;<font color="#fd0e0e">&#160;handler</font>;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;char&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*<font color="#f60909">handler_conf</font>;
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1389150462109" LINK="#ID_260480348" MODIFIED="1389150511849" TEXT="module_type"/>
-<node CREATED="1389150475025" LINK="#ID_260480348" MODIFIED="1389150519033" TEXT="cmd_type"/>
-<node CREATED="1389150526944" LINK="#ID_260480348" MODIFIED="1389150536776" TEXT="ctx"/>
-<node CREATED="1389591316401" LINK="#ID_922869772" MODIFIED="1389591357546">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      handler
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1389591335905" LINK="#ID_922869772" MODIFIED="1389591362445" TEXT="handler_conf"/>
-<node CREATED="1389601875679" LINK="#ID_1181673648" MODIFIED="1389601900963" TEXT="args,pool"/>
-</node>
 <node CREATED="1389272924862" FOLDED="true" MODIFIED="1389273031135" TEXT="ngx_log_s">
 <node CREATED="1389272931294" MODIFIED="1389272947872">
 <richcontent TYPE="NODE"><html>
@@ -8454,8 +8490,40 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1389600177743" MODIFIED="1389600181060" TEXT="event">
+<node CREATED="1389600177743" FOLDED="true" MODIFIED="1389600181060" TEXT="event">
 <node CREATED="1389082295120" MODIFIED="1390007696738" TEXT="ngx_event_s">
+<node CREATED="1389080693298" FOLDED="true" MODIFIED="1390015861014" TEXT="&#x7ed3;&#x6784;&#x5206;&#x6790;">
+<node CREATED="1389082303128" MODIFIED="1390015873119">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#160;* ngx_event_t&#12288;&#12288;&#12288; : &#20107;&#20214;&#32467;&#26500;&#20307;&#65292;&#26377;&#20010;&#37325;&#35201;&#30340;&#20989;&#25968;&#25351;&#38024;handler&#65292;fd&#20107;&#20214;&#34987;&#39537;&#21160;&#26102;&#65292;&#23558;&#35843;&#29992;&#36825;&#20010;&#20989;&#25968;&#12290;
+    </p>
+    <p>
+      &#160;*&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#23427;&#26377;&#20960;&#20010;&#37325;&#35201;&#25104;&#21592;
+    </p>
+    <p>
+      &#160;*&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;timer_set&#160;&#160;: &#27599;&#20010;event&#22312;epoll_wait&#21069;&#65292;&#35201;&#20808;&#36827;&#20837;&#23450;&#26102;&#22120;&#32418;&#40657;&#26641;&#65292;&#36825;&#20010;&#26631;&#35760;&#23601;&#26159;
+    </p>
+    <p>
+      &#160;*&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#26631;&#35760;&#26159;&#21542;&#22312;&#23450;&#26102;&#22120;&#37324;&#65292; &#36229;&#26102;&#22788;&#29702;&#29992;&#30340;.
+    </p>
+    <p>
+      &#160;*&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;active&#160;&#160;&#160;&#160;&#160;&#160;&#160;: &#24403;ngx_add_event&#37324;(&#28155;&#21152;&#25110;&#26356;&#26032;&#20107;&#20214;) &#36827;&#20837;epoll&#26102;&#65292;&#20250;&#32622;&#20026;1.
+    </p>
+    <p>
+      &#160;*&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ready&#160;&#160;&#160;&#160;&#160;&#160;&#160;: &#36827;&#20837;&#20107;&#20214;&#38431;&#21015;&#37324;&#65292;&#23558;&#32622;&#20026;1&#65292;&#21482;&#26377;&#20026;&#65297;&#65292;&#23427;&#23545;&#24212;&#30340;socket fd&#25165;&#21487;&#20197;&#35835;
+    </p>
+    <p>
+      &#160;*&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;timedout&#160;&#160;&#160;: &#27492;&#20107;&#20214;&#23545;&#24212;&#30340;socket fd&#23558;&#35270;&#20026;&#36229;&#26102;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
 <node CREATED="1389080693298" FOLDED="true" LINK="#ID_280816995" MODIFIED="1389105613298" TEXT="&#x7ed3;&#x6784;&#x5206;&#x6790;">
 <node CREATED="1389082303128" MODIFIED="1389103908469">
 <richcontent TYPE="NODE"><html>
@@ -8699,7 +8767,7 @@
 </node>
 </node>
 <node CREATED="1389080781400" FOLDED="true" MODIFIED="1389103767538" TEXT="epoll&#x64cd;&#x4f5c;&#x51fd;&#x6570;">
-<node CREATED="1389080781400" LINK="#ID_435219623" MODIFIED="1389591955116" TEXT="ngx_epoll_init">
+<node CREATED="1389080781400" FOLDED="true" LINK="#ID_435219623" MODIFIED="1389591955116" TEXT="ngx_epoll_init">
 <node CREATED="1389080728395" MODIFIED="1389083591770">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -9303,7 +9371,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1389151355314" MODIFIED="1389151369535" POSITION="right" TEXT="&#x56de;&#x8c03;&#x51fd;&#x6570;">
+<node CREATED="1389151355314" FOLDED="true" MODIFIED="1389151369535" POSITION="right" TEXT="&#x56de;&#x8c03;&#x51fd;&#x6570;">
 <node CREATED="1389242699632" FOLDED="true" ID="ID_1118410517" LINK="#ID_1345550578" MODIFIED="1389447876152" TEXT="ngx_signal_handler">
 <node CREATED="1389242707048" MODIFIED="1389447876150" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node BACKGROUND_COLOR="#ffff00" CREATED="1389242714057" MODIFIED="1389242724141">
@@ -9824,7 +9892,7 @@
 </node>
 </node>
 <node CREATED="1389594444537" MODIFIED="1389594479348" TEXT="/*init_process*/">
-<node CREATED="1389151285281" ID="ID_579592898" LINK="#ID_440555041" MODIFIED="1389591857479" TEXT="ngx_event_process_init">
+<node CREATED="1389151285281" FOLDED="true" ID="ID_579592898" LINK="#ID_440555041" MODIFIED="1389591857479" TEXT="ngx_event_process_init">
 <node CREATED="1389345764637" FOLDED="true" LINK="http://www.pagefault.info/?p=201" MODIFIED="1389595382350" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1389345806379" ID="ID_1712714867" MODIFIED="1390011199017">
 <richcontent TYPE="NODE"><html>
@@ -10647,8 +10715,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1389594505384" FOLDED="true" MODIFIED="1389594527369" TEXT="/*command set*/">
-<node CREATED="1389591191053" MODIFIED="1389591261281" TEXT="ngx_http_core_types">
+<node CREATED="1389594505384" MODIFIED="1389594527369" TEXT="/*command set*/">
+<node CREATED="1389591191053" FOLDED="true" MODIFIED="1389591261281" TEXT="ngx_http_core_types">
 <node CREATED="1389345764637" MODIFIED="1389447850946" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1389345806379" ID="ID_922869772" MODIFIED="1389591658334">
 <richcontent TYPE="NODE"><html>
@@ -10720,7 +10788,7 @@
 <node CREATED="1389591672409" LINK="#ID_1159741802" MODIFIED="1389591728633" TEXT="&#xa0;ngx_conf_parse"/>
 </node>
 <node CREATED="1389081320591" ID="ID_642383791" LINK="#ID_333242358" MODIFIED="1389448567915" TEXT="ngx_http_block">
-<node CREATED="1389081514663" FOLDED="true" MODIFIED="1389081601261" TEXT="ngx_http_optimize_servers">
+<node CREATED="1389081514663" MODIFIED="1389081601261" TEXT="ngx_http_optimize_servers">
 <node CREATED="1388929162025" FOLDED="true" MODIFIED="1389145398528" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;1">
 <node CREATED="1388929222345" MODIFIED="1389593181195">
 <richcontent TYPE="NODE"><html>
@@ -11012,8 +11080,8 @@
 <node CREATED="1389081618658" MODIFIED="1389081620094" TEXT="ngx_http_optimize_servers"/>
 </node>
 </node>
-<node CREATED="1389088130079" ID="ID_1463245406" LINK="#ID_824770665" MODIFIED="1389150490112" TEXT="ngx_events_block">
-<node CREATED="1389149980578" FOLDED="true" LINK="http://blog.csdn.net/kenbinzhang/article/details/4737539" MODIFIED="1389151263433" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389088130079" FOLDED="true" ID="ID_1463245406" LINK="#ID_824770665" MODIFIED="1389150490112" TEXT="ngx_events_block">
+<node CREATED="1389149980578" LINK="http://blog.csdn.net/kenbinzhang/article/details/4737539" MODIFIED="1389151263433" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1389088145645" ID="ID_260480348" MODIFIED="1389602152139">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -11587,8 +11655,655 @@
 </node>
 </node>
 </node>
+<node CREATED="1390271701198" FOLDED="true" MODIFIED="1390271718501" TEXT="/*ngx_connection_handler_pt*/">
+<node CREATED="1389345958461" FOLDED="true" ID="ID_113471940" LINK="#ID_64737652" MODIFIED="1389448731059" TEXT="ngx_http_init_connection">
+<node CREATED="1389450031541" FOLDED="true" MODIFIED="1389575211840" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389345975790" MODIFIED="1389575974533">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#25509;&#19979;&#26469;&#23601;&#26159;ngx_http_init_connection&#20989;&#25968;&#20102;&#65292;&#36825;&#20010;&#20989;&#25968;&#20027;&#35201;&#26159;&#35774;&#32622;&#24403;&#21069;&#21477;&#26564;&#30340;&#35835;handler&#65292;&#22914;&#26524;&#25968;&#25454;&#21487;&#35835;&#65292;&#21017;&#30452;&#25509;&#35843;&#29992;request handler&#65292;&#22914;&#26524;&#25968;&#25454;&#19981;&#21487;&#35835;&#65292;&#21017;&#35774;&#32622;&#23450;&#26102;&#22120;(&#36229;&#26102;&#23450;&#26102;&#22120;),&#24182;&#23558;&#36825;&#20010;&#21477;&#26564;&#25346;&#36733;&#21040;&#20107;&#20214;&#22788;&#29702;&#22120;&#19978;&#12290;
+    </p>
+    <p>
+      &#36825;&#37324;&#26377;&#19968;&#20010;&#38656;&#35201;&#27880;&#24847;&#30340;&#22320;&#26041;&#65292;&#37027;&#23601;&#26159;&#22914;&#26524;&#20351;&#29992;&#20102;ngx_use_accept_mutex&#38145;&#30340;&#35805;&#65292;&#37027;&#20040;&#23601;&#19981;&#33021;&#22815;&#31435;&#21363;&#22788;&#29702;request&#65292;&#22240;&#20026;&#22788;&#29702;request&#26159;&#19968;&#20010;&#38750;&#24120;&#32791;&#26102;&#30340;&#25805;&#20316;&#65292;&#32780;&#29616;&#22312;&#22312;&#38145;&#37324;&#38754;&#65292;&#25152;&#20197;&#27492;&#26102;&#20043;&#38656;&#35201;&#23558;&#36825;&#20010;&#35835;&#20107;&#20214;&#25346;&#36733;&#21040;ngx_posted_events&#38431;&#21015;&#65292;&#31561;&#36864;&#20986;&#38145;&#20043;&#21518;&#20877;&#36827;&#34892;&#22788;&#29702;&#12290;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#32780;&#19968;&#33324;&#26469;&#35828;&#40664;&#35748;&#37117;&#20250;&#20351;&#29992;mutex&#38145;&#65292;&#22240;&#27492;&#27492;&#26102;&#23601;&#23558;rev&#21152;&#21040;post_events&#38431;&#21015;&#20013;&#65292;&#28982;&#21518;&#30452;&#25509;&#36820;&#22238;&#65292;&#37027;&#20040;&#21487;&#33021;&#23601;&#35201;&#38382;&#20102;&#65292;&#20160;&#20040;&#26102;&#20505;&#20250;&#25226;&#20107;&#20214;&#25346;&#36733;&#21040;epoll&#20013;&#21602;&#65292;&#36825;&#20010;&#25105;&#20204;&#25509;&#19979;&#26469;&#20250;&#20998;&#26512;&#12290;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ngx_http_init_connection(ngx_connection_t *c)
+    </p>
+    <p>
+      {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_event_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*rev;
+    </p>
+    <p>
+      .....................................................
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;c-&gt;log_error = NGX_ERROR_INFO;
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;rev = c-&gt;read;
+    </p>
+    <p>
+      //&#35774;&#32622;&#35835;handler.
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;rev-&gt;handler = <font color="#f31010">ngx_http_wait_request_handler;</font>
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;c-&gt;write-&gt;handler = <font color="#f90101">ngx_http_empty_handler;</font>
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      #if (NGX_STAT_STUB)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;(void) ngx_atomic_fetch_add(ngx_stat_reading, 1);
+    </p>
+    <p>
+      #endif
+    </p>
+    <p>
+      //&#22914;&#26524;&#25509;&#25910;&#20934;&#22791;&#22909;&#20102;&#65292;&#21017;&#30452;&#25509;&#35843;&#29992;ngx_http_init_request,&#22914;&#26524;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;if (rev-&gt;ready) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* the deferred accept(), rtsig, aio, iocp */
+    </p>
+    <p>
+      //&#22914;&#26524;&#20351;&#29992;&#20102;mutex&#38145;&#65292;&#21017;post &#36825;&#20010;event&#65292;&#28982;&#21518;&#36820;&#22238;&#12290;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (ngx_use_accept_mutex) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_post_event(rev, &amp;ngx_posted_events);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;<font color="#fa0505">&#160;rev-&gt;handler</font>(rev);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      //&#28155;&#21152;&#23450;&#26102;&#22120;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_add_timer(rev, c-&gt;listening-&gt;post_accept_timeout);
+    </p>
+    <p>
+      //&#23558;&#20107;&#20214;&#25346;&#36733;&#21040;&#20107;&#20214;&#22788;&#29702;&#22120;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;if (ngx_handle_read_event(rev, 0) != NGX_OK) {
+    </p>
+    <p>
+      #if (NGX_STAT_STUB)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(void) ngx_atomic_fetch_add(ngx_stat_reading, -1);
+    </p>
+    <p>
+      #endif
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_http_close_connection(c);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1389346235797" MODIFIED="1390014362577">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      ngx_http_wait_request_handler
+    </p>
+    <p>
+      (ngx_http_init_request)
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1389575527314" MODIFIED="1389575579406" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389346241253" ID="ID_736255149" LINK="#ID_1066849236" MODIFIED="1389575335139">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#28982;&#21518;&#23601;&#26159;ngx_http_wait_request_handler(ngx_http_init_request)&#65292;&#36827;&#20837;&#36825;&#20010;&#20989;&#25968;&#65292;&#35828;&#26126;&#23458;&#25143;&#31471;&#26377;&#35831;&#27714;&#36807;&#26469;&#20102;&#65292;&#27492;&#26102;&#25105;&#20204;&#23601;&#38656;&#35201;&#36827;&#20837;http&#30340;&#21327;&#35758;&#35299;&#26512;&#37096;&#20998;&#20102;&#65292;&#22240;&#27492;&#22312;&#36825;&#20010;&#20989;&#25968;&#20027;&#35201;&#23601;&#26159;&#21021;&#22987;&#21270;request&#32467;&#26500;&#65292;&#21021;&#22987;&#21270;&#23436;&#27605;&#21518;&#36827;&#20837;&#35299;&#26512;&#22788;&#29702;
+    </p>
+    <p>
+      static void
+    </p>
+    <p>
+      ngx_http_init_request(ngx_event_t *rev)
+    </p>
+    <p>
+      {
+    </p>
+    <p>
+      ............................................
+    </p>
+    <p>
+      //&#35774;&#32622;handler&#22238;&#35843;
+    </p>
+    <p>
+      &#160;&#160;&#160;rev-&gt;handler = <font color="#f10a0a">ngx_http_process_request_line</font>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;r-&gt;read_event_handler = ngx_http_block_reading;
+    </p>
+    <p>
+      ......................................................
+    </p>
+    <p>
+      //&#36827;&#20837;&#35299;&#26512;request &#37096;&#20998;&#12290;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;rev-&gt;handler(rev);
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1389346235797" ID="ID_1066849236" LINK="#ID_736255149" MODIFIED="1389449981141" TEXT="ngx_http_process_request_line">
+<node CREATED="1389346805641" FOLDED="true" MODIFIED="1389447876150" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389346241253" MODIFIED="1389576209518">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#26368;&#21518;&#26469;&#30475;ngx_http_process_request_line&#65292;&#36825;&#20010;&#20989;&#25968;&#23601;&#26159;&#23545;request line&#36827;&#34892;&#35299;&#26512;&#65292;&#32780;&#35299;&#26512;&#37096;&#20998;&#22312;&#25105;&#20197;&#21069;&#30340;blog&#24050;&#32463;&#20998;&#26512;&#36807;&#20102;&#65292;&#36825;&#37324;&#23601;&#19981;&#35814;&#32454;&#20998;&#26512;&#20102;&#12290;&#36825;&#37324;&#35201;&#27880;&#24847;&#19968;&#20010;&#22320;&#26041;&#12290; &#25105;&#20204;&#30693;&#36947;nginx &#20351;&#29992;&#30340;&#26159;epoll&#30340;ET&#27169;&#24335;&#65292;&#32780;et&#27169;&#24335;&#30340;&#35805;&#65292;&#23601;&#38656;&#35201;&#33021;&#22815;&#21028;&#26029;&#36825;&#27425;&#35835;&#21462;&#30340;&#25968;&#25454;&#26159;&#21542;&#35835;&#23436;&#65292;&#36825;&#37324;nginx&#26159;&#36825;&#26679;&#21028;&#26029;&#30340;&#65292;&#37027;&#23601;&#26159;&#26681;&#25454;&#21327;&#35758;&#26469;&#21028;&#26029;&#65292;&#20063;&#23601;&#26159;&#21327;&#35758;&#39537;&#21160;&#65292;&#30001;&#21327;&#35758;&#26469;&#21028;&#26029;&#26159;&#21542;&#26377;&#35835;&#21462;&#23436;&#27605;&#12290;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#36825;&#37324;&#35201;&#27880;&#24847;&#65292;&#22914;&#26524;&#25105;&#20204;&#20351;&#29992;&#20102;mutex&#38145;&#65292;&#37027;&#20040;&#29616;&#22312;&#36827;&#20837;&#36825;&#20010;&#20989;&#25968;&#20043;&#21518;&#65292;&#25105;&#20204;&#20250;&#36890;&#36807;ngx_http_read_request_header&#20013;&#26469;&#25346;&#36733;&#35835;&#20107;&#20214;&#21040;epoll&#12290;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ngx_http_process_request_line(){
+    </p>
+    <p>
+      .....................................
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;for ( ;; ) {
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (rc == NGX_AGAIN) {
+    </p>
+    <p>
+      //&#35835;&#21462;request.
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n = <font color="#f50202">ngx_http_read_request_header</font>(r);
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (n == NGX_AGAIN || n == NGX_ERROR) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      //&#28982;&#21518;&#24320;&#22987;parse
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;rc = <font color="#f50606">ngx_http_parse_request_line</font>(r, r-&gt;header_in);
+    </p>
+    <p>
+      .....................................
+    </p>
+    <p>
+      &#28982;&#21518;&#24403;parse&#32467;&#26463;&#21518;&#36890;&#36807;rc&#26469;&#21028;&#26029;&#35299;&#26512;&#30340;&#32467;&#26524;&#65292;&#22914;&#26524;&#26159;NGX_OK&#21017;&#35828;&#26126;header&#35299;&#26512;&#23436;&#27605;&#65292;&#22914;&#26524;&#26159;NGX_AGAIN,&#21017;&#35828;&#26126;header&#21482;&#35299;&#26512;&#20102;&#19968;&#37096;&#20998;&#12290;&#25105;&#20204;&#36825;&#37324;&#20027;&#35201;&#26469;&#30475;NGX_OK&#30340;&#24773;&#20917;&#65292;&#23601;&#26159;&#24403;request line&#23436;&#20840;&#35299;&#26512;&#23436;&#27605;&#26102;&#65292;nginx&#20570;&#20160;&#20040;&#12290;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      if (rc == NGX_OK) {
+    </p>
+    <p>
+      ........................................
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;c-&gt;log-&gt;action = &quot;reading client request headers&quot;;
+    </p>
+    <p>
+      //&#35774;&#32622;&#24182;&#35843;&#29992;ngx_http_process_request_headers&#25191;&#34892;&#21518;&#32493;&#25805;&#20316;(&#35299;&#26512;header)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;rev-&gt;handler = ngx_http_process_request_headers;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<font color="#fa0505">ngx_http_process_request_headers</font>(rev);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ngx_http_process_request_headers&#36825;&#20010;&#20989;&#25968;&#20027;&#35201;&#26159;&#35299;&#26512;http&#30340;request header&#65292;
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1389346235797" FOLDED="true" MODIFIED="1389447876151" TEXT="ngx_http_read_request_header">
+<node CREATED="1389346805641" MODIFIED="1389576252167" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389346241253" MODIFIED="1389576252167">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      
+    </p>
+    <p>
+      ngx_http_read_request_header(){
+    </p>
+    <p>
+      ....
+    </p>
+    <p>
+      if (rev-&gt;ready) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n = c-&gt;recv(c, r-&gt;header_in-&gt;last,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;r-&gt;header_in-&gt;end - r-&gt;header_in-&gt;last);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;} else {
+    </p>
+    <p>
+      //&#31532;&#19968;&#27425;&#36827;&#26469;&#35774;&#32622;n&#20026;again
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n = NGX_AGAIN;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;if (n == NGX_AGAIN) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (!rev-&gt;timer_set) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;cscf = ngx_http_get_module_srv_conf(r, ngx_http_core_module);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_add_timer(rev, cscf-&gt;client_header_timeout);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      //&#28982;&#21518;&#25346;&#36733;&#35835;&#20107;&#20214;.
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (ngx_handle_read_event(rev, 0) != NGX_OK) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_http_close_request(r, NGX_HTTP_INTERNAL_SERVER_ERROR);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return NGX_ERROR;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      .....
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1390014422695" MODIFIED="1390014424148" TEXT="ngx_http_parse_request_line"/>
+<node CREATED="1389346235797" MODIFIED="1389447876150" TEXT="ngx_http_process_request_headers">
+<node CREATED="1389346805641" FOLDED="true" MODIFIED="1389575250108" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389346241253" MODIFIED="1389577507279">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      
+    </p>
+    <p>
+      static void
+    </p>
+    <p>
+      ngx_http_process_request_headers(ngx_event_t *rev)
+    </p>
+    <p>
+      {
+    </p>
+    <p>
+      ........................................................
+    </p>
+    <p>
+      &#160;&#160;&#160;rc = NGX_AGAIN;
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;for ( ;; ) {
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (rc == NGX_AGAIN) {
+    </p>
+    <p>
+      ..........................................
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n = <font color="#fb0808">ngx_http_read_request_header</font>(r);
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (n == NGX_AGAIN || n == NGX_ERROR) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;rc =<font color="#fa0909">&#160; ngx_http_parse_header_line</font>(r, r-&gt;header_in,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;cscf-&gt;underscores_in_headers);
+    </p>
+    <p>
+      ...................................................
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (rc == NGX_OK) {
+    </p>
+    <p>
+      //&#36825;&#20010;&#21028;&#26029;&#37324;&#38754;&#20250;&#35774;&#32622;request&#20013;&#30340;&#39044;&#21046;header(cookie, id_modify_since&#31561;&#31561;)
+    </p>
+    <p>
+      ....................................
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (rc == NGX_HTTP_PARSE_HEADER_DONE) {
+    </p>
+    <p>
+      //&#21040;&#36798;&#36825;&#37324;&#35828;&#26126;header&#35299;&#26512;&#23436;&#27605;.
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;r-&gt;request_length += r-&gt;header_in-&gt;pos - r-&gt;header_in-&gt;start;
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;r-&gt;http_state = NGX_HTTP_PROCESS_REQUEST_STATE;
+    </p>
+    <p>
+      //&#36825;&#37324;&#20027;&#35201;&#26159;&#36827;&#34892;&#19968;&#20123;&#22836;&#30340;&#26657;&#39564;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;rc = <font color="#f50606">ngx_http_process_request_header</font>(r);
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (rc != NGX_OK) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      //&#28982;&#21518;&#36827;&#20837;nginx&#30340;http&#22788;&#29702;(&#36827;&#20837;phase&#22788;&#29702;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<font color="#f60505">ngx_http_process_request</font>(r);
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      .........................
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1390014500908" MODIFIED="1390014502127" TEXT="ngx_http_read_request_header"/>
+<node CREATED="1390014512940" MODIFIED="1390014519500" TEXT="ngx_http_parse_header_line"/>
+<node CREATED="1390014531957" MODIFIED="1390014533407" TEXT="ngx_http_process_request_header"/>
+<node CREATED="1390014561580" FOLDED="true" MODIFIED="1390014603527" TEXT="ngx_http_process_request">
+<node CREATED="1389346805641" MODIFIED="1389575250108" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389346241253" MODIFIED="1390015098462">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1390015053509" FOLDED="true" MODIFIED="1390015054813" TEXT="ngx_http_handler">
+<node CREATED="1390015194944" FOLDED="true" MODIFIED="1390015196426" TEXT="ngx_http_core_run_phases">
+<node CREATED="1389346805641" FOLDED="true" MODIFIED="1389575250108" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389346241253" MODIFIED="1390015428443">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      void
+    </p>
+    <p>
+      ngx_http_core_run_phases(ngx_http_request_t *r)
+    </p>
+    <p>
+      {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_int_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;rc;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_http_phase_handler_t&#160;&#160;&#160;*ph;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_http_core_main_conf_t&#160;&#160;*cmcf;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;cmcf = ngx_http_get_module_main_conf(r, ngx_http_core_module);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ph = cmcf-&gt;phase_engine.handlers;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;while (ph[r-&gt;phase_handler].checker) {
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;rc = ph[r-&gt;phase_handler].checker(r, &amp;ph[r-&gt;phase_handler]);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (rc == NGX_OK) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1390015078172" MODIFIED="1390015079509" TEXT="ngx_http_run_posted_requests"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
 <node CREATED="1390224455119" MODIFIED="1390224462958" TEXT="/*ngx_event_handler_pt*/">
-<node CREATED="1389084519801" FOLDED="true" ID="ID_281294392" LINK="#ID_607686762" MODIFIED="1389447876153" TEXT="ngx_event_accept">
+<node CREATED="1389084519801" LINK="#ID_579592898" MODIFIED="1390015590436" TEXT="ngx_event_accept">
 <node CREATED="1389084532642" MODIFIED="1389084539986">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -11945,546 +12660,9 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1389345958461" ID="ID_113471940" LINK="#ID_64737652" MODIFIED="1389448731059" TEXT="ngx_http_init_connection">
-<node CREATED="1389450031541" FOLDED="true" MODIFIED="1389575211840" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
-<node CREATED="1389345975790" MODIFIED="1389575974533">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      &#25509;&#19979;&#26469;&#23601;&#26159;ngx_http_init_connection&#20989;&#25968;&#20102;&#65292;&#36825;&#20010;&#20989;&#25968;&#20027;&#35201;&#26159;&#35774;&#32622;&#24403;&#21069;&#21477;&#26564;&#30340;&#35835;handler&#65292;&#22914;&#26524;&#25968;&#25454;&#21487;&#35835;&#65292;&#21017;&#30452;&#25509;&#35843;&#29992;request handler&#65292;&#22914;&#26524;&#25968;&#25454;&#19981;&#21487;&#35835;&#65292;&#21017;&#35774;&#32622;&#23450;&#26102;&#22120;(&#36229;&#26102;&#23450;&#26102;&#22120;),&#24182;&#23558;&#36825;&#20010;&#21477;&#26564;&#25346;&#36733;&#21040;&#20107;&#20214;&#22788;&#29702;&#22120;&#19978;&#12290;
-    </p>
-    <p>
-      &#36825;&#37324;&#26377;&#19968;&#20010;&#38656;&#35201;&#27880;&#24847;&#30340;&#22320;&#26041;&#65292;&#37027;&#23601;&#26159;&#22914;&#26524;&#20351;&#29992;&#20102;ngx_use_accept_mutex&#38145;&#30340;&#35805;&#65292;&#37027;&#20040;&#23601;&#19981;&#33021;&#22815;&#31435;&#21363;&#22788;&#29702;request&#65292;&#22240;&#20026;&#22788;&#29702;request&#26159;&#19968;&#20010;&#38750;&#24120;&#32791;&#26102;&#30340;&#25805;&#20316;&#65292;&#32780;&#29616;&#22312;&#22312;&#38145;&#37324;&#38754;&#65292;&#25152;&#20197;&#27492;&#26102;&#20043;&#38656;&#35201;&#23558;&#36825;&#20010;&#35835;&#20107;&#20214;&#25346;&#36733;&#21040;ngx_posted_events&#38431;&#21015;&#65292;&#31561;&#36864;&#20986;&#38145;&#20043;&#21518;&#20877;&#36827;&#34892;&#22788;&#29702;&#12290;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#32780;&#19968;&#33324;&#26469;&#35828;&#40664;&#35748;&#37117;&#20250;&#20351;&#29992;mutex&#38145;&#65292;&#22240;&#27492;&#27492;&#26102;&#23601;&#23558;rev&#21152;&#21040;post_events&#38431;&#21015;&#20013;&#65292;&#28982;&#21518;&#30452;&#25509;&#36820;&#22238;&#65292;&#37027;&#20040;&#21487;&#33021;&#23601;&#35201;&#38382;&#20102;&#65292;&#20160;&#20040;&#26102;&#20505;&#20250;&#25226;&#20107;&#20214;&#25346;&#36733;&#21040;epoll&#20013;&#21602;&#65292;&#36825;&#20010;&#25105;&#20204;&#25509;&#19979;&#26469;&#20250;&#20998;&#26512;&#12290;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      ngx_http_init_connection(ngx_connection_t *c)
-    </p>
-    <p>
-      {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_event_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*rev;
-    </p>
-    <p>
-      .....................................................
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;c-&gt;log_error = NGX_ERROR_INFO;
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;rev = c-&gt;read;
-    </p>
-    <p>
-      //&#35774;&#32622;&#35835;handler.
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;rev-&gt;handler = <font color="#f31010">ngx_http_wait_request_handler;</font>
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;c-&gt;write-&gt;handler = <font color="#f90101">ngx_http_empty_handler;</font>
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      #if (NGX_STAT_STUB)
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;(void) ngx_atomic_fetch_add(ngx_stat_reading, 1);
-    </p>
-    <p>
-      #endif
-    </p>
-    <p>
-      //&#22914;&#26524;&#25509;&#25910;&#20934;&#22791;&#22909;&#20102;&#65292;&#21017;&#30452;&#25509;&#35843;&#29992;ngx_http_init_request,&#22914;&#26524;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;if (rev-&gt;ready) {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* the deferred accept(), rtsig, aio, iocp */
-    </p>
-    <p>
-      //&#22914;&#26524;&#20351;&#29992;&#20102;mutex&#38145;&#65292;&#21017;post &#36825;&#20010;event&#65292;&#28982;&#21518;&#36820;&#22238;&#12290;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (ngx_use_accept_mutex) {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_post_event(rev, &amp;ngx_posted_events);
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;<font color="#fa0505">&#160;rev-&gt;handler</font>(rev);
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;}
-    </p>
-    <p>
-      //&#28155;&#21152;&#23450;&#26102;&#22120;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_add_timer(rev, c-&gt;listening-&gt;post_accept_timeout);
-    </p>
-    <p>
-      //&#23558;&#20107;&#20214;&#25346;&#36733;&#21040;&#20107;&#20214;&#22788;&#29702;&#22120;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;if (ngx_handle_read_event(rev, 0) != NGX_OK) {
-    </p>
-    <p>
-      #if (NGX_STAT_STUB)
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(void) ngx_atomic_fetch_add(ngx_stat_reading, -1);
-    </p>
-    <p>
-      #endif
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_http_close_connection(c);
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;}
-    </p>
-    <p>
-      }
-    </p>
-  </body>
-</html></richcontent>
+<node CREATED="1390271870169" LINK="#ID_113471940" MODIFIED="1390271968114" TEXT="ngx_http_init_connection"/>
 </node>
-</node>
-<node CREATED="1389346235797" MODIFIED="1389575302763" TEXT="ngx_http_wait_request_handler">
-<node CREATED="1389575527314" FOLDED="true" MODIFIED="1389575579406" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
-<node CREATED="1389346241253" ID="ID_736255149" LINK="#ID_1066849236" MODIFIED="1389575335139">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      &#28982;&#21518;&#23601;&#26159;ngx_http_wait_request_handler(ngx_http_init_request)&#65292;&#36827;&#20837;&#36825;&#20010;&#20989;&#25968;&#65292;&#35828;&#26126;&#23458;&#25143;&#31471;&#26377;&#35831;&#27714;&#36807;&#26469;&#20102;&#65292;&#27492;&#26102;&#25105;&#20204;&#23601;&#38656;&#35201;&#36827;&#20837;http&#30340;&#21327;&#35758;&#35299;&#26512;&#37096;&#20998;&#20102;&#65292;&#22240;&#27492;&#22312;&#36825;&#20010;&#20989;&#25968;&#20027;&#35201;&#23601;&#26159;&#21021;&#22987;&#21270;request&#32467;&#26500;&#65292;&#21021;&#22987;&#21270;&#23436;&#27605;&#21518;&#36827;&#20837;&#35299;&#26512;&#22788;&#29702;
-    </p>
-    <p>
-      static void
-    </p>
-    <p>
-      ngx_http_init_request(ngx_event_t *rev)
-    </p>
-    <p>
-      {
-    </p>
-    <p>
-      ............................................
-    </p>
-    <p>
-      //&#35774;&#32622;handler&#22238;&#35843;
-    </p>
-    <p>
-      &#160;&#160;&#160;rev-&gt;handler = <font color="#f10a0a">ngx_http_process_request_line</font>;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;r-&gt;read_event_handler = ngx_http_block_reading;
-    </p>
-    <p>
-      ......................................................
-    </p>
-    <p>
-      //&#36827;&#20837;&#35299;&#26512;request &#37096;&#20998;&#12290;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;rev-&gt;handler(rev);
-    </p>
-    <p>
-      }
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1389346235797" ID="ID_1066849236" LINK="#ID_736255149" MODIFIED="1389449981141" TEXT="ngx_http_process_request_line">
-<node CREATED="1389346805641" FOLDED="true" MODIFIED="1389447876150" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
-<node CREATED="1389346241253" MODIFIED="1389576209518">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      &#26368;&#21518;&#26469;&#30475;ngx_http_process_request_line&#65292;&#36825;&#20010;&#20989;&#25968;&#23601;&#26159;&#23545;request line&#36827;&#34892;&#35299;&#26512;&#65292;&#32780;&#35299;&#26512;&#37096;&#20998;&#22312;&#25105;&#20197;&#21069;&#30340;blog&#24050;&#32463;&#20998;&#26512;&#36807;&#20102;&#65292;&#36825;&#37324;&#23601;&#19981;&#35814;&#32454;&#20998;&#26512;&#20102;&#12290;&#36825;&#37324;&#35201;&#27880;&#24847;&#19968;&#20010;&#22320;&#26041;&#12290; &#25105;&#20204;&#30693;&#36947;nginx &#20351;&#29992;&#30340;&#26159;epoll&#30340;ET&#27169;&#24335;&#65292;&#32780;et&#27169;&#24335;&#30340;&#35805;&#65292;&#23601;&#38656;&#35201;&#33021;&#22815;&#21028;&#26029;&#36825;&#27425;&#35835;&#21462;&#30340;&#25968;&#25454;&#26159;&#21542;&#35835;&#23436;&#65292;&#36825;&#37324;nginx&#26159;&#36825;&#26679;&#21028;&#26029;&#30340;&#65292;&#37027;&#23601;&#26159;&#26681;&#25454;&#21327;&#35758;&#26469;&#21028;&#26029;&#65292;&#20063;&#23601;&#26159;&#21327;&#35758;&#39537;&#21160;&#65292;&#30001;&#21327;&#35758;&#26469;&#21028;&#26029;&#26159;&#21542;&#26377;&#35835;&#21462;&#23436;&#27605;&#12290;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#36825;&#37324;&#35201;&#27880;&#24847;&#65292;&#22914;&#26524;&#25105;&#20204;&#20351;&#29992;&#20102;mutex&#38145;&#65292;&#37027;&#20040;&#29616;&#22312;&#36827;&#20837;&#36825;&#20010;&#20989;&#25968;&#20043;&#21518;&#65292;&#25105;&#20204;&#20250;&#36890;&#36807;ngx_http_read_request_header&#20013;&#26469;&#25346;&#36733;&#35835;&#20107;&#20214;&#21040;epoll&#12290;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      ngx_http_process_request_line(){
-    </p>
-    <p>
-      .....................................
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;for ( ;; ) {
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (rc == NGX_AGAIN) {
-    </p>
-    <p>
-      //&#35835;&#21462;request.
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n = <font color="#f50202">ngx_http_read_request_header</font>(r);
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (n == NGX_AGAIN || n == NGX_ERROR) {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
-    </p>
-    <p>
-      //&#28982;&#21518;&#24320;&#22987;parse
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;rc = <font color="#f50606">ngx_http_parse_request_line</font>(r, r-&gt;header_in);
-    </p>
-    <p>
-      .....................................
-    </p>
-    <p>
-      &#28982;&#21518;&#24403;parse&#32467;&#26463;&#21518;&#36890;&#36807;rc&#26469;&#21028;&#26029;&#35299;&#26512;&#30340;&#32467;&#26524;&#65292;&#22914;&#26524;&#26159;NGX_OK&#21017;&#35828;&#26126;header&#35299;&#26512;&#23436;&#27605;&#65292;&#22914;&#26524;&#26159;NGX_AGAIN,&#21017;&#35828;&#26126;header&#21482;&#35299;&#26512;&#20102;&#19968;&#37096;&#20998;&#12290;&#25105;&#20204;&#36825;&#37324;&#20027;&#35201;&#26469;&#30475;NGX_OK&#30340;&#24773;&#20917;&#65292;&#23601;&#26159;&#24403;request line&#23436;&#20840;&#35299;&#26512;&#23436;&#27605;&#26102;&#65292;nginx&#20570;&#20160;&#20040;&#12290;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      if (rc == NGX_OK) {
-    </p>
-    <p>
-      ........................................
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;c-&gt;log-&gt;action = &quot;reading client request headers&quot;;
-    </p>
-    <p>
-      //&#35774;&#32622;&#24182;&#35843;&#29992;ngx_http_process_request_headers&#25191;&#34892;&#21518;&#32493;&#25805;&#20316;(&#35299;&#26512;header)
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;rev-&gt;handler = ngx_http_process_request_headers;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<font color="#fa0505">ngx_http_process_request_headers</font>(rev);
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      ngx_http_process_request_headers&#36825;&#20010;&#20989;&#25968;&#20027;&#35201;&#26159;&#35299;&#26512;http&#30340;request header&#65292;
-    </p>
-    <p>
-      }
-    </p>
-    <p>
-      }
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1389346235797" FOLDED="true" MODIFIED="1389447876151" TEXT="ngx_http_read_request_header">
-<node CREATED="1389346805641" MODIFIED="1389576252167" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
-<node CREATED="1389346241253" MODIFIED="1389576252167">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      
-    </p>
-    <p>
-      ngx_http_read_request_header(){
-    </p>
-    <p>
-      ....
-    </p>
-    <p>
-      if (rev-&gt;ready) {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n = c-&gt;recv(c, r-&gt;header_in-&gt;last,
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;r-&gt;header_in-&gt;end - r-&gt;header_in-&gt;last);
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;} else {
-    </p>
-    <p>
-      //&#31532;&#19968;&#27425;&#36827;&#26469;&#35774;&#32622;n&#20026;again
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n = NGX_AGAIN;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;}
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;if (n == NGX_AGAIN) {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (!rev-&gt;timer_set) {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;cscf = ngx_http_get_module_srv_conf(r, ngx_http_core_module);
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_add_timer(rev, cscf-&gt;client_header_timeout);
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
-    </p>
-    <p>
-      //&#28982;&#21518;&#25346;&#36733;&#35835;&#20107;&#20214;.
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (ngx_handle_read_event(rev, 0) != NGX_OK) {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_http_close_request(r, NGX_HTTP_INTERNAL_SERVER_ERROR);
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return NGX_ERROR;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      .....
-    </p>
-    <p>
-      }
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-</node>
-<node CREATED="1389346235797" FOLDED="true" MODIFIED="1389447876150" TEXT="ngx_http_process_request_headers">
-<node CREATED="1389346805641" MODIFIED="1389575250108" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
-<node CREATED="1389346241253" MODIFIED="1389577507279">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      
-    </p>
-    <p>
-      static void
-    </p>
-    <p>
-      ngx_http_process_request_headers(ngx_event_t *rev)
-    </p>
-    <p>
-      {
-    </p>
-    <p>
-      ........................................................
-    </p>
-    <p>
-      &#160;&#160;&#160;rc = NGX_AGAIN;
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;for ( ;; ) {
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (rc == NGX_AGAIN) {
-    </p>
-    <p>
-      ..........................................
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n = <font color="#fb0808">ngx_http_read_request_header</font>(r);
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (n == NGX_AGAIN || n == NGX_ERROR) {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;rc =<font color="#fa0909">&#160; ngx_http_parse_header_line</font>(r, r-&gt;header_in,
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;cscf-&gt;underscores_in_headers);
-    </p>
-    <p>
-      ...................................................
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (rc == NGX_OK) {
-    </p>
-    <p>
-      //&#36825;&#20010;&#21028;&#26029;&#37324;&#38754;&#20250;&#35774;&#32622;request&#20013;&#30340;&#39044;&#21046;header(cookie, id_modify_since&#31561;&#31561;)
-    </p>
-    <p>
-      ....................................
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (rc == NGX_HTTP_PARSE_HEADER_DONE) {
-    </p>
-    <p>
-      //&#21040;&#36798;&#36825;&#37324;&#35828;&#26126;header&#35299;&#26512;&#23436;&#27605;.
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;r-&gt;request_length += r-&gt;header_in-&gt;pos - r-&gt;header_in-&gt;start;
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;r-&gt;http_state = NGX_HTTP_PROCESS_REQUEST_STATE;
-    </p>
-    <p>
-      //&#36825;&#37324;&#20027;&#35201;&#26159;&#36827;&#34892;&#19968;&#20123;&#22836;&#30340;&#26657;&#39564;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;rc = <font color="#f50606">ngx_http_process_request_header</font>(r);
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (rc != NGX_OK) {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
-    </p>
-    <p>
-      //&#28982;&#21518;&#36827;&#20837;nginx&#30340;http&#22788;&#29702;(&#36827;&#20837;phase&#22788;&#29702;)
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<font color="#f60505">ngx_http_process_request</font>(r);
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
-    </p>
-    <p>
-      .........................
-    </p>
-    <p>
-      }
-    </p>
-    <p>
-      
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-</node>
-</node>
-</node>
-</node>
-</node>
+<node CREATED="1390015130947" MODIFIED="1390015133337" TEXT="ngx_http_request_handler"/>
 <node CREATED="1390224549660" MODIFIED="1390224551153" TEXT="ngx_http_process_request_headers"/>
 <node CREATED="1390224564364" MODIFIED="1390224565723" TEXT="ngx_http_process_request_line"/>
 <node CREATED="1390224592068" MODIFIED="1390224593399" TEXT="ngx_http_keepalive_handler"/>
