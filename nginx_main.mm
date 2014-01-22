@@ -489,7 +489,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1389073579240" MODIFIED="1389238336566" POSITION="right" TEXT="&#x53c2;&#x8003;">
+<node CREATED="1389073579240" FOLDED="true" MODIFIED="1389238336566" POSITION="right" TEXT="&#x53c2;&#x8003;">
 <node CREATED="1389073591719" LINK="http://blog.csdn.net/kenbinzhang?viewmode=contents " MODIFIED="1389073624444" TEXT="&#x5543;&#x997c;&#x7684;&#x6280;&#x672f;&#x535a;&#x5ba2;"/>
 <node CREATED="1389239945627" LINK="http://blog.csdn.net/Marcky/article/category/747446" MODIFIED="1389447897452" TEXT="Marcky"/>
 <node CREATED="1389256392595" LINK="http://www.pagefault.info" MODIFIED="1389447897453" TEXT="pagefault"/>
@@ -498,7 +498,7 @@
 <node CREATED="1390227536656" LINK="http://lenky.info/" MODIFIED="1390227554051" TEXT="lenky"/>
 <node CREATED="1390272454501" LINK="http://my.oschina.net/fqing" MODIFIED="1390272490375" TEXT="&#x90a3;&#x4e00;&#x5251;&#x7684;&#x98ce;&#x60c5;"/>
 </node>
-<node CREATED="1388930950170" MODIFIED="1389150103872" POSITION="right" TEXT="main">
+<node CREATED="1388930950170" FOLDED="true" MODIFIED="1389150103872" POSITION="right" TEXT="main">
 <node CREATED="1388930885650" FOLDED="true" LINK="http://blog.csdn.net/kenbinzhang/article/details/4681694" MODIFIED="1389070124192" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1388930898050" MODIFIED="1388930910629" TEXT="main&#x51fd;&#x6570;&#x7684;&#x5904;&#x7406;&#x8fc7;&#x7a0b;&#x53ef;&#x4ee5;&#x5206;&#x4e3a;&#x4ee5;&#x4e0b;&#x6b65;&#x9aa4;&#xff1a;&#xa;&#xa;1&#x3001;&#x4ece;&#x63a7;&#x5236;&#x53f0;&#x83b7;&#x53d6;&#x53c2;&#x6570;&#x5e76;&#x5904;&#x7406;:ngx_get_options(argc, argv)&#xff1b;&#xa;&#xa;2&#x3001;&#x7b80;&#x5355;&#x521d;&#x59cb;&#x5316;&#xff0c;&#x521d;&#x59cb;&#x5316;&#x4e00;&#x4e9b;&#x6570;&#x636e;&#x7ed3;&#x6784;&#x548c;&#x6a21;&#x5757;:ngx_debug_init(),ngx_time_init(),ngx_regex_init(),ngx_log_init(),ngx_ssl_init()&#xff1b;&#xa;&#xa;3&#x3001;&#x521d;&#x59cb;&#x5316;&#x5c40;&#x90e8;&#x7684;ngx_cycle_t init_cycle&#x7ed3;&#x6784;&#x4f53;&#x53d8;&#x91cf;:&#xa;    ngx_memzero(&amp;init_cycle, sizeof(ngx_cycle_t));&#xa;    init_cycle.log = log;&#xa;    ngx_cycle = &amp;init_cycle;&#xa;&#xa;    init_cycle.pool = ngx_create_pool(1024, log);&#xa;    if (init_cycle.pool == NULL) {&#xa;        return 1;&#xa;    }    &#xa;&#xa;4&#x3001;&#x4fdd;&#x5b58;&#x53c2;&#x6570;&#xff0c;&#x8bbe;&#x7f6e;&#x51e0;&#x4e2a;&#x5168;&#x5c40;&#x53d8;&#x91cf;&#xff1a;ngx_argc,ngx_os_argv,ngx_argv,ngx_os_environ&#xff1b;&#xa;&#xa;5&#x3001;&#x8c03;&#x7528;ngx_process_options&#xff0c;&#x8bbe;&#x7f6e;init_cycle&#x7684;&#x4e00;&#x4e9b;&#x5b57;&#x6bb5;&#xff0c;&#x8fd9;&#x4e9b;&#x5b57;&#x6bb5;&#x662f;&#x4ece;&#x63a7;&#x5236;&#x53f0;&#x7684;&#x547d;&#x4ee4;&#x4e2d;&#x53d6;&#x5f97;&#x7684;&#xff1a;conf_prefix&#xff08;config prefix path&#xff09;&#x3001;prefix&#xff08;prefix path:-p prefix&#xff09;&#x3001;conf_file&#xff08;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x8def;&#x5f84;:-c filenname&#xff09;&#x3001;conf_param(-g directives)&#xff0c;&#x53e6;&#x5916;&#x8fd8;&#x628a;init_cycle.log.log_level&#x8bbe;&#x7f6e;&#x4e3a;NGX_LOG_INFO&#xff1b;&#xa;&#xa;6&#x3001;&#x8c03;&#x7528;ngx_os_init&#xff0c;&#x8fd9;&#x4e2a;&#x8c03;&#x7528;&#x4f1a;&#x8bbe;&#x7f6e;&#x4e00;&#x4e9b;&#x5168;&#x5c40;&#x53d8;&#x91cf;&#xff0c;&#x8fd9;&#x4e9b;&#x5168;&#x5c40;&#x53d8;&#x91cf;&#x548c;&#x64cd;&#x4f5c;&#x7cfb;&#x7edf;&#x76f8;&#x5173;&#xff0c;&#x6bd4;&#x5982;:ngx_pagesize,ngx_cacheline_size,ngx_ncpu,ngx_cpuinfo(),ngx_max_sockets&#x7b49;&#xff1b;&#xa;&#xa;7&#x3001;&#x8c03;&#x7528;&#x521d;&#x59cb;&#x5316;&#x51fd;&#x6570;ngx_crc32_table_init()&#xff1b;&#xa;&#xa;8&#x3001;&#x8c03;&#x7528;ngx_set_inherited_sockets(&amp;init_cycle)&#xff0c;&#x521d;&#x59cb;&#x5316;init_cycle.listening&#xff0c;&#x8fd9;&#x662f;&#x4e00;&#x4e2a;ngx_listening_t&#x7684;&#x7ed3;&#x6784;&#x6570;&#x7ec4;&#xff0c;&#x5176;socket_fd&#x662f;&#x4ece;&#x73af;&#x5883;&#x53d8;&#x91cf;NGINX&#x4e2d;&#x8bfb;&#x53d6;&#x7684;&#xff1b;&#xa;&#xa;9&#x3001;&#x5bf9;&#x7cfb;&#x7edf;&#x6240;&#x6709;&#x6a21;&#x5757;&#x70b9;&#x4e00;&#x4e0b;&#x6570;&#xff0c;&#x7136;&#x540e;&#x8fdb;&#x5165;ngx_init_cycle&#x4f5c;&#x4e3b;&#x8981;&#x7684;&#x6a21;&#x5757;&#x76f8;&#x5173;&#x7684;&#x521d;&#x59cb;&#x5316;&#xff0c;init_cycle&#x4f5c;&#x4e3a;&#x65e7;&#x7684;&#x5168;&#x5c40;&#x8bbe;&#x7f6e;&#x4f20;&#x8fdb;&#x53bb;&#xff0c;&#x8fd9;&#x4e2a;&#x51fd;&#x6570;&#x4f1a;&#x521b;&#x5efa;&#x4e00;&#x4e0b;&#x65b0;&#x7684;ngx_cycle_t&#x53d8;&#x91cf;&#xff0c;&#x5e76;&#x8fd4;&#x56de;&#x5176;&#x6307;&#x9488;&#xff1a;&#xa;    ngx_max_module = 0;&#xa;    for (i = 0; ngx_modules[i]; i++) {&#xa;        ngx_modules[i]-&gt;index = ngx_max_module++;&#xa;    }    &#xa;&#xa;    cycle = ngx_init_cycle(&amp;init_cycle);&#xa;&#xa;10&#x3001;&#x4e0e;&#x4fe1;&#x53f7;&#x91cf;&#x76f8;&#x5173;&#x7684;&#x4e00;&#x4e9b;&#x64cd;&#x4f5c;&#x4ee3;&#x7801;&#xff1b;&#xa;&#xa;11&#x3001;&#x591a;&#x8fdb;&#x7a0b;&#x7684;&#x60c5;&#x51b5;&#x4e0b;&#xff0c;&#x8c03;&#x7528;ngx_master_process_cycle(cycle)&#xff0c;&#x5355;&#x8fdb;&#x7a0b;&#x60c5;&#x51b5;&#x4e0b;&#x8c03;&#x7528;ngx_single_process_cycle&#x5b8c;&#x6210;&#x6700;&#x540e;&#x7684;&#x542f;&#x52a8;&#x5de5;&#x4f5c;&#x3002;"/>
 </node>
@@ -1488,7 +1488,7 @@
 <node CREATED="1388925990592" MODIFIED="1388926024814" TEXT="&#x5bf9;&#x5404;&#x4e2a;&#x6a21;&#x5757;&#x7684;index&#x5b57;&#x6bb5;&#x7684;&#x521d;&#x59cb;&#x5316;&#x662f;&#x5728;main&#x51fd;&#x6570;&#x4e2d;&#x8fdb;&#x884c;&#x7684;&#xff0c;&#x5982;&#x4e0b;&#x3002;&#xa; ngx_max_module = 0;  &#xa; for (i = 0; ngx_modules[i]; i++) {  &#xa;     ngx_modules[i]-&gt;index = ngx_max_module++;  &#xa; }  &#xa;&#xa;&#x53ef;&#x89c1;&#xff0c;&#x8be5;for-loop&#x6267;&#x884c;&#x540e;&#xff0c;&#x6bcf;&#x4e2a;&#x6a21;&#x5757;&#x7684;index&#x503c;&#x4fbf;&#x662f;&#x5176;&#x5728;ngx_modules[]&#x6570;&#x7ec4;&#x4e2d;&#x7684;&#x4e0b;&#x6807;&#x503c;&#xff0c;&#x4e14;&#x5168;&#x5c40;&#x53d8;&#x91cf;ngx_max_module&#x4e3a;&#x6a21;&#x5757;&#x4e2a;&#x6570;&#xff0c;&#x5bf9;&#x4e8e;&#x672c;&#x4f8b;&#x6765;&#x8bb2;&#xff0c;ngx_max_module=44&#x3002;"/>
 </node>
 </node>
-<node BACKGROUND_COLOR="#459b12" CREATED="1388815502394" MODIFIED="1389149868572" TEXT="ngx_init_cycle">
+<node BACKGROUND_COLOR="#459b12" CREATED="1388815502394" FOLDED="true" MODIFIED="1389149868572" TEXT="ngx_init_cycle">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1388817913231" MODIFIED="1388817916114" TEXT="ngx_create_pidfile"/>
 <node CREATED="1388817929857" MODIFIED="1388817933030" TEXT="ngx_delete_pidfile"/>
@@ -2242,8 +2242,7 @@
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -2259,7 +2258,7 @@
 <node CREATED="1388924751415" MODIFIED="1388924753236" TEXT="&#x82e5;&#x65e0;&#x7ee7;&#x627f;sockets&#xff0c;&#x4e14;&#x8bbe;&#x7f6e;&#x4e86;&#x5b88;&#x62a4;&#x8fdb;&#x7a0b;&#x6807;&#x8bc6;&#xff0c;&#x5219;&#x8c03;&#x7528;ngx_daemon()&#x521b;&#x5efa;&#x5b88;&#x62a4;&#x8fdb;&#x7a0b;"/>
 </node>
 <node CREATED="1388815551105" MODIFIED="1388815552096" TEXT="ngx_open_pipes"/>
-<node BACKGROUND_COLOR="#47a433" COLOR="#080f05" CREATED="1388815601954" MODIFIED="1389591599404" STYLE="fork" TEXT="process_cycle">
+<node BACKGROUND_COLOR="#47a433" COLOR="#080f05" CREATED="1388815601954" FOLDED="true" MODIFIED="1389591599404" STYLE="fork" TEXT="process_cycle">
 <edge COLOR="#808080" STYLE="bezier" WIDTH="thin"/>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1388815607274" MODIFIED="1389591710581" TEXT="ngx_single_process_cycle"/>
@@ -5251,7 +5250,7 @@
 <node CREATED="1389242576749" ID="ID_1345550578" LINK="#ID_1118410517" MODIFIED="1389702972756" TEXT="ngx_signal_handler"/>
 </node>
 </node>
-<node CREATED="1389106372749" MODIFIED="1389151945772" POSITION="left" TEXT="&#x7ed3;&#x6784;&#x4f53;&#x5b9e;&#x4f8b;">
+<node CREATED="1389106372749" FOLDED="true" MODIFIED="1389151945772" POSITION="left" TEXT="&#x7ed3;&#x6784;&#x4f53;&#x5b9e;&#x4f8b;">
 <node CREATED="1389088285082" FOLDED="true" ID="ID_824770665" LINK="#ID_13477724" MODIFIED="1389150160271" TEXT="ngx_events_commands">
 <icon BUILTIN="full-2"/>
 <node CREATED="1389088290682" LINK="#ID_1463245406" MODIFIED="1389088503998">
@@ -7989,7 +7988,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1388928327257" ID="ID_13477724" LINK="#ID_594437396" MODIFIED="1389107638080" TEXT="ngx_command_t">
+<node CREATED="1388928327257" FOLDED="true" ID="ID_13477724" LINK="#ID_594437396" MODIFIED="1389107638080" TEXT="ngx_command_t">
 <icon BUILTIN="full-2"/>
 <node CREATED="1389150403890" FOLDED="true" MODIFIED="1389150477119" TEXT="&#x7ed3;&#x6784;&#x4f53;">
 <node CREATED="1389150422386" MODIFIED="1390274984137">
@@ -8032,9 +8031,9 @@
 <node CREATED="1388928363577" MODIFIED="1388928399963" TEXT="&#x6a21;&#x5757;&#x7684;&#x6307;&#x4ee4;&#x5728;&#x6e90;&#x7801;&#x4e2d;&#x662f;ngx_command_t&#x7ed3;&#x6784;&#x7684;&#x53d8;&#x91cf;&#xff0c;ngx_command_t&#x7684;&#x58f0;&#x660e;&#x5728;src/core/ngx_conf_file.h&#x4e2d;:&#xa;&#xa;struct ngx_command_s {&#xa;    ngx_str_t             name;&#xa;    ngx_uint_t            type;&#xa;    char               *(*set)(ngx_conf_t *cf, ngx_command_t *cmd, void *conf);&#xa;    ngx_uint_t            conf;&#xa;    ngx_uint_t            offset;&#xa;    void                 *post;&#xa;};&#xa;&#xa;name&#x662f;&#x6307;&#x4ee4;&#x540d;&#x79f0;&#x7684;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x4e0d;&#x5305;&#x542b;&#x7a7a;&#x683c;&#x3002;&#xa;&#xa;type&#x662f;&#x6807;&#x8bc6;&#x7b26;&#x96c6;&#xff0c;&#x6807;&#x8bc6;&#x6307;&#x4ee4;&#x5728;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e2d;&#x7684;&#x5408;&#x6cd5;&#x4f4d;&#x7f6e;&#x548c;&#x6307;&#x4ee4;&#x7684;&#x53c2;&#x6570;&#x4e2a;&#x6570;&#x3002;&#x8fd9;&#x662f;&#x4e00;&#x4e2a;&#x81f3;&#x5c11;&#x6709;32bit&#x7684;&#x65e0;&#x7b26;&#x53f7;&#x6574;&#x5f62;&#xff0c;&#x524d;16bit&#x7528;&#x4e8e;&#x6807;&#x8bc6;&#x4f4d;&#x7f6e;&#xff0c;&#x540e;16bit&#x7528;&#x4e8e;&#x6807;&#x8bc6;&#x53c2;&#x6570;&#x3002;&#xa;&#xa;&#x5148;&#x770b;&#x770b;&#x53c2;&#x6570;&#x7684;&#x6807;&#x8bc6;&#xff0c;&#x5b8f;&#x5b9a;&#x4e49;&#x5728;src/core/ngx_conf_file.h&#x4e2d;:&#xa;&#xa;#define NGX_CONF_NOARGS      0x00000001 &#xff08;&#x6ca1;&#x6709;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE1       0x00000002 &#xff08;&#x6709;1&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE2       0x00000004 &#xff08;&#x6709;2&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE3       0x00000008 &#xff08;&#x6709;3&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE4       0x00000010 &#xff08;&#x6709;4&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE5       0x00000020 &#xff08;&#x6709;5&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE6       0x00000040 &#xff08;&#x6709;6&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE7       0x00000080 &#xff08;&#x6709;7&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;&#xa;#define NGX_CONF_MAX_ARGS    8&#xa;&#xa;#define NGX_CONF_TAKE12      (NGX_CONF_TAKE1|NGX_CONF_TAKE2) &#xff08;&#x6709;1&#x4e2a;&#x6216;&#x8005;&#x6709;2&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_TAKE13      (NGX_CONF_TAKE1|NGX_CONF_TAKE3)&#xa;&#xa;#define NGX_CONF_TAKE23      (NGX_CONF_TAKE2|NGX_CONF_TAKE3)&#xa;&#xa;#define NGX_CONF_TAKE123     (NGX_CONF_TAKE1|NGX_CONF_TAKE2|NGX_CONF_TAKE3)&#xa;#define NGX_CONF_TAKE1234    (NGX_CONF_TAKE1|NGX_CONF_TAKE2|NGX_CONF_TAKE3   /&#xa;                              |NGX_CONF_TAKE4)&#xa;&#xa;#define NGX_CONF_ARGS_NUMBER 0x000000ff&#xa;#define NGX_CONF_BLOCK       0x00000100  (&#x5757;&#x57df;&#xff0c;&#x540e;&#x9762;&#x8ddf;{...}&#xff0c;&#x4f8b;&#x5982;:events {...})&#xa;#define NGX_CONF_FLAG        0x00000200 &#xff08;&#x6709;&#x4e00;&#x4e2a;&#x5e03;&#x5c14;&#x578b;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_ANY         0x00000400&#xa;#define NGX_CONF_1MORE       0x00000800 &#xff08;&#x81f3;&#x591a;&#x6709;1&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_2MORE       0x00001000 &#xff08;&#x81f3;&#x591a;&#x6709;2&#x4e2a;&#x53c2;&#x6570;&#xff09;&#xa;#define NGX_CONF_MULTI       0x00002000&#xa;&#xa;&#x518d;&#x770b;&#x770b;&#x4f4d;&#x7f6e;&#x7684;&#x6807;&#x8bc6;&#xff0c;&#x4f4d;&#x7f6e;&#x7684;&#x6807;&#x8bc6;&#x5b8f;&#x5b9a;&#x4e49;&#x5728;&#x51e0;&#x4e2a;&#x6587;&#x4ef6;&#x4e2d;:&#xa;&#xa;src/core/ngx_conf_file.h:&#xa;#define NGX_DIRECT_CONF      0x00010000&#xa;&#xa;#define NGX_MAIN_CONF        0x01000000&#xa;#define NGX_ANY_CONF         0x0F000000&#xa;&#xa;src/event/ngx_event.h:&#xa;#define NGX_EVENT_CONF        0x02000000&#xa;&#xa;src/http/ngx_http_config.h:&#xa;#define NGX_HTTP_MAIN_CONF        0x02000000&#xa;#define NGX_HTTP_SRV_CONF         0x04000000&#xa;#define NGX_HTTP_LOC_CONF         0x08000000&#xa;#define NGX_HTTP_UPS_CONF         0x10000000&#xa;#define NGX_HTTP_SIF_CONF         0x20000000&#xa;#define NGX_HTTP_LIF_CONF         0x40000000&#xa;#define NGX_HTTP_LMT_CONF         0x80000000&#xa;&#xa;src/mail/ngx_mail.h:&#xa;#define NGX_MAIL_MAIN_CONF      0x02000000&#xa;#define NGX_MAIL_SRV_CONF       0x04000000&#xa;&#xa;&#x8981;&#x7406;&#x89e3;&#x4e0a;&#x9762;&#x6240;&#x8c13;&#x7684;&#x5408;&#x6cd5;&#x4f4d;&#x7f6e;&#x7684;&#x771f;&#x6b63;&#x542b;&#x4e49;&#xff0c;&#x5c31;&#x8981;&#x4e86;&#x89e3;&#x4e00;&#x4e0b;nginx&#x7684;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e86;&#xff0c;&#x8fd9;&#x91cc;&#x5c31;&#x4e0d;&#x7d2f;&#x8ff0;&#x4e86;&#xff0c;&#x4e0d;&#x5f71;&#x54cd;&#x4e0b;&#x9762;&#x7684;&#x5206;&#x6790;&#xff0c;&#x6211;&#x4f1a;&#x5728;&#x5f88;&#x540e;&#x9762;&#x7684;&#x65f6;&#x5019;&#x5206;&#x6790;&#x4e00;&#x4e0b;nginx&#x7684;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#xff0c;&#x56e0;&#x4e3a;&#x90a3;&#x662f;&#x4e00;&#x4e2a;big topic&#x3002;&#xa;&#xa;set&#x662f;&#x4e00;&#x4e2a;&#x51fd;&#x6570;&#x6307;&#x9488;&#xff0c;&#x8fd9;&#x4e2a;&#x51fd;&#x6570;&#x4e3b;&#x8981;&#x662f;&#x4ece;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e2d;&#x628a;&#x8be5;&#x6307;&#x4ee4;&#x7684;&#x53c2;&#x6570;&#xff08;&#x5b58;&#x653e;&#x5728;ngx_conf_t&#x4e2d;&#xff09;&#x8f6c;&#x6362;&#x4e3a;&#x5408;&#x9002;&#x7684;&#x6570;&#x636e;&#x7c7b;&#x578b;&#x5e76;&#x5c06;&#x8f6c;&#x6362;&#x540e;&#x7684;&#x503c;&#x4fdd;&#x5b58;&#x5230;&#x6a21;&#x5757;&#x7684;&#x914d;&#x7f6e;&#x7ed3;&#x6784;&#x4f53;&#x4e2d;&#xff08;void *conf&#xff09;&#xff0c;&#x8fd9;&#x4e2a;&#x914d;&#x7f6e;&#x7ed3;&#x6784;&#x4f53;&#x53c8;&#x662f;&#x7528;void *&#x6307;&#x5411;&#x7684;&#xff0c;&#x5e94;&#x8be5;&#x53ef;&#x4ee5;&#x6599;&#x5230;&#x8fd9;&#x8bf4;&#x660e;&#x6bcf;&#x4e2a;&#x6a21;&#x5757;&#x7684;&#x914d;&#x7f6e;&#x7ed3;&#x6784;&#x4f53;&#x662f;&#x4e0d;&#x540c;&#x7684;&#xff0c;&#x8fd9;&#x4e9b;&#x7ed3;&#x6784;&#x4f53;&#x547d;&#x540d;&#x683c;&#x5f0f;&#x4e3a;:ngx_&lt;module name&gt;_conf_t&#xff0c;&#x81f3;&#x4e8e;&#x8981;&#x628a;&#x8f6c;&#x6362;&#x540e;&#x7684;&#x503c;&#x653e;&#x5230;&#x914d;&#x7f6e;&#x7ed3;&#x6784;&#x4f53;&#x7684;&#x4ec0;&#x4e48;&#x4f4d;&#x7f6e;&#xff0c;&#x5c31;&#x8981;&#x4f9d;&#x9760;offset&#x4e86;&#xff0c;offset&#x662f;&#x8c03;&#x7528;&#x4e86;offsetof&#x51fd;&#x6570;&#x8ba1;&#x7b97;&#x51fa;&#x7684;&#x7ed3;&#x6784;&#x4f53;&#x4e2d;&#x67d0;&#x4e2a;&#x6210;&#x5458;&#x7684;&#x504f;&#x79fb;&#x4f4d;&#x7f6e;&#x3002;&#xa;&#xa;&#x5e76;&#x4e0d;&#x662f;&#x6240;&#x6709;&#x7684;&#x6a21;&#x5757;&#x90fd;&#x8981;&#x5b9a;&#x4e49;&#x4e00;&#x4e2a;&#x914d;&#x7f6e;&#x7ed3;&#x6784;&#x4f53;&#xff0c;&#x56e0;&#x4e3a;set&#x4e5f;&#x53ef;&#x80fd;&#x662f;&#x4e00;&#x4e2a;&#x7b80;&#x5355;&#x7684;&#x64cd;&#x4f5c;&#x51fd;&#x6570;&#xff0c;&#x5b83;&#x53ef;&#x80fd;&#x53ea;&#x662f;&#x4ece;&#x914d;&#x7f6e;&#x4e2d;&#xff08;ngx_conf_t&#xff09;&#x8bfb;&#x53d6;&#x4e00;&#x4e9b;&#x6570;&#x636e;&#x8fdb;&#x884c;&#x7b80;&#x5355;&#x7684;&#x64cd;&#x4f5c;&#xff0c;&#x6bd4;&#x5982;errlog&#x6a21;&#x5757;&#x7684;&#x201c;error_log&#x201d;&#x6307;&#x4ee4;&#x5c31;&#x662f;&#x8c03;&#x7528;ngx_error_log&#x5199;&#x4e00;&#x6761;&#x65e5;&#x5fd7;&#xff0c;&#x5e76;&#x4e0d;&#x9700;&#x8981;&#x5b58;&#x50a8;&#x4ec0;&#x4e48;&#x914d;&#x7f6e;&#x6570;&#x636e;&#x3002;&#xa;&#xa;conf&#x548c;offset&#xff0c;offset&#x524d;&#x9762;&#x5df2;&#x7ecf;&#x63d0;&#x5230;&#xff0c;&#x5b83;&#x662f;&#x914d;&#x7f6e;&#x7ed3;&#x6784;&#x4f53;&#x4e2d;&#x6210;&#x5458;&#x7684;&#x504f;&#x79fb;&#x3002;conf&#x4e5f;&#x662f;&#x4e00;&#x4e2a;&#x504f;&#x79fb;&#x503c;&#xff0c;&#x4e0d;&#x8fc7;&#x5b83;&#x662f;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x7ed3;&#x6784;&#x4f53;&#x7684;&#xff08;ngx_conf_t&#xff09;&#x6210;&#x5458;ctx&#x7684;&#x6210;&#x5458;&#x7684;&#x504f;&#x79fb;&#xff0c;&#x4e00;&#x822c;&#x662f;&#x7528;&#x6765;&#x628a;ctx&#x4e2d;&#x6307;&#x5b9a;&#x504f;&#x79fb;&#x4f4d;&#x7f6e;&#x7684;&#x6210;&#x5458;&#x8d4b;&#x503c;&#x7ed9;void *conf&#x3002;&#xa;&#xa;post&#x6307;&#x5411;&#x6a21;&#x5757;&#x8bfb;&#x914d;&#x7f6e;&#x7684;&#x65f6;&#x5019;&#x9700;&#x8981;&#x7684;&#x4e00;&#x4e9b;&#x96f6;&#x788e;&#x53d8;&#x91cf;&#x3002;&#xa;&#xa;&#x4ece;&#x4e0a;&#x9762;&#x7684;&#x5206;&#x6790;&#x53ef;&#x4ee5;&#x770b;&#x51fa;&#xff0c;&#x6bcf;&#x4e2a;&#x6a21;&#x5757;&#x4f1a;&#x6620;&#x5c04;&#x5230;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e2d;&#x7684;&#x67d0;&#x4e2a;&#x4f4d;&#x7f6e;&#xff0c;&#x5168;&#x5c40;&#x4f4d;&#x7f6e;&#x7684;&#x914d;&#x7f6e;&#x4f1a;&#x88ab;&#x4e0b;&#x4e00;&#x7ea7;&#x7684;&#x914d;&#x7f6e;&#x7ee7;&#x627f;&#xff0c;&#x6bd4;&#x5982;http_main&#x4f1a;&#x88ab;http_svr&#x7ee7;&#x627f;&#xff0c;http_svr&#x4f1a;&#x88ab;http_loc&#x7ee7;&#x627f;&#xff0c;&#x8fd9;&#x4e9b;&#x7ee7;&#x627f;&#x5728;&#x6e90;&#x7801;&#x4e2d;&#x662f;&#x8c03;&#x7528;&#x6a21;&#x5757;&#x4e0a;&#x4e0b;&#x6587;&#x7684;&#x5408;&#x5e76;&#x914d;&#x7f6e;&#x7684;&#x63a5;&#x53e3;&#x5b8c;&#x6210;&#x7684;&#x3002;&#xa;&#xa;ngx_command_t&#x7684;set&#x6210;&#x5458;&#x4e5f;&#x53ef;&#x4ee5;&#x4f5c;&#x4e3a;&#x4e00;&#x4e2a;&#x56de;&#x8c03;&#x51fd;&#x6570;&#xff0c;&#x901a;&#x8fc7;&#x628a;&#x81ea;&#x5b9a;&#x4e49;&#x7684;&#x64cd;&#x4f5c;&#x51fd;&#x6570;&#x8d4b;&#x503c;&#x7ed9;set&#x6765;&#x6ce8;&#x518c;&#x4e00;&#x4e9b;&#x64cd;&#x4f5c;&#x3002;&#xa;&#xa;&#x5230;&#x76ee;&#x524d;&#x4e3a;&#x6b62;&#xff0c;&#x5df2;&#x7ecf;&#x4e86;&#x89e3;&#x4e0d;&#x5c11;&#x56de;&#x8c03;&#x51fd;&#x6570;&#x4e86;&#xff0c;&#x8fd9;&#x4e9b;&#x56de;&#x8c03;&#x51fd;&#x6570;&#x7528;&#x6765;&#x6ce8;&#x518c;&#x6a21;&#x5757;&#x7684;&#x81ea;&#x5b9a;&#x4e49;&#x64cd;&#x4f5c;&#xff0c;&#x6211;&#x6709;&#x65f6;&#x79f0;&#x5b83;&#x4e3a;&#x63a5;&#x53e3;&#xff0c;&#x6709;&#x65f6;&#x79f0;&#x5b83;&#x4e3a;&#x56de;&#x8c03;&#x51fd;&#x6570;&#xff0c;&#x6709;&#x70b9;&#x6df7;&#x4e71;&#xff0c;&#x63a5;&#x4e0b;&#x6765;&#x7684;&#x5206;&#x6790;&#x6587;&#x7ae0;&#x4e2d;&#xff0c;&#x8fdb;&#x884c;&#x4e00;&#x4e0b;&#x7edf;&#x4e00;&#xff0c;&#x5168;&#x90e8;&#x79f0;&#x4e3a;&#x94a9;&#x5b50;&#xff08;hook&#xff09;&#x3002;&#x628a;&#x73b0;&#x5728;&#x5df2;&#x7ecf;&#x5206;&#x6790;&#x8fc7;&#x7684;&#x94a9;&#x5b50;&#x7f57;&#x5217;&#x4e00;&#x4e0b;&#xff1a;&#xa;&#xa;ngx_module_t -&gt; init_master&#xa;ngx_module_t -&gt; init_module&#xa;ngx_module_t -&gt; init_process&#xa;ngx_module_t -&gt; init_thread&#xa;ngx_module_t -&gt; exit_thread&#xa;ngx_module_t -&gt; exit_process&#xa;ngx_module_t -&gt; exit_master&#xa;&#xa;ngx_command_t -&gt; set&#xa;&#xa;&#x4e0b;&#x4e00;&#x7bc7;&#x5256;&#x6790;&#x6a21;&#x5757;&#x4e0a;&#x4e0b;&#x6587;&#x7684;&#x65f6;&#x5019;&#xff0c;&#x4f1a;&#x6709;&#x66f4;&#x591a;&#x7684;&#x94a9;&#x5b50;&#xff0c;&#x8fd9;&#x5c31;&#x662f;&#x4e3a;&#x4ec0;&#x4e48;&#x8981;&#x5bf9;c&#x8bed;&#x8a00;&#x7684;&#x6307;&#x9488;&#x6df1;&#x5165;&#x7406;&#x89e3;&#x7684;&#x539f;&#x56e0;&#x4e86;&#xff0c;nginx&#x4e2d;&#x5230;&#x5904;&#x90fd;&#x662f;&#x94a9;&#x5b50;&#xff0c;&#x5047;&#x5982;&#x8981;&#x81ea;&#x5df1;&#x5199;&#x4e00;&#x4e2a;&#x6a21;&#x5757;&#xff0c;&#x53ef;&#x4ee5;&#x901a;&#x8fc7;&#x8fd9;&#x4e9b;&#x94a9;&#x5b50;&#x628a;&#x81ea;&#x5df1;&#x7684;&#x6a21;&#x5757;&#x6302;&#x5230;nginx&#x7684;&#x5904;&#x7406;&#x6d41;&#x4e2d;&#xff0c;&#x53c2;&#x4e0e;&#x5230;nginx&#x8fd0;&#x884c;&#x7684;&#x6bcf;&#x4e2a;&#x7279;&#x5b9a;&#x9636;&#x6bb5;&#xff0c;&#x5f53;&#x7136;&#xff0c;&#x4e5f;&#x4e0d;&#x662f;&#x968f;&#x610f;&#x7684;&#x5d4c;&#x5165;&#xff0c;&#x8981;&#x7cbe;&#x786e;&#x5b9a;&#x4e49;&#x6a21;&#x5757;&#x4f55;&#x65f6;&#x5982;&#x4f55;&#x4ea7;&#x751f;&#x4f5c;&#x7528;&#x624d;&#x662f;&#x6709;&#x610f;&#x4e49;&#x7684;&#xff0c;&#x8fd9;&#x4e0d;&#x662f;&#x4e00;&#x4ef6;&#x8f7b;&#x677e;&#x7684;&#x4e8b;&#x60c5;&#x3002;"/>
 </node>
 </node>
-<node CREATED="1389150266269" FOLDED="true" MODIFIED="1390274182115" TEXT="ngx_conf_t">
+<node CREATED="1389150266269" MODIFIED="1390274182115" TEXT="ngx_conf_t">
 <icon BUILTIN="full-2"/>
-<node CREATED="1389150403890" MODIFIED="1389150477119" TEXT="&#x7ed3;&#x6784;&#x4f53;">
+<node CREATED="1389150403890" FOLDED="true" MODIFIED="1389150477119" TEXT="&#x7ed3;&#x6784;&#x4f53;">
 <node CREATED="1389150422386" MODIFIED="1389601865680">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -8098,7 +8097,647 @@
 </node>
 <node CREATED="1389150462109" LINK="#ID_260480348" MODIFIED="1389150511849" TEXT="module_type"/>
 <node CREATED="1389150475025" LINK="#ID_260480348" MODIFIED="1389150519033" TEXT="cmd_type"/>
-<node CREATED="1389150526944" LINK="#ID_260480348" MODIFIED="1389150536776" TEXT="ctx"/>
+<node CREATED="1389150526944" LINK="#ID_260480348" MODIFIED="1389150536776" TEXT="ctx">
+<node CREATED="1390286372956" MODIFIED="1390286374285" TEXT="ngx_http_conf_ctx_t">
+<node CREATED="1390286361955" FOLDED="true" MODIFIED="1390286794952" TEXT="ngx_http_core_main_conf_t">
+<node CREATED="1390286372956" MODIFIED="1390286841088">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      typedef struct {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_array_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;servers;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* ngx_http_core_srv_conf_t */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_http_phase_engine_t&#160;&#160;&#160;&#160;phase_engine;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_hash_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;headers_in_hash;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_hash_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;variables_hash;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_array_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;variables;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* ngx_http_variable_t */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ncaptures;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;server_names_hash_max_size;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;server_names_hash_bucket_size;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;variables_hash_max_size;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;variables_hash_bucket_size;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_hash_keys_arrays_t&#160;&#160;&#160;&#160;*variables_keys;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_array_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*ports;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;try_files;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* unsigned&#160;&#160;try_files:1 */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_http_phase_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<font color="#ef0808">&#160;phases</font>[NGX_HTTP_LOG_PHASE + 1];
+    </p>
+    <p>
+      } ngx_http_core_main_conf_t;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1390286361955" FOLDED="true" MODIFIED="1390286826355" TEXT="ngx_http_core_srv_conf_t">
+<node CREATED="1390286372956" MODIFIED="1390286820630">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      typedef struct {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* array of the ngx_http_server_name_t, &quot;server_name&quot; directive */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_array_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;server_names;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* server ctx */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_http_conf_ctx_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*ctx;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_str_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;server_name;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_str_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;server_admin;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;size_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;connection_pool_size;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;size_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;request_pool_size;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;size_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;client_header_buffer_size;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_bufs_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;large_client_header_buffers;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_msec_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;client_header_timeout;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ignore_invalid_headers;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;merge_slashes;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;underscores_in_headers;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;listen:1;
+    </p>
+    <p>
+      #if (NGX_PCRE)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;captures:1;
+    </p>
+    <p>
+      #endif
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_http_core_loc_conf_t&#160;&#160;**named_locations;
+    </p>
+    <p>
+      } ngx_http_core_srv_conf_t;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1390286361955" FOLDED="true" MODIFIED="1390287065783" TEXT="ngx_http_core_loc_conf_s">
+<node CREATED="1390286372956" MODIFIED="1390287060018">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct ngx_http_core_loc_conf_s {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_str_t&#160;&#160;&#160;&#160;&#160;name;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* location name */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      #if (NGX_PCRE)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_http_regex_t&#160;&#160;*regex;
+    </p>
+    <p>
+      #endif
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned&#160;&#160;&#160;&#160;&#160;&#160;noname:1;&#160;&#160;&#160;/* &quot;if () {}&quot; block or limit_except */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned&#160;&#160;&#160;&#160;&#160;&#160;lmt_excpt:1;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned&#160;&#160;&#160;&#160;&#160;&#160;named:1;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned&#160;&#160;&#160;&#160;&#160;&#160;exact_match:1;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned&#160;&#160;&#160;&#160;&#160;&#160;noregex:1;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned&#160;&#160;&#160;&#160;&#160;&#160;auto_redirect:1;
+    </p>
+    <p>
+      #if (NGX_HTTP_GZIP)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned&#160;&#160;&#160;&#160;&#160;&#160;gzip_disable_msie6:2;
+    </p>
+    <p>
+      #if (NGX_HTTP_DEGRADATION)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned&#160;&#160;&#160;&#160;&#160;&#160;gzip_disable_degradation:2;
+    </p>
+    <p>
+      #endif
+    </p>
+    <p>
+      #endif
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_http_location_tree_node_t&#160;&#160;&#160;*static_locations;
+    </p>
+    <p>
+      #if (NGX_PCRE)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_http_core_loc_conf_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;**regex_locations;
+    </p>
+    <p>
+      #endif
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* pointer to the modules' loc_conf */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;void&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;**loc_conf;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;uint32_t&#160;&#160;&#160;&#160;&#160;&#160;limit_except;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;void&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;**limit_except_loc_conf;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_http_handler_pt&#160;&#160;handler;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* location name length for inclusive location with inherited alias */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;size_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;alias;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_str_t&#160;&#160;&#160;&#160;&#160;root;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* root, alias */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_str_t&#160;&#160;&#160;&#160;&#160;post_action;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_array_t&#160;&#160;*root_lengths;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_array_t&#160;&#160;*root_values;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_array_t&#160;&#160;*types;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_hash_t&#160;&#160;&#160;&#160;types_hash;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_str_t&#160;&#160;&#160;&#160;&#160;default_type;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;off_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;client_max_body_size;&#160;&#160;&#160;&#160;/* client_max_body_size */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;off_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;directio;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* directio */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;off_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;directio_alignment;&#160;&#160;&#160;&#160;&#160;&#160;/* directio_alignment */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_bufs_t&#160;&#160;&#160;&#160;client_body_buffers;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;size_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;client_body_postpone_size;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;size_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;client_body_buffer_size; /* client_body_buffer_size */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;size_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;send_lowat;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* send_lowat */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;size_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;postpone_output;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* postpone_output */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;size_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;limit_rate;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* limit_rate */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;size_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;limit_rate_after;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* limit_rate_after */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;size_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;sendfile_max_chunk;&#160;&#160;&#160;&#160;&#160;&#160;/* sendfile_max_chunk */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;size_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;read_ahead;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* read_ahead */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_msec_t&#160;&#160;&#160;&#160;client_body_timeout;&#160;&#160;&#160;&#160;&#160;/* client_body_timeout */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_msec_t&#160;&#160;&#160;&#160;send_timeout;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* send_timeout */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_msec_t&#160;&#160;&#160;&#160;keepalive_timeout;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* keepalive_timeout */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_msec_t&#160;&#160;&#160;&#160;lingering_time;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* lingering_time */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_msec_t&#160;&#160;&#160;&#160;lingering_timeout;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* lingering_timeout */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_msec_t&#160;&#160;&#160;&#160;resolver_timeout;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* resolver_timeout */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_resolver_t&#160;&#160;*resolver;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* resolver */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;time_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;keepalive_header;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* keepalive_timeout */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;keepalive_requests;&#160;&#160;&#160;&#160;&#160;&#160;/* keepalive_requests */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;keepalive_disable;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* keepalive_disable */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;satisfy;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* satisfy */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;lingering_close;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* lingering_close */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;if_modified_since;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* if_modified_since */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;max_ranges;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* max_ranges */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;client_body_in_file_only; /* client_body_in_file_only */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;client_body_in_single_buffer;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* client_body_in_singe_buffer */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;retry_cached_connection;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;internal;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* internal */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;sendfile;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* sendfile */
+    </p>
+    <p>
+      #if (NGX_HAVE_FILE_AIO)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;aio;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* aio */
+    </p>
+    <p>
+      #endif
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;tcp_nopush;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* tcp_nopush */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;tcp_nodelay;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* tcp_nodelay */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;reset_timedout_connection; /* reset_timedout_connection */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;server_name_in_redirect; /* server_name_in_redirect */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;port_in_redirect;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* port_in_redirect */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;msie_padding;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* msie_padding */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;msie_refresh;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* msie_refresh */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;log_not_found;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* log_not_found */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;log_subrequest;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* log_subrequest */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;recursive_error_pages;&#160;&#160;&#160;/* recursive_error_pages */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;server_tokens;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* server_tokens */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;server_info;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* server_info */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;chunked_transfer_encoding; /* chunked_transfer_encoding */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;etag;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* etag */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;request_time_cache;&#160;&#160;&#160;&#160;&#160;&#160;/* request_time_cache */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;server_tag_type;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* server tag type */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_str_t&#160;&#160;&#160;&#160;&#160;server_tag;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* customized server tag */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_str_t&#160;&#160;&#160;&#160;&#160;server_tag_header;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* server tag header */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      #if (NGX_HTTP_GZIP)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;gzip_vary;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* gzip_vary */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;gzip_http_version;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* gzip_http_version */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;gzip_proxied;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* gzip_proxied */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      #if (NGX_PCRE)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_array_t&#160;&#160;*gzip_disable;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* gzip_disable */
+    </p>
+    <p>
+      #endif
+    </p>
+    <p>
+      #endif
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      #if (NGX_HAVE_OPENAT)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;disable_symlinks;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* disable_symlinks */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_http_complex_value_t&#160;&#160;*disable_symlinks_from;
+    </p>
+    <p>
+      #endif
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_array_t&#160;&#160;*error_pages;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* error_page */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_http_try_file_t&#160;&#160;&#160;&#160;*try_files;&#160;&#160;&#160;&#160;&#160;/* try_files */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_path_t&#160;&#160;&#160;*client_body_temp_path;&#160;&#160;&#160;/* client_body_temp_path */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_open_file_cache_t&#160;&#160;*open_file_cache;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;time_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;open_file_cache_valid;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;open_file_cache_min_uses;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;open_file_cache_errors;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_flag_t&#160;&#160;&#160;&#160;open_file_cache_events;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_log_t&#160;&#160;&#160;&#160;*error_log;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;types_hash_max_size;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;types_hash_bucket_size;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_queue_t&#160;&#160;*locations;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      #if 0
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_http_core_loc_conf_t&#160;&#160;*prev_location;
+    </p>
+    <p>
+      #endif
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+</node>
 <node CREATED="1389591316401" LINK="#ID_922869772" MODIFIED="1389591357546">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -9371,7 +10010,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1389151355314" FOLDED="true" MODIFIED="1389151369535" POSITION="right" TEXT="&#x56de;&#x8c03;&#x51fd;&#x6570;">
+<node CREATED="1389151355314" MODIFIED="1389151369535" POSITION="right" TEXT="&#x56de;&#x8c03;&#x51fd;&#x6570;">
 <node CREATED="1389242699632" FOLDED="true" ID="ID_1118410517" LINK="#ID_1345550578" MODIFIED="1389447876152" TEXT="ngx_signal_handler">
 <node CREATED="1389242707048" MODIFIED="1389447876150" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node BACKGROUND_COLOR="#ffff00" CREATED="1389242714057" MODIFIED="1389242724141">
@@ -11080,7 +11719,7 @@
 <node CREATED="1389081618658" MODIFIED="1389081620094" TEXT="ngx_http_optimize_servers"/>
 </node>
 </node>
-<node CREATED="1389088130079" FOLDED="true" ID="ID_1463245406" LINK="#ID_824770665" MODIFIED="1389150490112" TEXT="ngx_events_block">
+<node CREATED="1389088130079" ID="ID_1463245406" LINK="#ID_824770665" MODIFIED="1389150490112" TEXT="ngx_events_block">
 <node CREATED="1389149980578" LINK="http://blog.csdn.net/kenbinzhang/article/details/4737539" MODIFIED="1389151263433" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1389088145645" ID="ID_260480348" MODIFIED="1389602152139">
 <richcontent TYPE="NODE"><html>
