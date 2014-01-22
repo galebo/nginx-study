@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1388815008672" MODIFIED="1389575567479" TEXT="nginx">
+<node COLOR="#338800" CREATED="1388815008672" MODIFIED="1390387317352" TEXT="nginx">
 <node CREATED="1389275126222" FOLDED="true" MODIFIED="1389275131039" POSITION="right" TEXT="&#x6587;&#x7ae0;">
 <node CREATED="1389275135399" FOLDED="true" LINK="http://www.php100.com/html/itnews/PHPxinwen/2012/0103/9606.html" MODIFIED="1389599367258" TEXT="&#x5173;&#x4e8e;Apache&#x4e0e;Nginx&#x7684;&#x4f18;&#x52bf;&#x6bd4;&#x8f83;">
 <node CREATED="1389275146855" MODIFIED="1389599279158">
@@ -2951,8 +2951,7 @@
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1388931843778" FOLDED="true" LINK="http://blog.csdn.net/kenbinzhang/article/details/4696730" MODIFIED="1389099255989" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
@@ -5945,6 +5944,10 @@
 <node CREATED="1390527974854" LINK="#ID_62070090" MODIFIED="1390528149679" TEXT="get"/>
 </node>
 <node CREATED="1390526400757" LINK="#ID_1648342452" MODIFIED="1390527857302" TEXT="ngx_timer_resolution"/>
+</node>
+<node CREATED="1390389260732" MODIFIED="1390389266773" TEXT="&#x542f;&#x52a8;&#x76f8;&#x5173;">
+<node CREATED="1390389270112" MODIFIED="1390389271520" TEXT="ngx_argc"/>
+<node CREATED="1390389282096" MODIFIED="1390389283100" TEXT="ngx_argv"/>
 </node>
 </node>
 <node CREATED="1389106372749" FOLDED="true" MODIFIED="1389151945772" POSITION="left" TEXT="&#x7ed3;&#x6784;&#x4f53;&#x5b9e;&#x4f8b;">
