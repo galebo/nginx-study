@@ -14,7 +14,7 @@
 #include <errno.h>
 int parentId = 1;
 static void ngx_execute_proc(char *data, int pid, char * const *argv) {
-	if (execve("/home/li/WORK/git/nginx-study/src/exe_bin", argv, NULL) == -1) {
+	if (execve("./exe_bin", argv, NULL) == -1) {
 		printf("exe %s error,pid:%d\r\n", data, pid);
 	}
 	printf("exe %s ok,pid:%d\r\n", data, pid);
