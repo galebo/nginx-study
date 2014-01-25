@@ -14,6 +14,7 @@ int rtn;
 #define _EXE_(exe) rtn=exe;if(NGX_OK!=rtn) return rtn;
 #define _INI_(dst,alloc) dst=alloc;if(dst==NULL) return NGX_ERROR;
 
+
 int main(int argc, char **argv) {
 	ngx_log_t        *log;
 	ngx_pool_t       *pool;
@@ -31,6 +32,8 @@ int main(int argc, char **argv) {
     _EXE_(testChain(pool,log));
     ngx_log_error(NGX_LOG_CRIT, log, 0, "===============testLog  ================");
     _EXE_(testLog(pool,log));
+    ngx_log_error(NGX_LOG_CRIT, log, 0, "===============testTimer================");
+    _EXE_(testTimer(pool,log));
 
     ngx_log_error(NGX_LOG_CRIT, log, 0, "begin destroy pool");
 	ngx_destroy_pool(pool);
@@ -249,4 +252,40 @@ int testLog(ngx_pool_t *pool,ngx_log_t *log){
 
     ngx_log_stderr(0,"ngx_log_stderr");
     return 0;
+}
+
+static ngx_connection_t dummy;
+static ngx_event_t ev;
+static int count=1;
+
+static void _testTimer_print(ngx_event_t *ev)
+{
+	ngx_log_error(NGX_LOG_CRIT, ev->log, 0, "_testTimer_print\n");
+    if(count < 10){
+    	count=count+1;
+    	ngx_add_timer(ev, 1000);
+    }
+}
+
+
+void _testTimer_init(ngx_log_t *log)
+{
+    dummy.fd = (ngx_socket_t) -1;
+
+    ngx_memzero(&ev, sizeof(ngx_event_t));
+
+    ev.handler = _testTimer_print;
+    ev.log = log;
+    ev.data = &dummy;
+
+    ngx_add_timer(&ev, 1000);
+
+    while(count<10)
+    {
+
+    }
+}
+int testTimer(ngx_pool_t *pool,ngx_log_t *log){
+	_testTimer_init(log);
+	return NGX_OK;
 }

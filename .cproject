@@ -29,7 +29,12 @@
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1056581279" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.1570504236" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.debug.option.debugging.level.595785155" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
-								<option id="gnu.c.compiler.option.include.paths.2029080373" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath"/>
+								<option id="gnu.c.compiler.option.include.paths.2029080373" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/tengine/src/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/tengine/src/http}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/tengine/src/event}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/tengine/src/os/unix}&quot;"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.2116243411" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.1817195585" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug">

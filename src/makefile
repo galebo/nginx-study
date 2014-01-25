@@ -1,4 +1,4 @@
-${NGINX_SRC}=
+NGINX_SRC=../../tengine
 all:main
 
 main:main.c
@@ -137,5 +137,6 @@ main:main.c
 	${NGINX_SRC}/objs/src/http/modules/ngx_http_stub_status_module.o \
 	${NGINX_SRC}/objs/ngx_modules.o \
 	-lpthread -ldl -lcrypt -lpcre -lssl -lcrypto -ldl -lz
+	mkdir -p logs
 clean:
 	rm main
