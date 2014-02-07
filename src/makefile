@@ -1,5 +1,5 @@
 NGINX_SRC=../../tengine
-all:main
+all:main epoll
 
 main:main.c
 	gcc -g -o main  main.c \
@@ -140,3 +140,5 @@ main:main.c
 	mkdir -p logs
 clean:
 	rm main
+epoll:epoll.c
+	gcc -Wall -o epoll epoll.c

@@ -492,7 +492,7 @@
 <node CREATED="1389073579240" MODIFIED="1389238336566" POSITION="right" TEXT="&#x53c2;&#x8003;">
 <node CREATED="1389073591719" LINK="http://blog.csdn.net/kenbinzhang?viewmode=contents " MODIFIED="1389073624444" TEXT="&#x5543;&#x997c;&#x7684;&#x6280;&#x672f;&#x535a;&#x5ba2;"/>
 <node CREATED="1389239945627" LINK="http://blog.csdn.net/Marcky/article/category/747446" MODIFIED="1389447897452" TEXT="Marcky">
-<node CREATED="1390607177749" MODIFIED="1390607179896" TEXT="Nginx&#x5b9a;&#x65f6;&#x5668;&#x7684;&#x5b9e;&#x73b0;&#x53ca;&#x5b9a;&#x65f6;&#x4e8b;&#x4ef6;&#x7684;&#x4f7f;&#x7528; ">
+<node CREATED="1390607177749" FOLDED="true" MODIFIED="1391736967677" TEXT="Nginx&#x5b9a;&#x65f6;&#x5668;&#x7684;&#x5b9e;&#x73b0;&#x53ca;&#x5b9a;&#x65f6;&#x4e8b;&#x4ef6;&#x7684;&#x4f7f;&#x7528; ">
 <node CREATED="1390607208818" MODIFIED="1390607218966">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -842,10 +842,10 @@
       &#26412;&#25991;&#21482;&#26159;&#31616;&#21333;&#30340;&#20171;&#32461;&#20102;nginx&#30340;&#23450;&#26102;&#65292;&#32454;&#33410;&#36824;&#38656;&#35201;&#38405;&#35835;&#20195;&#30721;&#65292;&#27604;&#22914;nginx&#32418;&#40657;&#26641;&#30340;&#23454;&#29616;&#31561;&#12290;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
+<node CREATED="1391736959405" LINK="http://blog.csdn.net/marcky/article/details/6069958" MODIFIED="1391736987199" TEXT="Nginx&#x6e90;&#x7801;&#x5206;&#x6790;-Epoll&#x6a21;&#x5757; "/>
 </node>
 <node CREATED="1389256392595" LINK="http://www.pagefault.info" MODIFIED="1389447897453" TEXT="pagefault"/>
 <node CREATED="1389703024647" LINK="http://tengine.taobao.org/book/" MODIFIED="1389704484323" TEXT="tengine"/>
@@ -2614,7 +2614,7 @@
 <node CREATED="1388924751415" MODIFIED="1388924753236" TEXT="&#x82e5;&#x65e0;&#x7ee7;&#x627f;sockets&#xff0c;&#x4e14;&#x8bbe;&#x7f6e;&#x4e86;&#x5b88;&#x62a4;&#x8fdb;&#x7a0b;&#x6807;&#x8bc6;&#xff0c;&#x5219;&#x8c03;&#x7528;ngx_daemon()&#x521b;&#x5efa;&#x5b88;&#x62a4;&#x8fdb;&#x7a0b;"/>
 </node>
 <node CREATED="1388815551105" MODIFIED="1388815552096" TEXT="ngx_open_pipes"/>
-<node BACKGROUND_COLOR="#47a433" COLOR="#080f05" CREATED="1388815601954" MODIFIED="1389591599404" STYLE="fork" TEXT="process_cycle">
+<node BACKGROUND_COLOR="#47a433" COLOR="#080f05" CREATED="1388815601954" FOLDED="true" MODIFIED="1389591599404" STYLE="fork" TEXT="process_cycle">
 <edge COLOR="#808080" STYLE="bezier" WIDTH="thin"/>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1388815607274" MODIFIED="1389591710581" TEXT="ngx_single_process_cycle"/>
@@ -5436,7 +5436,83 @@
 <node CREATED="1389085058082" ID="ID_356705254" LINK="#ID_458451428" MODIFIED="1390379864787" TEXT="ngx_process_events">
 <icon BUILTIN="back"/>
 </node>
-<node CREATED="1389085100480" MODIFIED="1389450679734" TEXT="ngx_event_process_posted"/>
+<node CREATED="1389346235797" FOLDED="true" MODIFIED="1389447876151" TEXT="ngx_event_process_posted">
+<node CREATED="1389346241253" MODIFIED="1391751604781">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      void
+    </p>
+    <p>
+      ngx_event_process_posted(ngx_cycle_t *cycle,&#160;ngx_thread_volatile ngx_event_t **posted)
+    </p>
+    <p>
+      {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_event_t&#160;&#160;*ev;
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;for ( ;; ) {
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ev = (ngx_event_t *) *posted;
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_log_debug1(NGX_LOG_DEBUG_EVENT, cycle-&gt;log, 0,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;posted event %p&quot;, ev);
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (ev == NULL) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_delete_posted_event(ev);
+    </p>
+    <p>
+      //&#35843;&#29992;handler
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ev-&gt;handler(ev);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      &#28982;&#21518;&#23601;&#26159;ngx_event_process_poste&#20989;&#25968;&#65292;&#36825;&#20010;&#20989;&#25968;&#24456;&#31616;&#21333;&#65292;&#23601;&#26159;&#36941;&#21382;event&#38431;&#21015;&#65292;&#28982;&#21518;&#35843;&#29992;event&#30340;handler&#20989;&#25968;&#65292;&#32780;&#25105;&#20204;&#36824;&#35760;&#24471;&#19978;&#38754;&#22312;ngx_http_init_connection&#20013;&#35774;&#32622;&#30340;handler&#23601;&#26159;ngx_http_init_request&#65292;&#36825;&#26679;&#23376;&#65292;&#25105;&#20204;&#23601;&#20877;&#19968;&#27425;&#36827;&#20837;request&#30340;&#22788;&#29702;&#65292;&#21487;&#26159;&#27492;&#26102;&#20381;&#26087;&#27809;&#26377;&#25346;&#36733;&#35835;&#20107;&#20214;&#21040;epoll&#12290;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
 <node CREATED="1390528665190" MODIFIED="1390528666178" TEXT="ngx_event_find_timer">
 <node CREATED="1389084882636" FOLDED="true" MODIFIED="1389085095397" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1389084899026" MODIFIED="1390528912981">
@@ -6203,9 +6279,9 @@
 </node>
 </node>
 </node>
-<node CREATED="1388816679113" MODIFIED="1389150154774" POSITION="left" TEXT="&#x5168;&#x5c40;&#x53d8;&#x91cf;">
+<node CREATED="1388816679113" FOLDED="true" MODIFIED="1389150154774" POSITION="left" TEXT="&#x5168;&#x5c40;&#x53d8;&#x91cf;">
 <node CREATED="1388816693569" MODIFIED="1388816695882" TEXT="ngx_dump_config"/>
-<node CREATED="1389063190084" MODIFIED="1389105502690" TEXT="&#x8fdb;&#x7a0b;&#x76f8;&#x5173;">
+<node CREATED="1389063190084" FOLDED="true" MODIFIED="1389105502690" TEXT="&#x8fdb;&#x7a0b;&#x76f8;&#x5173;">
 <node CREATED="1389063202261" FOLDED="true" MODIFIED="1389107681387" TEXT="ngx_last_process">
 <node CREATED="1389098087008" MODIFIED="1389098101627">
 <richcontent TYPE="NODE"><html>
@@ -6284,7 +6360,7 @@
 <node CREATED="1390378978278" MODIFIED="1390378979949" TEXT="ngx_posted_accept_events"/>
 <node CREATED="1390378990806" MODIFIED="1390378992341" TEXT="ngx_posted_events"/>
 </node>
-<node CREATED="1389242555502" FOLDED="true" MODIFIED="1389702972755" TEXT="signals">
+<node CREATED="1389242555502" MODIFIED="1389702972755" TEXT="signals">
 <node CREATED="1389242576749" ID="ID_1345550578" LINK="#ID_1118410517" MODIFIED="1389702972756" TEXT="ngx_signal_handler"/>
 </node>
 <node CREATED="1390523423453" FOLDED="true" MODIFIED="1390523435621" TEXT="&#x8ba1;&#x65f6;&#x5668;">
@@ -6300,7 +6376,7 @@
 </node>
 <node CREATED="1390526400757" LINK="#ID_1648342452" MODIFIED="1390527857302" TEXT="ngx_timer_resolution"/>
 </node>
-<node CREATED="1390389260732" MODIFIED="1390389266773" TEXT="&#x542f;&#x52a8;&#x76f8;&#x5173;">
+<node CREATED="1390389260732" FOLDED="true" MODIFIED="1390389266773" TEXT="&#x542f;&#x52a8;&#x76f8;&#x5173;">
 <node CREATED="1390389270112" MODIFIED="1390389271520" TEXT="ngx_argc"/>
 <node CREATED="1390389282096" MODIFIED="1390389283100" TEXT="ngx_argv"/>
 </node>
@@ -6584,7 +6660,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1388928033225" FOLDED="true" MODIFIED="1389151944412" POSITION="left" TEXT="&#x7ed3;&#x6784;&#x4f53;">
+<node CREATED="1388928033225" MODIFIED="1389151944412" POSITION="left" TEXT="&#x7ed3;&#x6784;&#x4f53;">
 <node CREATED="1388928059241" FOLDED="true" ID="ID_552558133" MODIFIED="1389149735662" TEXT="ngx_module_t">
 <icon BUILTIN="full-0"/>
 <node CREATED="1388928269427" FOLDED="true" LINK="http://blog.csdn.net/kenbinzhang/article/details/4656815" MODIFIED="1389146397452" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
@@ -8030,14 +8106,10 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1390400530243" LINK="#ID_1076558626" MODIFIED="1390400550455" TEXT="ngx_event_action_t"/>
+<node CREATED="1390400530243" ID="ID_564489032" LINK="#ID_1076558626" MODIFIED="1390400550455" TEXT="ngx_event_action_t"/>
 </node>
 </node>
 <node CREATED="1389595291407" LINK="#ID_1712714867" MODIFIED="1389603010441" TEXT="actions.init"/>
-</node>
-<node CREATED="1389600239389" FOLDED="true" LINK="#ID_1262072544" MODIFIED="1390381526056" TEXT="ngx_event_module_t">
-<icon BUILTIN="full-3"/>
-<node CREATED="1388928654001" LINK="#ID_1076558626" MODIFIED="1390396596420" TEXT="ngx_event_actions_t"/>
 </node>
 <node CREATED="1388928672641" FOLDED="true" MODIFIED="1389107626790" TEXT="ngx_mail_module_t">
 <icon BUILTIN="full-3"/>
@@ -9694,7 +9766,7 @@
 <node CREATED="1390396614740" FOLDED="true" MODIFIED="1390396620655" TEXT="&#x7ed3;&#x6784;&#x5206;&#x6790;">
 <node CREATED="1389105668972" MODIFIED="1389105681442" TEXT="typedef struct {&#xa;    ngx_int_t  (*add)(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags);&#xa;    ngx_int_t  (*del)(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags);&#xa;&#xa;    ngx_int_t  (*enable)(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags);&#xa;    ngx_int_t  (*disable)(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags);&#xa;&#xa;    ngx_int_t  (*add_conn)(ngx_connection_t *c);&#xa;    ngx_int_t  (*del_conn)(ngx_connection_t *c, ngx_uint_t flags);&#xa;&#xa;    ngx_int_t  (*process_changes)(ngx_cycle_t *cycle, ngx_uint_t nowait);&#xa;    ngx_int_t  (*process_events)(ngx_cycle_t *cycle, ngx_msec_t timer,&#xa;                   ngx_uint_t flags);&#xa;&#xa;    ngx_int_t  (*init)(ngx_cycle_t *cycle, ngx_msec_t timer);&#xa;    void       (*done)(ngx_cycle_t *cycle);&#xa;} ngx_event_actions_t;&#xa;"/>
 </node>
-<node CREATED="1388928654001" FOLDED="true" ID="ID_1926937442" LINK="#ID_590008386" MODIFIED="1390396609452" TEXT="&#x5b9e;&#x4f8b;">
+<node CREATED="1388928654001" ID="ID_1926937442" LINK="#ID_590008386" MODIFIED="1390396609452" TEXT="&#x5b9e;&#x4f8b;">
 <node CREATED="1389600032611" MODIFIED="1390009808675">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -10799,8 +10871,8 @@
 </node>
 </node>
 <node CREATED="1389151355314" MODIFIED="1389151369535" POSITION="right" TEXT="&#x56de;&#x8c03;&#x51fd;&#x6570;">
-<node CREATED="1389242699632" FOLDED="true" ID="ID_1118410517" LINK="#ID_1345550578" MODIFIED="1389447876152" TEXT="ngx_signal_handler">
-<node CREATED="1389242707048" MODIFIED="1389447876150" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389242699632" ID="ID_1118410517" LINK="#ID_1345550578" MODIFIED="1389447876152" TEXT="ngx_signal_handler">
+<node CREATED="1389242707048" FOLDED="true" MODIFIED="1389447876150" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node BACKGROUND_COLOR="#ffff00" CREATED="1389242714057" MODIFIED="1389242724141">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -11311,7 +11383,7 @@
 <node CREATED="1389591672409" LINK="#ID_1159741802" MODIFIED="1389591728633" TEXT="&#xa0;ngx_conf_parse"/>
 </node>
 <node CREATED="1389081320591" ID="ID_642383791" LINK="#ID_333242358" MODIFIED="1389448567915" TEXT="ngx_http_block">
-<node CREATED="1389081514663" FOLDED="true" MODIFIED="1389081601261" TEXT="ngx_http_optimize_servers">
+<node CREATED="1389081514663" MODIFIED="1389081601261" TEXT="ngx_http_optimize_servers">
 <node CREATED="1388929162025" FOLDED="true" MODIFIED="1389145398528" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;1">
 <node CREATED="1388929222345" MODIFIED="1389593181195">
 <richcontent TYPE="NODE"><html>
@@ -12068,7 +12140,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1390271701198" FOLDED="true" MODIFIED="1390271718501" TEXT="/*ngx_connection_handler_pt*/">
+<node CREATED="1390271701198" MODIFIED="1390271718501" TEXT="/*ngx_connection_handler_pt*/">
 <node CREATED="1389345958461" ID="ID_113471940" LINK="#ID_64737652" MODIFIED="1389448731059" TEXT="ngx_http_init_connection">
 <node CREATED="1389450031541" FOLDED="true" MODIFIED="1389575211840" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1389345975790" MODIFIED="1390526338210">
@@ -12716,7 +12788,7 @@
 <node CREATED="1390526346894" MODIFIED="1390526348249" TEXT="ngx_add_timer"/>
 </node>
 </node>
-<node CREATED="1390224455119" FOLDED="true" MODIFIED="1390224462958" TEXT="/*ngx_event_handler_pt*/">
+<node CREATED="1390224455119" ID="ID_881684021" LINK="#ID_1961438373" MODIFIED="1391751211972" TEXT="/*ngx_event_handler_pt*/">
 <node CREATED="1389103358419" LINK="#ID_535744274" MODIFIED="1390379759115" TEXT="ngx_channel_handler">
 <node CREATED="1389103381172" FOLDED="true" MODIFIED="1389106843180" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1389103332523" MODIFIED="1390379277895">
@@ -13356,7 +13428,8 @@
 <node CREATED="1390224564364" MODIFIED="1390224565723" TEXT="ngx_http_process_request_line"/>
 <node CREATED="1390224592068" MODIFIED="1390224593399" TEXT="ngx_http_keepalive_handler"/>
 </node>
-<node CREATED="1390013233538" ID="ID_590008386" LINK="#ID_1926937442" MODIFIED="1390013262288" TEXT="ngx_event_actions_t(epoll)">
+<node CREATED="1390013233538" ID="ID_590008386" LINK="#ID_564489032" MODIFIED="1391751372013" TEXT="ngx_event_actions_t(epoll)">
+<node CREATED="1391751836303" FOLDED="true" MODIFIED="1391751852811" TEXT="/*actions.init*/">
 <node CREATED="1390008473155" ID="ID_656889216" LINK="#ID_1222451264" MODIFIED="1390524232648" TEXT="ngx_epoll_init">
 <node CREATED="1390398057691" FOLDED="true" MODIFIED="1390398070344" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1390008477374" MODIFIED="1390523987966">
@@ -13584,7 +13657,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1390398057691" FOLDED="true" ID="ID_449834385" LINK="http://www.alidata.org/archives/1296" MODIFIED="1390399510804" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1390398057691" FOLDED="true" ID="ID_449834385" LINK="http://blog.csdn.net/marcky/article/details/6069958" MODIFIED="1391736616837" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1390398079402" MODIFIED="1390517990187">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -13788,7 +13861,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1390254743733" ID="ID_476761845" MODIFIED="1390381235131" TEXT="/*ngx_process_events*/">
+</node>
+<node CREATED="1390254743733" FOLDED="true" ID="ID_476761845" MODIFIED="1390381235131" TEXT="/*ngx_process_events*/">
 <node CREATED="1390254756383" LINK="#ID_356705254" MODIFIED="1390381220999" TEXT="ngx_epoll_process_events">
 <node CREATED="1390380649717" FOLDED="true" MODIFIED="1390380669723" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1390008477374" MODIFIED="1390378757972">
@@ -14014,7 +14088,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1390380649717" FOLDED="true" LINK="http://www.alidata.org/archives/1296" MODIFIED="1390399470321" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1390380649717" FOLDED="true" LINK="http://blog.csdn.net/marcky/article/details/6069958" MODIFIED="1391736922292" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1390008477374" ID="ID_62070090" MODIFIED="1390528299505">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -14349,8 +14423,10 @@
 </html></richcontent>
 </node>
 </node>
+<node CREATED="1391751182004" ID="ID_1961438373" LINK="#ID_881684021" MODIFIED="1391751199355" TEXT="ngx_event_handler_pt"/>
 </node>
 </node>
+<node CREATED="1391751523917" MODIFIED="1391751550997" TEXT="/*ngx_add_conn*/">
 <node CREATED="1390400353189" MODIFIED="1390400380705" TEXT="ngx_epoll_add_connection">
 <node CREATED="1390400148171" FOLDED="true" MODIFIED="1390400156458" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1390400161955" MODIFIED="1390400308840">
@@ -14427,6 +14503,8 @@
 </node>
 </node>
 </node>
+</node>
+<node CREATED="1391751529662" MODIFIED="1391751558835" TEXT="/*ngx_del_conn*/">
 <node CREATED="1390400764204" MODIFIED="1390400788681" TEXT="ngx_epoll_del_connection">
 <node CREATED="1390400148171" FOLDED="true" MODIFIED="1390400156458" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1390400161955" MODIFIED="1390400838193">
@@ -14545,85 +14623,6 @@
 </node>
 </node>
 </node>
-</node>
-<node CREATED="1389346235797" FOLDED="true" MODIFIED="1389447876151" TEXT="ngx_event_process_posted">
-<node CREATED="1389346241253" MODIFIED="1389447919931">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      void
-    </p>
-    <p>
-      ngx_event_process_posted(ngx_cycle_t *cycle,
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_thread_volatile ngx_event_t **posted)
-    </p>
-    <p>
-      {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_event_t&#160;&#160;*ev;
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;for ( ;; ) {
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ev = (ngx_event_t *) *posted;
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_log_debug1(NGX_LOG_DEBUG_EVENT, cycle-&gt;log, 0,
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;posted event %p&quot;, ev);
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (ev == NULL) {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_delete_posted_event(ev);
-    </p>
-    <p>
-      //&#35843;&#29992;handler
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ev-&gt;handler(ev);
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;}
-    </p>
-    <p>
-      }
-    </p>
-    <p>
-      &#28982;&#21518;&#23601;&#26159;ngx_event_process_poste&#20989;&#25968;&#65292;&#36825;&#20010;&#20989;&#25968;&#24456;&#31616;&#21333;&#65292;&#23601;&#26159;&#36941;&#21382;event&#38431;&#21015;&#65292;&#28982;&#21518;&#35843;&#29992;event&#30340;handler&#20989;&#25968;&#65292;&#32780;&#25105;&#20204;&#36824;&#35760;&#24471;&#19978;&#38754;&#22312;ngx_http_init_connection&#20013;&#35774;&#32622;&#30340;handler&#23601;&#26159;ngx_http_init_request&#65292;&#36825;&#26679;&#23376;&#65292;&#25105;&#20204;&#23601;&#20877;&#19968;&#27425;&#36827;&#20837;request&#30340;&#22788;&#29702;&#65292;&#21487;&#26159;&#27492;&#26102;&#20381;&#26087;&#27809;&#26377;&#25346;&#36733;&#35835;&#20107;&#20214;&#21040;epoll&#12290;
-    </p>
-  </body>
-</html></richcontent>
 </node>
 </node>
 <node CREATED="1390524629717" LINK="#ID_552558133" MODIFIED="1390526139686" TEXT="ngx_module_t">
@@ -15075,7 +15074,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1389595074949" ID="ID_1648342452" MODIFIED="1389595090765" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;2">
+<node CREATED="1389595074949" FOLDED="true" ID="ID_1648342452" MODIFIED="1389595090765" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;2">
 <node CREATED="1389151295667" ID="ID_435219623" MODIFIED="1390607094244">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -15305,11 +15304,10 @@
       &#160;&#160;rev-&gt;handle = ngx_event_accept;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
-<node CREATED="1390526604318" MODIFIED="1390526644912" TEXT="ngx_timer_signal_handle">
+<node CREATED="1390526604318" FOLDED="true" MODIFIED="1390526644912" TEXT="ngx_timer_signal_handle">
 <icon BUILTIN="back"/>
 <node CREATED="1389595074949" MODIFIED="1390527688599" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1389151295667" ID="ID_332607311" MODIFIED="1390526706966">
@@ -15359,7 +15357,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1390523798393" MODIFIED="1390523839249" TEXT="ngx_event_timer_init">
+<node CREATED="1390523798393" FOLDED="true" MODIFIED="1390523839249" TEXT="ngx_event_timer_init">
 <node CREATED="1390523804557" MODIFIED="1390523833522">
 <richcontent TYPE="NODE"><html>
   <head>
