@@ -491,7 +491,7 @@
 </node>
 <node CREATED="1389073579240" MODIFIED="1389238336566" POSITION="right" TEXT="&#x53c2;&#x8003;">
 <node CREATED="1389073591719" LINK="http://blog.csdn.net/kenbinzhang?viewmode=contents " MODIFIED="1389073624444" TEXT="&#x5543;&#x997c;&#x7684;&#x6280;&#x672f;&#x535a;&#x5ba2;"/>
-<node CREATED="1389239945627" LINK="http://blog.csdn.net/Marcky/article/category/747446" MODIFIED="1389447897452" TEXT="Marcky">
+<node CREATED="1389239945627" FOLDED="true" LINK="http://blog.csdn.net/Marcky/article/category/747446" MODIFIED="1389447897452" TEXT="Marcky">
 <node CREATED="1390607177749" FOLDED="true" MODIFIED="1391736967677" TEXT="Nginx&#x5b9a;&#x65f6;&#x5668;&#x7684;&#x5b9e;&#x73b0;&#x53ca;&#x5b9a;&#x65f6;&#x4e8b;&#x4ef6;&#x7684;&#x4f7f;&#x7528; ">
 <node CREATED="1390607208818" MODIFIED="1390607218966">
 <richcontent TYPE="NODE"><html>
@@ -5010,8 +5010,8 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1389103275370" MODIFIED="1389106958316" TEXT="ngx_add_channel_event">
-<node CREATED="1389103381172" FOLDED="true" MODIFIED="1389106900099" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389103275370" ID="ID_1899417687" MODIFIED="1389106958316" TEXT="ngx_add_channel_event">
+<node CREATED="1389103381172" ID="ID_1064190415" MODIFIED="1389106900099" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1389103332523" ID="ID_1606222132" MODIFIED="1390395966696">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -5172,7 +5172,7 @@
 <node CREATED="1389105081619" MODIFIED="1389450679727" TEXT="ngx_add_channel_event&#x628a;&#x53e5;&#x67c4;ngx_channel(&#x5f53;&#x524d;worker&#x7684;channel[1])&#x4e0a;&#x5efa;&#x7acb;&#x7684;&#x8fde;&#x63a5;&#x7684;&#x53ef;&#x8bfb;&#x4e8b;&#x4ef6;&#x52a0;&#x5165;&#x4e8b;&#x4ef6;&#x76d1;&#x63a7;&#x961f;&#x5217;&#xa;&#x5c06;channel&#x653e;&#x5230;epoll&#x7b49;&#x4e8b;&#x4ef6;&#x5904;&#x7406;&#x6a21;&#x5757;"/>
 </node>
 </node>
-<node CREATED="1389079455321" FOLDED="true" MODIFIED="1389079474479" TEXT="ngx_process_events_and_timers">
+<node CREATED="1389079455321" MODIFIED="1389079474479" TEXT="ngx_process_events_and_timers">
 <node CREATED="1389084882636" FOLDED="true" MODIFIED="1389085095397" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1389084899026" MODIFIED="1390529110596">
 <richcontent TYPE="NODE"><html>
@@ -6668,17 +6668,37 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1389063262403" FOLDED="true" MODIFIED="1389144359124" TEXT="ngx_channel">
-<node CREATED="1389065217030" MODIFIED="1389065219571" TEXT="// &#x7528;&#x4e8e;&#x76d1;&#x542c;&#x53ef;&#x8bfb;&#x4e8b;&#x4ef6;&#x7684;socket"/>
-</node>
 <node CREATED="1389244249178" FOLDED="true" LINK="#ID_1961689213" MODIFIED="1389702972756" TEXT="ngx_process">
 <node CREATED="1389244258209" MODIFIED="1389702972755" TEXT="&#x6307;&#x793a;&#x8fdb;&#x7a0b;&#x7c7b;&#x522b;"/>
 </node>
 <node CREATED="1389245186936" FOLDED="true" LINK="#ID_1502592810" MODIFIED="1389702972757" TEXT="ngx_channel">
-<node CREATED="1389245224142" MODIFIED="1389702972755" TEXT="&#x7528;&#x4e8e;&#x76d1;&#x542c;&#x53ef;&#x8bfb;&#x4e8b;&#x4ef6;&#x7684;socket"/>
+<node CREATED="1389245224142" MODIFIED="1391863027074">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#29992;&#20110;&#30417;&#21548;&#21487;&#35835;&#20107;&#20214;&#30340;socket&#65292;&#25509;&#21463;&#20027;worker&#30340;&#20449;&#24687;
+    </p>
+    <p>
+      &#22312;ngx_worker_process_init&#20013;
+    </p>
+    <p>
+      &#35843;&#29992;ngx_add_channel_event(cycle, ngx_channel, NGX_READ_EVENT,&#160; ngx_channel_handler)
+    </p>
+    <p>
+      &#21363;&#23558;&#160;ngx_channel&#30340;NGX_READ_EVENT&#21152;&#19978;ngx_channel_handler&#22788;&#29702;&#20989;&#25968;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1391863168615" LINK="#ID_1899417687" MODIFIED="1391863264776" TEXT="ngx_add_channel_event"/>
+<node CREATED="1391863180790" LINK="#ID_1171672992" MODIFIED="1391863303431" TEXT="ngx_channel_handler"/>
 </node>
 </node>
-<node CREATED="1389105507572" MODIFIED="1389105518458" TEXT="&#x4e8b;&#x4ef6;&#x76f8;&#x5173;">
+<node CREATED="1389105507572" FOLDED="true" MODIFIED="1391863248694" TEXT="&#x4e8b;&#x4ef6;&#x76f8;&#x5173;">
 <node CREATED="1389105522876" LINK="#ID_1076558626" MODIFIED="1389105726262" TEXT="ngx_event_actions"/>
 <node CREATED="1390377526957" MODIFIED="1390517590080" TEXT="epoll&#x76f8;&#x5173;">
 <node CREATED="1390013550536" LINK="#ID_402061381" MODIFIED="1390517645005" TEXT="event_list"/>
@@ -6690,7 +6710,7 @@
 <node CREATED="1390378990806" MODIFIED="1390378992341" TEXT="ngx_posted_events"/>
 <node CREATED="1391825451511" MODIFIED="1391825457454" TEXT="ngx_os_io_t  ngx_io"/>
 </node>
-<node CREATED="1389242555502" MODIFIED="1389702972755" TEXT="signals">
+<node CREATED="1389242555502" FOLDED="true" MODIFIED="1389702972755" TEXT="signals">
 <node CREATED="1389242576749" ID="ID_1345550578" LINK="#ID_1118410517" MODIFIED="1389702972756" TEXT="ngx_signal_handler"/>
 </node>
 <node CREATED="1390523423453" FOLDED="true" MODIFIED="1390523435621" TEXT="&#x8ba1;&#x65f6;&#x5668;">
@@ -6710,8 +6730,18 @@
 <node CREATED="1390389270112" MODIFIED="1390389271520" TEXT="ngx_argc"/>
 <node CREATED="1390389282096" MODIFIED="1390389283100" TEXT="ngx_argv"/>
 </node>
+<node CREATED="1391863521021" FOLDED="true" MODIFIED="1391863534588" TEXT="ngx_cycle">
+<node CREATED="1391863570733" MODIFIED="1391863583707" TEXT="&#x8fde;&#x63a5;&#x961f;&#x5217;">
+<node CREATED="1391863647246" MODIFIED="1391863648298" TEXT="connection_n"/>
+<node CREATED="1391863587405" MODIFIED="1391863588831" TEXT="free_connections"/>
+<node CREATED="1391863597469" MODIFIED="1391863598515" TEXT="free_connection_n"/>
+<node CREATED="1391863674229" MODIFIED="1391863675343" TEXT="files_n"/>
+<node CREATED="1391863612629" MODIFIED="1391863613759" TEXT="files"/>
+<node CREATED="1391863738189" ID="ID_9135247" LINK="#ID_1804549620" MODIFIED="1391863816256" TEXT="&#x8fde;&#x63a5;&#x961f;&#x5217;&#x64cd;&#x4f5c;&#x51fd;&#x6570;"/>
 </node>
-<node CREATED="1389106372749" MODIFIED="1389151945772" POSITION="left" TEXT="&#x7ed3;&#x6784;&#x4f53;&#x5b9e;&#x4f8b;">
+</node>
+</node>
+<node CREATED="1389106372749" FOLDED="true" MODIFIED="1389151945772" POSITION="left" TEXT="&#x7ed3;&#x6784;&#x4f53;&#x5b9e;&#x4f8b;">
 <node CREATED="1389088285082" FOLDED="true" ID="ID_824770665" LINK="#ID_13477724" MODIFIED="1389150160271" TEXT="ngx_events_commands">
 <icon BUILTIN="full-2"/>
 <node CREATED="1389088290682" LINK="#ID_1463245406" MODIFIED="1389088503998">
@@ -6856,7 +6886,7 @@
 </html></richcontent>
 </node>
 </node>
-<node BACKGROUND_COLOR="#9c7b7b" CREATED="1389084135274" FOLDED="true" LINK="#ID_552558133" MODIFIED="1389150823772" TEXT="ngx_event_core_module">
+<node BACKGROUND_COLOR="#9c7b7b" CREATED="1389084135274" LINK="#ID_552558133" MODIFIED="1389150823772" TEXT="ngx_event_core_module">
 <icon BUILTIN="full-0"/>
 <node CREATED="1390252440495" FOLDED="true" MODIFIED="1390252448220" TEXT="&#x7ed3;&#x6784;&#x4f53;">
 <node CREATED="1389084139984" MODIFIED="1389084669333">
@@ -8534,8 +8564,7 @@
       <font color="#ef0303">#define NGX_CMD_REOPEN&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;5 </font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1389104087091" FOLDED="true" MODIFIED="1389104095842" TEXT="&#x64cd;&#x4f5c;&#x51fd;&#x6570;">
 <node CREATED="1389104099563" LINK="#ID_280816995" MODIFIED="1389104169798" TEXT="ngx_read_channel">
@@ -8574,10 +8603,10 @@
 </node>
 </node>
 </node>
-<node CREATED="1389082295120" FOLDED="true" ID="ID_951469658" MODIFIED="1389107602567" TEXT="ngx_connection_s">
+<node CREATED="1389082295120" ID="ID_951469658" MODIFIED="1389107602567" TEXT="ngx_connection_s">
 <icon BUILTIN="full-4"/>
 <node CREATED="1389080693298" FOLDED="true" MODIFIED="1389098608813" TEXT="&#x7ed3;&#x6784;&#x5206;&#x6790;">
-<node CREATED="1389082303128" MODIFIED="1391783092166">
+<node CREATED="1389082303128" MODIFIED="1391866664753">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -8599,7 +8628,7 @@
       
     </p>
     <p>
-      &#160;&#160;&#160;&#160;ngx_socket_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;fd; // &#36830;&#25509;&#22871;&#25509;&#21475;&#30340;&#22871;&#25509;&#21475;&#25551;&#36848;&#23383;
+      &#160;&#160;&#160;&#160;ngx_socket_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<font color="#f70404">fd</font>; // &#36830;&#25509;&#22871;&#25509;&#21475;&#30340;&#22871;&#25509;&#21475;&#25551;&#36848;&#23383;
     </p>
     <p>
       
@@ -8752,243 +8781,45 @@
       }
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 </node>
-<node CREATED="1389080781400" FOLDED="true" MODIFIED="1389082557027" TEXT="&#x64cd;&#x4f5c;&#x51fd;&#x6570;">
-<node CREATED="1389080684894" FOLDED="true" LINK="#ID_1606222132" MODIFIED="1389106817573" TEXT="ngx_get_connection">
-<node CREATED="1389080728395" MODIFIED="1389082595243">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      1&#12289;ngx_connection_t *ngx_get_connection(ngx_socket_t s, ngx_log_t *log);
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#20174;cycle-&gt;connections&#38142;&#34920;&#20013;&#25688;&#21462;&#19968;&#20010;&#31354;&#38386;&#30340;&#36830;&#25509;&#32467;&#26500;&#21464;&#37327;&#24182;&#20462;&#25913;&#31354;&#38386;&#38142;&#65292;&#28982;&#21518;&#35774;&#32622;&#36830;&#25509;&#36164;&#28304;&#30340;&#35835;&#20889;&#20107;&#20214;&#30340;&#21021;&#22987;&#29366;&#24577;&#20449;&#24687;&#65307;
-    </p>
-  </body>
-</html></richcontent>
+<node CREATED="1389080781400" LINK="#ID_1804549620" MODIFIED="1391864145912" TEXT="&#x64cd;&#x4f5c;&#x51fd;&#x6570;"/>
+<node CREATED="1390381641183" LINK="#ID_1606222132" MODIFIED="1391865844981" TEXT="&#x521d;&#x59cb;&#x5316;1(ngx_add_channel_event)">
+<node CREATED="1391866862894" MODIFIED="1391867070470" TEXT="pool"/>
 </node>
-<node CREATED="1389579213030" FOLDED="true" LINK="http://www.pagefault.info/?p=46" MODIFIED="1389579575947" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
-<node CREATED="1389579219454" MODIFIED="1389579557791">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      &#36825;&#37324;&#20107;&#20214;&#32467;&#26500;&#26377;&#20010;&#24456;&#20851;&#38190;&#30340;&#21464;&#37327;instance&#65292;&#23427;&#23601;&#26159;&#19968;&#20010;&#26631;&#35760;&#65292;&#29992;&#26469;&#26631;&#35760;&#20004;&#20010;&#36830;&#25509;&#30340;&#65292;&#22240;&#20026;nginx&#20013;&#21018;&#21018;&#37322;&#25918;&#30340;&#36830;&#25509;&#26377;&#21487;&#33021;&#20250;&#34987;&#39532;&#19978;&#20351;&#29992;&#30340;&#65292;&#22240;&#20026;free_connections&#23427;&#26159;&#19968;&#20010;&#31867;&#20284;&#19982;&#26632;&#30340;&#19996;&#35199;&#65292;&#20063;&#23601;&#26159;&#22312;&#24490;&#29615;&#20013;&#26377;&#21487;&#33021;&#20250;&#36935;&#21040;&#21018;&#37322;&#25918;&#30340;&#36830;&#25509;&#21448;&#34987;&#20351;&#29992;&#65288;fd&#30456;&#21516;)&#65292;&#32780;&#25105;&#20204;&#27492;&#26102;&#24182;&#19981;&#30693;&#36947;&#65292;&#22240;&#27492;&#36825;&#37324;&#36825;&#20010;instance&#23601;&#26159;&#29992;&#26469;&#21028;&#26029;&#36825;&#20010;&#30340;&#12290;
-    </p>
-    <p>
-      ngx_connection_t *
-    </p>
-    <p>
-      ngx_get_connection(ngx_socket_t s, ngx_log_t *log)
-    </p>
-    <p>
-      {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;instance;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_event_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;*rev, *wev;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_connection_t&#160;&#160;*c;
-    </p>
-    <p>
-      &#160;&#160;&#160;.........................................................
-    </p>
-    <p>
-      //&#21487;&#20197;&#30475;&#21040;&#33719;&#21462;&#21040;&#30340;&#26159;&#26368;&#26032;&#34987;&#37322;&#25918;&#30340;&#36830;&#25509;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_cycle-&gt;free_connections = c-&gt;data;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_cycle-&gt;free_connection_n--;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;/* ngx_mutex_unlock */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;if (ngx_cycle-&gt;files) {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_cycle-&gt;files[s] = c;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;}
-    </p>
-    <p>
-      //&#20445;&#23384;&#23545;&#24212;&#30340;event&#65292;&#36991;&#20813;&#20869;&#23384;&#20877;&#27425;&#20998;&#37197;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;rev = c-&gt;read;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;wev = c-&gt;write;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_memzero(c, sizeof(ngx_connection_t));
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;c-&gt;read = rev;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;c-&gt;write = wev;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;c-&gt;fd = s;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;c-&gt;log = log;
-    </p>
-    <p>
-      //&#33719;&#21462;instance
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;instance = rev-&gt;instance;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_memzero(rev, sizeof(ngx_event_t));
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_memzero(wev, sizeof(ngx_event_t));
-    </p>
-    <p>
-      //&#36825;&#37324;&#21487;&#20197;&#30475;&#21040;&#23558;instance&#21435;&#21453;&#65292;&#29992;&#20197;&#21306;&#20998;&#26159;&#21542;&#26159;&#21018;&#25165;&#34987;&#37322;&#25918;&#30340;<font color="#fb0c0c">????????</font>
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;rev-&gt;instance = !instance;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;wev-&gt;instance = !instance;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;rev-&gt;index = NGX_INVALID_INDEX;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;wev-&gt;index = NGX_INVALID_INDEX;
-    </p>
-    <p>
-      //data&#20013;&#20445;&#23384;&#36830;&#25509;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;rev-&gt;data = c;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;wev-&gt;data = c;
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;wev-&gt;write = 1;
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;return c;
-    </p>
-    <p>
-      }
-    </p>
-  </body>
-</html></richcontent>
+<node CREATED="1390381641183" LINK="#ID_579592898" MODIFIED="1391865823595" TEXT="&#x521d;&#x59cb;&#x5316;2(ngx_event_process_init)">
+<node CREATED="1391866862894" MODIFIED="1391866865792" TEXT="read"/>
+<node CREATED="1391866884558" MODIFIED="1391866886161" TEXT="write"/>
+<node CREATED="1391866949406" MODIFIED="1391866950445" TEXT="fd"/>
+<node CREATED="1391867901111" MODIFIED="1391867903419" TEXT="data"/>
+<node CREATED="1391867922855" MODIFIED="1391867924382" TEXT="log"/>
+<node CREATED="1391867922855" MODIFIED="1391867937533" TEXT="listening"/>
 </node>
+<node COLOR="#050d00" CREATED="1390381641183" FOLDED="true" LINK="#ID_1588041292" MODIFIED="1391865879713" TEXT="&#x521d;&#x59cb;&#x5316;3(ngx_event_accept)">
+<node CREATED="1391866949406" MODIFIED="1391867307901" TEXT="&#x4f7f;&#x7528;fd"/>
+<node CREATED="1391866862894" MODIFIED="1391867330424" TEXT="pool"/>
+<node CREATED="1391866956550" MODIFIED="1391867377601" TEXT="send"/>
+<node CREATED="1391866949406" MODIFIED="1391867363843" TEXT="recv"/>
+<node CREATED="1391866851534" MODIFIED="1391867442662" TEXT="socklen"/>
+<node CREATED="1391866884558" MODIFIED="1391867301601" TEXT="sockaddr"/>
+<node CREATED="1391866884558" MODIFIED="1391867468605" TEXT="local_sockaddr"/>
+<node CREATED="1391866851534" MODIFIED="1391867448930" TEXT="listening"/>
+<node CREATED="1391866851534" MODIFIED="1391867395441" TEXT="recv_chain"/>
+<node CREATED="1391866851534" MODIFIED="1391867406934" TEXT="send_chain"/>
+<node CREATED="1391866851534" MODIFIED="1391867416232" TEXT="log"/>
+<node CREATED="1391866884558" MODIFIED="1391867480746" TEXT="unexpected_eof"/>
+<node CREATED="1391866884558" MODIFIED="1391867502754" TEXT="addr_text"/>
+<node CREATED="1391866884558" MODIFIED="1391867530170" TEXT="number"/>
 </node>
+<node CREATED="1391866851534" MODIFIED="1391866936936" TEXT="&#x7ed3;&#x6784;&#x5206;&#x6790;(ngx_get_channel)">
+<node CREATED="1391866862894" MODIFIED="1391866865792" TEXT="read"/>
+<node CREATED="1391866884558" MODIFIED="1391866886161" TEXT="write"/>
+<node CREATED="1391866862894" MODIFIED="1391866909658" TEXT="log"/>
+<node CREATED="1391866949406" MODIFIED="1391866950445" TEXT="fd"/>
+<node CREATED="1391866956550" MODIFIED="1391866957563" TEXT="log"/>
 </node>
-<node CREATED="1389080908949" FOLDED="true" LINK="#ID_280816995" MODIFIED="1389106919029" TEXT="ngx_close_connection">
-<node CREATED="1389080787544" MODIFIED="1389082674982">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      2&#12289;void ngx_close_connection(ngx_connection_t *c);
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#20851;&#38381;&#36830;&#25509;&#65292;&#39318;&#20808;&#28165;&#29702;&#36830;&#25509;&#19978;&#30340;&#35835;&#20889;&#20107;&#20214;&#65292;&#36825;&#21487;&#33021;&#20250;&#21024;&#38500;&#23450;&#26102;&#22120;&#12289;&#21024;&#38500;&#31561;&#24453;&#20107;&#20214;&#65292;&#28982;&#21518;&#37322;&#25918;&#36830;&#25509;&#36164;&#28304;&#65292;&#24182;&#20851;&#38381;&#36830;&#25509;&#23545;&#24212;&#30340;&#22871;&#25509;&#21475;&#65307;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1389080858663" FOLDED="true" LINK="#ID_1606222132" MODIFIED="1389106828190" TEXT="ngx_free_connection">
-<node CREATED="1389579213030" FOLDED="true" LINK="http://www.pagefault.info/?p=46" MODIFIED="1389579581915" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
-<node CREATED="1389579219454" MODIFIED="1389579260123">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      &#39318;&#20808;&#35201;&#30693;&#36947;&#22312;nginx&#20013;&#26159;&#23384;&#22312;&#19968;&#20010;&#36830;&#25509;&#27744;&#30340;&#65292;&#25152;&#26377;&#30340;&#36830;&#25509;&#30340;&#33719;&#21462;&#21644;&#37322;&#25918;&#37117;&#26159;&#36890;&#36807;&#36830;&#25509;&#27744;&#26469;&#36827;&#34892;&#30340;&#65292;nginx&#20013;&#36830;&#25509;&#27744;&#24456;&#31616;&#21333;&#65292;&#23601;&#26159;&#19968;&#20010;&#31616;&#21333;&#30340;&#25968;&#32452;&#65292;&#26377;&#19968;&#20010;free_connections&#21464;&#37327;&#20445;&#23384;&#20102;&#25152;&#26377;&#21487;&#20197;&#20351;&#29992;&#30340;&#36830;&#25509;&#65292;&#23427;&#26159;&#19968;&#20010;&#38142;&#34920;&#65292;&#23427;&#30340;&#26500;&#36896;&#26159;&#36825;&#26679;&#23376;&#30340;&#65292;&#27599;&#20010;&#36830;&#25509;&#37117;&#26377;&#19968;&#20010;&#22495;data&#65292;&#22914;&#26524;&#37322;&#25918;&#19968;&#20010;&#36830;&#25509;&#65292;&#21017;&#36825;&#20010;&#36830;&#25509;&#30340;data&#23601;&#25351;&#21521;&#24403;&#21069;&#30340;free_connects,&#28982;&#21518;&#24403;&#21069;&#30340;&#37322;&#25918;&#30340;&#36830;&#25509;&#30452;&#25509;&#25351;&#21521;free_connections,&#20063;&#23601;&#26159;&#19968;&#20010;&#23558;&#36830;&#25509;&#21152;&#20837;free&#38142;&#34920;&#30340; &#21160;&#20316;&#12290;
-    </p>
-    <p>
-      void
-    </p>
-    <p>
-      ngx_free_connection(ngx_connection_t *c)
-    </p>
-    <p>
-      {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;/* ngx_mutex_lock */
-    </p>
-    <p>
-      //&#20445;&#23384;&#24403;&#21069;&#30340;free_connections.
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;c-&gt;data = ngx_cycle-&gt;free_connections;
-    </p>
-    <p>
-      //&#23558;&#37322;&#25918;&#30340;&#36830;&#25509;&#21152;&#20837;&#21040;free connections
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_cycle-&gt;free_connections = c;
-    </p>
-    <p>
-      //&#21487;&#29992;&#36830;&#25509;&#25968;&#21152;1
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_cycle-&gt;free_connection_n++;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;/* ngx_mutex_unlock */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;if (ngx_cycle-&gt;files) {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_cycle-&gt;files[c-&gt;fd] = NULL;
-    </p>
-    <p>
-      &#160;}
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1390381641183" LINK="#ID_1606222132" MODIFIED="1391782026228" TEXT="&#x521d;&#x59cb;&#x5316;1"/>
-<node CREATED="1390381641183" LINK="#ID_579592898" MODIFIED="1391782093003" TEXT="&#x521d;&#x59cb;&#x5316;2"/>
-<node COLOR="#050d00" CREATED="1390381641183" LINK="#ID_1588041292" MODIFIED="1391825587214" TEXT="&#x521d;&#x59cb;&#x5316;3"/>
 </node>
 <node CREATED="1389077677218" FOLDED="true" MODIFIED="1389107602567" TEXT="ngx_listening_s">
 <icon BUILTIN="full-4"/>
@@ -9321,9 +9152,9 @@
 </node>
 </node>
 </node>
-<node CREATED="1389082295120" FOLDED="true" MODIFIED="1391846866331" TEXT="ngx_event_s">
+<node CREATED="1389082295120" MODIFIED="1391846866331" TEXT="ngx_event_s">
 <icon BUILTIN="full-4"/>
-<node CREATED="1389080693298" FOLDED="true" MODIFIED="1390015861014" TEXT="&#x7ed3;&#x6784;&#x5206;&#x6790;">
+<node CREATED="1389080693298" MODIFIED="1390015861014" TEXT="&#x7ed3;&#x6784;&#x5206;&#x6790;">
 <node CREATED="1389082303128" MODIFIED="1390015873119">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -9353,6 +9184,30 @@
     </p>
   </body>
 </html></richcontent>
+</node>
+<node CREATED="1391865381686" MODIFIED="1391866784230" TEXT="&#x4e3b;&#x5b50;worker&#x901a;&#x4fe1;(&#x5728;ngx_get_channel&#x4e2d;&#x8bbe;&#x7f6e;)">
+<node CREATED="1391865401974" MODIFIED="1391865403214" TEXT="channel"/>
+<node CREATED="1391866693230" MODIFIED="1391866723352" TEXT="data&#x4e3a;channel"/>
+<node CREATED="1391866731934" MODIFIED="1391866733208" TEXT="instance"/>
+<node CREATED="1391866739326" MODIFIED="1391866740314" TEXT="index"/>
+<node CREATED="1391866799510" MODIFIED="1391866800509" TEXT="write"/>
+</node>
+<node CREATED="1391865381686" MODIFIED="1391868621264" TEXT="ngx_accept_event&#x4f7f;&#x7528;">
+<node CREATED="1391866693230" MODIFIED="1391868614158" TEXT="timedout"/>
+<node CREATED="1391866739326" MODIFIED="1391868685311" TEXT="ready"/>
+<node CREATED="1391866731934" MODIFIED="1391868649649" TEXT="available"/>
+<node CREATED="1391866739326" MODIFIED="1391868665699" TEXT="data"/>
+<node CREATED="1391868388927" MODIFIED="1391868765137" TEXT="deferred_accept"/>
+</node>
+<node CREATED="1391865381686" MODIFIED="1391868306242" TEXT="ngx_event_process_init">
+<node CREATED="1391866693230" MODIFIED="1391868235173" TEXT="closed"/>
+<node CREATED="1391866731934" MODIFIED="1391866733208" TEXT="instance"/>
+<node CREATED="1391866739326" MODIFIED="1391868279179" TEXT="lock(thread)"/>
+<node CREATED="1391866739326" MODIFIED="1391868293769" TEXT="own_lock(thread)"/>
+<node CREATED="1391868382959" MODIFIED="1391868466256" TEXT="log(read)"/>
+<node CREATED="1391868388927" MODIFIED="1391868481686" TEXT="accept(read)"/>
+<node CREATED="1391868398919" MODIFIED="1391868483571" TEXT="deferred_accept(read)"/>
+<node CREATED="1391868409455" MODIFIED="1391868485609" TEXT="handler(read)"/>
 </node>
 </node>
 <node CREATED="1389080693298" FOLDED="true" LINK="#ID_280816995" MODIFIED="1389105613298" TEXT="&#x7ed3;&#x6784;&#x5206;&#x6790;">
@@ -9516,8 +9371,7 @@
       &#20851;&#20110;&#20107;&#20214;&#30340;&#20960;&#20010;&#25805;&#20316;&#25509;&#21475;&#23601;&#26159;&#21069;&#38754;&#21453;&#22797;&#25552;&#21040;&#36807;&#30340;10&#20010;actions&#38057;&#23376;&#65292;&#36825;&#20123;&#38057;&#23376;&#23553;&#35013;&#20102;&#19968;&#22871;&#20107;&#20214;&#39537;&#21160;&#30340;&#25509;&#21475;&#65292;&#19981;&#21516;&#30340;IO&#27169;&#22411;&#19981;&#21516;&#30340;&#23454;&#29616;&#26041;&#24335;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1389080781400" FOLDED="true" MODIFIED="1389103767538" TEXT="epoll&#x64cd;&#x4f5c;&#x51fd;&#x6570;">
@@ -9564,343 +9418,11 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1389080781400" FOLDED="true" MODIFIED="1389084395082" TEXT="ngx_epoll_add_event">
-<node CREATED="1389080728395" MODIFIED="1389083501114">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      3&#12289;static ngx_int_t ngx_epoll_add_event(ngx_event_t *ev, ngx_int_t event,
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_uint_t flags);
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      add &#21644;enable&#38057;&#23376;&#65292;&#35843;&#29992;epoll_ctl(ep, EPOLL_CTL_MOD/EPOLL_CTL_ADD, c-&gt;fd, &amp;ee)&#28155;&#21152;&#23545;&#36830;&#25509;&#22871;&#25509;&#21475;&#30340;&#35835;&#20107;&#20214;&#25110;&#32773;&#20889;&#20107;&#20214;&#30417;&#25511;&#65292;&#24182;&#19988;&#35774;&#32622;&#20107;&#20214;&#30340;&#29366;&#24577;&#20301;&#65306;ev-&gt;action = 1&#65292;&#24403;&#28155;&#21152;&#35835;&#20107;&#20214;&#30340;&#26102;&#20505;&#20250;&#21028;&#26029;&#20889;&#20107;&#20214;&#26159;&#21542;&#24050;&#32463;&#35774;&#32622;&#65288;wev-&gt;action=1?&#65289;&#65292;&#20174;&#32780;&#20915;&#23450;op&#26159;&#21542;&#20351;&#29992;EPOLL_CTL_MOD&#65292;&#28155;&#21152;&#20889;&#20107;&#20214; &#20063;&#35201;&#21028;&#26029;&#35835;&#20107;&#20214;&#30340;&#29366;&#24577;&#65307;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1389579213030" LINK="http://www.pagefault.info/?p=46" MODIFIED="1389579581915" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
-<node CREATED="1389579219454" MODIFIED="1389579847878">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      &#36825;&#20010;&#20989;&#25968;&#23601;&#26159;&#21152;&#20107;&#20214;&#21040;epoll&#20013;&#12290;&#28982;&#21518;&#35774;&#32622;&#23545;&#24212;&#30340;epoll data
-    </p>
-    <p>
-      static ngx_int_t
-    </p>
-    <p>
-      ngx_epoll_add_event(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags)
-    </p>
-    <p>
-      {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;int&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;op;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;uint32_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;events, prev;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_event_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*e;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_connection_t&#160;&#160;&#160;&#160;*c;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct epoll_event&#160;&#160;&#160;ee;
-    </p>
-    <p>
-      ............................................
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ee.events = events | (uint32_t) flags;
-    </p>
-    <p>
-      //&#26368;&#20851;&#38190;&#30340;&#19968;&#37096;&#20998;&#65292;&#21487;&#20197;&#30475;&#21040;&#35774;&#32622;connect &#25351;&#38024;&#30340;&#26368;&#21518;&#19968;&#20301;&#20026;ev-&gt;instance.
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ee.data.ptr = (void *) ((uintptr_t) c | ev-&gt;instance);
-    </p>
-    <p>
-      ............................
-    </p>
-    <p>
-      }
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-</node>
-<node CREATED="1389080781400" FOLDED="true" MODIFIED="1389084395859" TEXT="ngx_epoll_del_event">
-<node CREATED="1389080728395" MODIFIED="1389083477414">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      4&#12289;static ngx_int_t ngx_epoll_del_event(ngx_event_t *ev, ngx_int_t event,
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_uint_t flags);
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      del &#21644;disable&#38057;&#23376;&#65292;&#35843;&#29992;epoll_ctl(ep, EPOLL_CTL_MOD/EPOLL_CTL_DEL, c-&gt;fd, &amp;ee)&#21024;&#38500;&#23545;&#36830;&#25509;&#22871;&#25509;&#21475;&#30340;&#35835;&#20107;&#20214;&#25110;&#32773;&#20889;&#20107;&#20214;&#30340;&#30417;&#25511;&#65292;&#24182;&#19988;&#35774;&#32622;&#20107;&#20214;&#30340;&#29366;&#24577;&#20301;&#65306;ev-&gt;action = 0&#65292;&#24403;&#21024;&#38500;&#35835;&#20107;&#20214;&#30340;&#26102;&#20505;&#20250;&#21028;&#26029;&#20889;&#20107;&#20214;&#26159;&#21542;&#24050;&#32463;&#35774;&#32622;&#65288;wev-&gt;action=1?&#65289;&#65292;&#20174;&#32780;&#20915;&#23450;op&#26159;&#21542;&#20351;&#29992;EPOLL_CTL_MOD&#65292;&#21024;&#38500;&#20889;&#20107;&#20214; &#20063;&#35201;&#21028;&#26029;&#35835;&#20107;&#20214;&#30340;&#29366;&#24577;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1389080781400" FOLDED="true" MODIFIED="1389084397075" TEXT="ngx_epoll_add_connection">
-<node CREATED="1389080728395" MODIFIED="1389083268383">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      5&#12289;static ngx_int_t ngx_epoll_add_connection(ngx_connection_t *c);
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      add_conn&#38057;&#23376;&#65292;&#35843;&#29992;epoll_ctl(ep, EPOLL_CTL_ADD, c-&gt;fd, &amp;ee)&#21516;&#26102;&#28155;&#21152;&#23545;&#19968;&#26465;&#36830;&#25509;&#30340;&#35835;&#20889;&#20107;&#20214;&#30340;&#30417;&#25511;&#65292;&#24182;&#35774;&#32622;&#20854;&#35835;&#20889;&#20107;&#20214;&#30340;&#29366;&#24577;active = 1&#65307;
-    </p>
-    <p>
-      
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1389579213030" FOLDED="true" LINK="http://www.pagefault.info/?p=46" MODIFIED="1389579581915" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
-<node CREATED="1389579219454" MODIFIED="1389580125988">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ngx_epoll_add_connection(ngx_connection_t *c)
-    </p>
-    <p>
-      {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct epoll_event&#160;&#160;ee;
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ee.events = EPOLLIN|EPOLLOUT|EPOLLET;
-    </p>
-    <p>
-      //&#21516;&#26679;&#26159;&#23558;&#36830;&#25509;&#30340;read&#20107;&#20214;&#30340;instance&#26631;&#35760;&#21152;&#21040;&#25351;&#38024;&#30340;&#26411;&#23614;&#12290;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ee.data.ptr = (void *) ((uintptr_t) c | c-&gt;read-&gt;instance);
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_log_debug2(NGX_LOG_DEBUG_EVENT, c-&gt;log, 0,
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;epoll add connection: fd:%d ev:%08XD&quot;, c-&gt;fd, ee.events);
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;if (epoll_ctl(ep, EPOLL_CTL_ADD, c-&gt;fd, &amp;ee) == -1) {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_log_error(NGX_LOG_ALERT, c-&gt;log, ngx_errno,
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;epoll_ctl(EPOLL_CTL_ADD, %d) failed&quot;, c-&gt;fd);
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return NGX_ERROR;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;}
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;c-&gt;read-&gt;active = 1;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;c-&gt;write-&gt;active = 1;
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;return NGX_OK;
-    </p>
-    <p>
-      }
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-</node>
-<node CREATED="1389083333281" FOLDED="true" MODIFIED="1389084397858" TEXT="ngx_epoll_del_connection">
-<node CREATED="1389080811624" MODIFIED="1389083095381">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      6&#12289;static ngx_int_t ngx_epoll_del_connection(ngx_connection_t *c,
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_uint_t flags);
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      del_conn&#38057;&#23376;&#65292;&#35843;&#29992;epoll_ctl(ep, EPOLL_CTL_DEL, c-&gt;fd, &amp;ee)&#21516;&#26102;&#21024;&#38500;&#23545;&#19968;&#26465;&#36830;&#25509;&#30340;&#35835;&#20889;&#20107;&#20214;&#30340;&#30417;&#25511;&#65292;&#24182;&#35774;&#32622;&#20854;&#35835;&#20889;&#20107;&#20214;&#30340;&#29366;&#24577;active = 0&#65307;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1389083356719" FOLDED="true" MODIFIED="1389084398655" TEXT="ngx_epoll_process_events">
-<node CREATED="1389080787544" MODIFIED="1389082962080">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      7&#12289;static ngx_int_t ngx_epoll_process_events(ngx_cycle_t *cycle, ngx_msec_t timer,
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ngx_uint_t flags);
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      process_events &#38057;&#23376;&#65292;&#35843;&#29992;events = epoll_wait(ep, event_list, (int) nevents, timer)&#36718;&#35810;&#20107;&#20214;&#65292;&#36229;&#26102;&#20540;&#20026;timer&#65292;&#20107;&#20214;&#23384;&#25918;&#20110;event_list&#25968;&#32452;&#20013;&#65292;&#26368;&#22823;&#25968;&#37327;&#20026;nevents&#12290;&#23545;&#20110;&#21457;&#29983;&#30340;&#35835;&#20107;&#20214;&#65292;&#33509;flags&#20013;&#32622;&#20301;&#20102; NGX_POST_EVENTS&#65292;&#20877;&#26681;&#25454;&#34987;&#30417;&#25511;&#30340;&#22871;&#25509;&#21475;&#26159;&#30417;&#21548;&#22871;&#25509;&#21475;&#36824;&#26159;&#25968;&#25454;&#22871;&#25509;&#21475;&#20915;&#23450;&#26242;&#26102;&#25237;&#36882;&#21040;&#20107;&#20214;&#38431;&#21015; ngx_posted_accept_events&#36824;&#26159;ngx_posted_events&#31561;&#24453;&#36827;&#31243;&#22788;&#29702;&#65292;&#21542;&#21017;&#23601;&#30452;&#25509;&#35843;&#29992;&#20107;&#20214;&#22788;&#29702;&#20989;&#25968; rev-&gt;handler&#22788;&#29702;&#20107;&#20214;&#65307;&#23545;&#20110;&#21457;&#29983;&#30340;&#20889;&#20107;&#20214;&#65292;&#33509;flags&#32622;&#20301;&#20102;NGX_POST_EVENTS&#65292;&#25237;&#36882;&#21040;&#20107;&#20214;&#38431;&#21015; ngx_posted_events&#31561;&#24453;&#22788;&#29702;&#65292;&#21542;&#21017;&#23601;&#30452;&#25509;&#35843;&#29992;&#20107;&#20214;&#22788;&#29702;&#20989;&#25968;wev-&gt;handler&#22788;&#29702;&#20107;&#20214;&#12290;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1389579213030" FOLDED="true" LINK="http://www.pagefault.info/?p=46" MODIFIED="1389579581915" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
-<node CREATED="1389579219454" MODIFIED="1389580140151">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      static ngx_int_t
-    </p>
-    <p>
-      ngx_epoll_process_events(ngx_cycle_t *cycle, ngx_msec_t timer, ngx_uint_t flags)
-    </p>
-    <p>
-      {
-    </p>
-    <p>
-      ...............................................
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;for (i = 0; i &lt; events; i++) {&#160;&#160;
-    </p>
-    <p>
-      //&#20808;&#20174;epoll&#28155;&#21152;&#20107;&#20214;&#26102;&#20256;&#36882;&#30340;&#25968;&#25454;&#20013;&#21462;&#20986;connect&#30340;&#22320;&#22336;&#12290;&#160;&#160;
-    </p>
-    <p>
-      &#160;c = event_list[i].data.ptr;
-    </p>
-    <p>
-      &#160;//&#28982;&#21518;&#21462;&#20986;&#26469;&#23545;&#24212;&#30340;instance&#20540;
-    </p>
-    <p>
-      instance = (uintptr_t) c &amp; 1;
-    </p>
-    <p>
-      //&#28982;&#21518;&#21462;&#20986;&#26469;&#23545;&#24212;&#30340;connect&#25351;&#38024;(&#30001;&#20110;&#22312;&#28155;&#21152;&#26159;&#35774;&#32622;&#20102;&#26368;&#21518;&#19968;&#20301;&#25351;&#38024;&#65292;&#22240;&#27492;&#36825;&#37324;&#38656;&#35201;&#23631;&#34109;&#25481;&#26368;&#21518;&#19968;&#20301;).&#160;&#160;&#160;&#160;&#160;&#160;
-    </p>
-    <p>
-      &#160;c = (ngx_connection_t *) ((uintptr_t) c &amp; (uintptr_t) ~1);&#160;&#160;&#160;&#160;&#160;
-    </p>
-    <p>
-      &#160;&#160;rev = c-&gt;read;
-    </p>
-    <p>
-      //&#28982;&#21518;&#22914;&#26524;c-fd&#20026;&#65293;1&#21017;&#35828;&#26126;fd&#34987;&#20851;&#38381;&#65292;&#22914;&#26524;rev-&gt;instance != instance&#21017;&#34920;&#31034;&#24403;&#21069;&#30340;fd&#24050;&#32463;&#34987;&#37325;&#26032;&#20351;&#29992;&#36807;&#20102;&#65292;&#20063;&#23601;&#26159;&#35828;&#36825;&#20010;event&#24050;&#32463;&#26159;stale&#30340;&#20102;&#65292;&#25152;&#20197;&#36339;&#36807;&#36825;&#20010;&#20107;&#20214;&#65292;&#28982;&#21518;&#36827;&#34892;&#19979;&#19968;&#20010;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (c-&gt;fd == -1 || rev-&gt;instance != instance) {
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/*
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* the stale event from a file descriptor
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* that was just closed in this iteration
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*/
-    </p>
-    <p>
-      &#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_log_debug1(NGX_LOG_DEBUG_EVENT, cycle-&gt;log, 0,
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;epoll: stale event %p&quot;, c);
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;continue;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
-    </p>
-    <p>
-      ........................................
-    </p>
-    <p>
-      }
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-</node>
+<node CREATED="1389080781400" LINK="#ID_497093278" MODIFIED="1391865187424" TEXT="ngx_epoll_add_event"/>
+<node CREATED="1389080781400" LINK="#ID_1657925637" MODIFIED="1391865180608" TEXT="ngx_epoll_del_event"/>
+<node CREATED="1389080781400" LINK="#ID_536509620" MODIFIED="1391865198390" TEXT="ngx_epoll_add_connection"/>
+<node CREATED="1389083333281" LINK="#ID_1548845294" MODIFIED="1391865210494" TEXT="ngx_epoll_del_connection"/>
+<node CREATED="1389083356719" LINK="#ID_476761845" MODIFIED="1391865216038" TEXT="ngx_epoll_process_events"/>
 </node>
 <node CREATED="1389579959520" MODIFIED="1389579967041" TEXT="epoll_event">
 <node CREATED="1389579992231" FOLDED="true" MODIFIED="1389580000420" TEXT="&#x7ed3;&#x6784;&#x5206;&#x6790;">
@@ -11123,6 +10645,251 @@
     </p>
   </body>
 </html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1391863738189" ID="ID_1804549620" LINK="#ID_9135247" MODIFIED="1391863827375" POSITION="right" TEXT="&#x8fde;&#x63a5;&#x961f;&#x5217;&#x64cd;&#x4f5c;&#x51fd;&#x6570;">
+<node CREATED="1389080684894" LINK="#ID_1606222132" MODIFIED="1389106817573" TEXT="ngx_get_connection">
+<node CREATED="1389080728395" MODIFIED="1391866627094">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      1&#12289;ngx_connection_t *ngx_get_connection(ngx_socket_t s, ngx_log_t *log);
+    </p>
+    <p>
+      &#20174;cycle-&gt;connections&#38142;&#34920;&#20013;&#25688;&#21462;&#19968;&#20010;&#31354;&#38386;&#30340;&#36830;&#25509;&#32467;&#26500;&#21464;&#37327;&#24182;&#20462;&#25913;&#31354;&#38386;&#38142;&#65292;&#28982;&#21518;&#35774;&#32622;&#36830;&#25509;&#36164;&#28304;&#30340;&#35835;&#20889;&#20107;&#20214;&#30340;&#21021;&#22987;&#29366;&#24577;&#20449;&#24687;&#65307;
+    </p>
+    <p>
+      &#65288;&#21462;&#30340;connection&#36824;&#20445;&#25345;&#20197;&#21069;&#30340;&#35835;&#20889;&#20107;&#20214;&#65292;&#20294;&#35835;&#20889;&#20107;&#20214;&#30340;data&#20026;&#27492;connection&#65292;&#35774;&#32622;&#35835;&#20889;&#20107;&#20214;&#30340;instance&#65292;index&#65292;write,&#20854;&#20182;&#30340;&#37325;&#32622;&#65289;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#35774;&#32622;connection&#30340;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;c-&gt;fd = s;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;c-&gt;log = log&#65292;&#20854;&#20182;&#30340;&#37325;&#32622;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1389579213030" FOLDED="true" LINK="http://www.pagefault.info/?p=46" MODIFIED="1389579575947" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389579219454" MODIFIED="1391864450380">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#36825;&#37324;&#20107;&#20214;&#32467;&#26500;&#26377;&#20010;&#24456;&#20851;&#38190;&#30340;&#21464;&#37327;instance&#65292;&#23427;&#23601;&#26159;&#19968;&#20010;&#26631;&#35760;&#65292;&#29992;&#26469;&#26631;&#35760;&#20004;&#20010;&#36830;&#25509;&#30340;&#65292;&#22240;&#20026;nginx&#20013;&#21018;&#21018;&#37322;&#25918;&#30340;&#36830;&#25509;&#26377;&#21487;&#33021;&#20250;&#34987;&#39532;&#19978;&#20351;&#29992;&#30340;&#65292;&#22240;&#20026;free_connections&#23427;&#26159;&#19968;&#20010;&#31867;&#20284;&#19982;&#26632;&#30340;&#19996;&#35199;&#65292;&#20063;&#23601;&#26159;&#22312;&#24490;&#29615;&#20013;&#26377;&#21487;&#33021;&#20250;&#36935;&#21040;&#21018;&#37322;&#25918;&#30340;&#36830;&#25509;&#21448;&#34987;&#20351;&#29992;&#65288;fd&#30456;&#21516;)&#65292;&#32780;&#25105;&#20204;&#27492;&#26102;&#24182;&#19981;&#30693;&#36947;&#65292;&#22240;&#27492;&#36825;&#37324;&#36825;&#20010;instance&#23601;&#26159;&#29992;&#26469;&#21028;&#26029;&#36825;&#20010;&#30340;&#12290;
+    </p>
+    <p>
+      ngx_connection_t *
+    </p>
+    <p>
+      ngx_get_connection(ngx_socket_t s, ngx_log_t *log)
+    </p>
+    <p>
+      {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;instance;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_event_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;*rev, *wev;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_connection_t&#160;&#160;*c;
+    </p>
+    <p>
+      &#160;&#160;&#160;.........................................................
+    </p>
+    <p>
+      //&#21487;&#20197;&#30475;&#21040;&#33719;&#21462;&#21040;&#30340;&#26159;&#26368;&#26032;&#34987;&#37322;&#25918;&#30340;&#36830;&#25509;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_cycle-&gt;free_connections = c-&gt;data;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_cycle-&gt;free_connection_n--;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* ngx_mutex_unlock */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;if (ngx_cycle-&gt;files) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_cycle-&gt;files[s] = c;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      //&#20445;&#23384;&#23545;&#24212;&#30340;event&#65292;&#23558;&#26377;&#29992;&#30340;&#37096;&#20998;&#20445;&#23384;&#19979;&#26469;&#65292;&#28982;&#21518;&#37325;&#32622;&#65292;&#20877;&#24674;&#22797;&#65292;&#36991;&#20813;&#20869;&#23384;&#20877;&#27425;&#20998;&#37197;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;rev = c-&gt;read;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;wev = c-&gt;write;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_memzero(c, sizeof(ngx_connection_t));
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;c-&gt;read = rev;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;c-&gt;write = wev;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;c-&gt;fd = s;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;c-&gt;log = log;
+    </p>
+    <p>
+      //&#33719;&#21462;instance
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;instance = rev-&gt;instance;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_memzero(rev, sizeof(ngx_event_t));
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_memzero(wev, sizeof(ngx_event_t));
+    </p>
+    <p>
+      //&#36825;&#37324;&#21487;&#20197;&#30475;&#21040;&#23558;instance&#21435;&#21453;&#65292;&#29992;&#20197;&#21306;&#20998;&#26159;&#21542;&#26159;&#21018;&#25165;&#34987;&#37322;&#25918;&#30340;<font color="#fb0c0c">????????</font>
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;rev-&gt;instance = !instance;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;wev-&gt;instance = !instance;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;rev-&gt;index = NGX_INVALID_INDEX;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;wev-&gt;index = NGX_INVALID_INDEX;
+    </p>
+    <p>
+      //data&#20013;&#20445;&#23384;&#36830;&#25509;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;rev-&gt;data = c;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;wev-&gt;data = c;
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;wev-&gt;write = 1;
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;return c;
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1389080908949" FOLDED="true" LINK="#ID_280816995" MODIFIED="1389106919029" TEXT="ngx_close_connection">
+<node CREATED="1389080787544" MODIFIED="1389082674982">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      2&#12289;void ngx_close_connection(ngx_connection_t *c);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#20851;&#38381;&#36830;&#25509;&#65292;&#39318;&#20808;&#28165;&#29702;&#36830;&#25509;&#19978;&#30340;&#35835;&#20889;&#20107;&#20214;&#65292;&#36825;&#21487;&#33021;&#20250;&#21024;&#38500;&#23450;&#26102;&#22120;&#12289;&#21024;&#38500;&#31561;&#24453;&#20107;&#20214;&#65292;&#28982;&#21518;&#37322;&#25918;&#36830;&#25509;&#36164;&#28304;&#65292;&#24182;&#20851;&#38381;&#36830;&#25509;&#23545;&#24212;&#30340;&#22871;&#25509;&#21475;&#65307;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1389080858663" FOLDED="true" LINK="#ID_1606222132" MODIFIED="1389106828190" TEXT="ngx_free_connection">
+<node CREATED="1389579213030" FOLDED="true" LINK="http://www.pagefault.info/?p=46" MODIFIED="1389579581915" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389579219454" MODIFIED="1389579260123">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#39318;&#20808;&#35201;&#30693;&#36947;&#22312;nginx&#20013;&#26159;&#23384;&#22312;&#19968;&#20010;&#36830;&#25509;&#27744;&#30340;&#65292;&#25152;&#26377;&#30340;&#36830;&#25509;&#30340;&#33719;&#21462;&#21644;&#37322;&#25918;&#37117;&#26159;&#36890;&#36807;&#36830;&#25509;&#27744;&#26469;&#36827;&#34892;&#30340;&#65292;nginx&#20013;&#36830;&#25509;&#27744;&#24456;&#31616;&#21333;&#65292;&#23601;&#26159;&#19968;&#20010;&#31616;&#21333;&#30340;&#25968;&#32452;&#65292;&#26377;&#19968;&#20010;free_connections&#21464;&#37327;&#20445;&#23384;&#20102;&#25152;&#26377;&#21487;&#20197;&#20351;&#29992;&#30340;&#36830;&#25509;&#65292;&#23427;&#26159;&#19968;&#20010;&#38142;&#34920;&#65292;&#23427;&#30340;&#26500;&#36896;&#26159;&#36825;&#26679;&#23376;&#30340;&#65292;&#27599;&#20010;&#36830;&#25509;&#37117;&#26377;&#19968;&#20010;&#22495;data&#65292;&#22914;&#26524;&#37322;&#25918;&#19968;&#20010;&#36830;&#25509;&#65292;&#21017;&#36825;&#20010;&#36830;&#25509;&#30340;data&#23601;&#25351;&#21521;&#24403;&#21069;&#30340;free_connects,&#28982;&#21518;&#24403;&#21069;&#30340;&#37322;&#25918;&#30340;&#36830;&#25509;&#30452;&#25509;&#25351;&#21521;free_connections,&#20063;&#23601;&#26159;&#19968;&#20010;&#23558;&#36830;&#25509;&#21152;&#20837;free&#38142;&#34920;&#30340; &#21160;&#20316;&#12290;
+    </p>
+    <p>
+      void
+    </p>
+    <p>
+      ngx_free_connection(ngx_connection_t *c)
+    </p>
+    <p>
+      {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* ngx_mutex_lock */
+    </p>
+    <p>
+      //&#20445;&#23384;&#24403;&#21069;&#30340;free_connections.
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;c-&gt;data = ngx_cycle-&gt;free_connections;
+    </p>
+    <p>
+      //&#23558;&#37322;&#25918;&#30340;&#36830;&#25509;&#21152;&#20837;&#21040;free connections
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_cycle-&gt;free_connections = c;
+    </p>
+    <p>
+      //&#21487;&#29992;&#36830;&#25509;&#25968;&#21152;1
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_cycle-&gt;free_connection_n++;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* ngx_mutex_unlock */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;if (ngx_cycle-&gt;files) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_cycle-&gt;files[c-&gt;fd] = NULL;
+    </p>
+    <p>
+      &#160;}
+    </p>
+  </body>
+</html></richcontent>
+</node>
 </node>
 </node>
 </node>
@@ -12396,7 +12163,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1390271701198" MODIFIED="1390271718501" TEXT="/*ngx_connection_handler_pt*/">
+<node CREATED="1390271701198" FOLDED="true" MODIFIED="1390271718501" TEXT="/*ngx_connection_handler_pt*/">
 <node CREATED="1389345958461" ID="ID_113471940" LINK="#ID_64737652" MODIFIED="1389448731059" TEXT="ngx_http_init_connection">
 <node CREATED="1389450031541" FOLDED="true" MODIFIED="1389575211840" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1389345975790" MODIFIED="1390526338210">
@@ -12544,8 +12311,8 @@
 <node CREATED="1390526346894" MODIFIED="1390526348249" TEXT="ngx_add_timer"/>
 </node>
 </node>
-<node CREATED="1390224455119" FOLDED="true" ID="ID_881684021" LINK="#ID_1961438373" MODIFIED="1391751211972" TEXT="/*ngx_event_handler_pt*/">
-<node CREATED="1389103358419" ID="ID_1171672992" LINK="#ID_535744274" MODIFIED="1390379759115" TEXT="ngx_channel_handler">
+<node CREATED="1390224455119" ID="ID_881684021" LINK="#ID_1961438373" MODIFIED="1391751211972" TEXT="/*ngx_event_handler_pt*/">
+<node CREATED="1389103358419" FOLDED="true" ID="ID_1171672992" LINK="#ID_535744274" MODIFIED="1390379759115" TEXT="ngx_channel_handler">
 <node CREATED="1389103381172" FOLDED="true" MODIFIED="1389106843180" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1389103332523" MODIFIED="1390379277895">
 <richcontent TYPE="NODE"><html>
@@ -12834,7 +12601,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1389084519801" ID="ID_1588041292" LINK="#ID_579592898" MODIFIED="1390015590436" TEXT="ngx_event_accept">
+<node CREATED="1389084519801" FOLDED="true" ID="ID_1588041292" LINK="#ID_192294338" MODIFIED="1391861298058" TEXT="ngx_event_accept">
 <node CREATED="1389084532642" MODIFIED="1389084539986">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -13191,7 +12958,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1389345764637" FOLDED="true" LINK="http://blog.csdn.net/marcky/article/details/6025651" MODIFIED="1391825917467" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389345764637" LINK="http://blog.csdn.net/marcky/article/details/6025651" MODIFIED="1391825917467" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1389345806379" MODIFIED="1391825909070">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -14145,7 +13912,7 @@
 <node CREATED="1390015130947" MODIFIED="1390015133337" TEXT="ngx_http_request_handler"/>
 <node CREATED="1390224592068" MODIFIED="1390224593399" TEXT="ngx_http_keepalive_handler"/>
 </node>
-<node CREATED="1390013233538" FOLDED="true" ID="ID_590008386" LINK="#ID_564489032" MODIFIED="1391751372013" TEXT="ngx_event_actions_t(epoll)">
+<node CREATED="1390013233538" ID="ID_590008386" LINK="#ID_564489032" MODIFIED="1391751372013" TEXT="ngx_event_actions_t(epoll)">
 <node CREATED="1391751836303" FOLDED="true" MODIFIED="1391751852811" TEXT="/*actions.init*/">
 <node CREATED="1390008473155" ID="ID_656889216" LINK="#ID_1222451264" MODIFIED="1390524232648" TEXT="ngx_epoll_init">
 <node CREATED="1390398057691" FOLDED="true" MODIFIED="1390398070344" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
@@ -14580,8 +14347,8 @@
 </node>
 </node>
 <node CREATED="1390254743733" ID="ID_476761845" MODIFIED="1390381235131" TEXT="/*ngx_process_events*/">
-<node CREATED="1390254756383" LINK="#ID_356705254" MODIFIED="1390381220999" TEXT="ngx_epoll_process_events">
-<node CREATED="1390380649717" FOLDED="true" MODIFIED="1390380669723" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1390254756383" FOLDED="true" LINK="#ID_356705254" MODIFIED="1390381220999" TEXT="ngx_epoll_process_events">
+<node CREATED="1390380649717" FOLDED="true" MODIFIED="1391865122543" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;1">
 <node CREATED="1390008477374" MODIFIED="1390378757972">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -14805,7 +14572,96 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1390380649717" FOLDED="true" LINK="http://blog.csdn.net/marcky/article/details/6069958" MODIFIED="1391736922292" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389579213030" FOLDED="true" LINK="http://www.pagefault.info/?p=46" MODIFIED="1391865105264" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;2">
+<node CREATED="1389579219454" MODIFIED="1389580140151">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static ngx_int_t
+    </p>
+    <p>
+      ngx_epoll_process_events(ngx_cycle_t *cycle, ngx_msec_t timer, ngx_uint_t flags)
+    </p>
+    <p>
+      {
+    </p>
+    <p>
+      ...............................................
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;for (i = 0; i &lt; events; i++) {&#160;&#160;
+    </p>
+    <p>
+      //&#20808;&#20174;epoll&#28155;&#21152;&#20107;&#20214;&#26102;&#20256;&#36882;&#30340;&#25968;&#25454;&#20013;&#21462;&#20986;connect&#30340;&#22320;&#22336;&#12290;&#160;&#160;
+    </p>
+    <p>
+      &#160;c = event_list[i].data.ptr;
+    </p>
+    <p>
+      &#160;//&#28982;&#21518;&#21462;&#20986;&#26469;&#23545;&#24212;&#30340;instance&#20540;
+    </p>
+    <p>
+      instance = (uintptr_t) c &amp; 1;
+    </p>
+    <p>
+      //&#28982;&#21518;&#21462;&#20986;&#26469;&#23545;&#24212;&#30340;connect&#25351;&#38024;(&#30001;&#20110;&#22312;&#28155;&#21152;&#26159;&#35774;&#32622;&#20102;&#26368;&#21518;&#19968;&#20301;&#25351;&#38024;&#65292;&#22240;&#27492;&#36825;&#37324;&#38656;&#35201;&#23631;&#34109;&#25481;&#26368;&#21518;&#19968;&#20301;).&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;c = (ngx_connection_t *) ((uintptr_t) c &amp; (uintptr_t) ~1);&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;rev = c-&gt;read;
+    </p>
+    <p>
+      //&#28982;&#21518;&#22914;&#26524;c-fd&#20026;&#65293;1&#21017;&#35828;&#26126;fd&#34987;&#20851;&#38381;&#65292;&#22914;&#26524;rev-&gt;instance != instance&#21017;&#34920;&#31034;&#24403;&#21069;&#30340;fd&#24050;&#32463;&#34987;&#37325;&#26032;&#20351;&#29992;&#36807;&#20102;&#65292;&#20063;&#23601;&#26159;&#35828;&#36825;&#20010;event&#24050;&#32463;&#26159;stale&#30340;&#20102;&#65292;&#25152;&#20197;&#36339;&#36807;&#36825;&#20010;&#20107;&#20214;&#65292;&#28982;&#21518;&#36827;&#34892;&#19979;&#19968;&#20010;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (c-&gt;fd == -1 || rev-&gt;instance != instance) {
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/*
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* the stale event from a file descriptor
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* that was just closed in this iteration
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*/
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_log_debug1(NGX_LOG_DEBUG_EVENT, cycle-&gt;log, 0,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;epoll: stale event %p&quot;, c);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;continue;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      ........................................
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1390380649717" FOLDED="true" LINK="http://blog.csdn.net/marcky/article/details/6069958" MODIFIED="1391865118112" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;3">
 <node CREATED="1390008477374" ID="ID_62070090" MODIFIED="1390528299505">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -15141,22 +14997,40 @@
 </node>
 </node>
 <node CREATED="1391751182004" ID="ID_1961438373" LINK="#ID_881684021" MODIFIED="1391751199355" TEXT="ngx_event_handler_pt"/>
-</node>
-</node>
-<node CREATED="1391751523917" MODIFIED="1391751550997" TEXT="/*ngx_add_conn*/">
-<node CREATED="1390400353189" MODIFIED="1390400380705" TEXT="ngx_epoll_add_connection">
-<node CREATED="1390400148171" FOLDED="true" MODIFIED="1390400156458" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
-<node CREATED="1390400161955" MODIFIED="1390400308840">
+<node CREATED="1389080787544" MODIFIED="1389082962080">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      static ngx_int_t
+      7&#12289;static ngx_int_t ngx_epoll_process_events(ngx_cycle_t *cycle, ngx_msec_t timer,
     </p>
     <p>
-      ngx_epoll_add_connection(ngx_connection_t *c)
+      &#160;&#160;&#160;&#160;ngx_uint_t flags);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      process_events &#38057;&#23376;&#65292;&#35843;&#29992;events = epoll_wait(ep, event_list, (int) nevents, timer)&#36718;&#35810;&#20107;&#20214;&#65292;&#36229;&#26102;&#20540;&#20026;timer&#65292;&#20107;&#20214;&#23384;&#25918;&#20110;event_list&#25968;&#32452;&#20013;&#65292;&#26368;&#22823;&#25968;&#37327;&#20026;nevents&#12290;&#23545;&#20110;&#21457;&#29983;&#30340;&#35835;&#20107;&#20214;&#65292;&#33509;flags&#20013;&#32622;&#20301;&#20102; NGX_POST_EVENTS&#65292;&#20877;&#26681;&#25454;&#34987;&#30417;&#25511;&#30340;&#22871;&#25509;&#21475;&#26159;&#30417;&#21548;&#22871;&#25509;&#21475;&#36824;&#26159;&#25968;&#25454;&#22871;&#25509;&#21475;&#20915;&#23450;&#26242;&#26102;&#25237;&#36882;&#21040;&#20107;&#20214;&#38431;&#21015; ngx_posted_accept_events&#36824;&#26159;ngx_posted_events&#31561;&#24453;&#36827;&#31243;&#22788;&#29702;&#65292;&#21542;&#21017;&#23601;&#30452;&#25509;&#35843;&#29992;&#20107;&#20214;&#22788;&#29702;&#20989;&#25968; rev-&gt;handler&#22788;&#29702;&#20107;&#20214;&#65307;&#23545;&#20110;&#21457;&#29983;&#30340;&#20889;&#20107;&#20214;&#65292;&#33509;flags&#32622;&#20301;&#20102;NGX_POST_EVENTS&#65292;&#25237;&#36882;&#21040;&#20107;&#20214;&#38431;&#21015; ngx_posted_events&#31561;&#24453;&#22788;&#29702;&#65292;&#21542;&#21017;&#23601;&#30452;&#25509;&#35843;&#29992;&#20107;&#20214;&#22788;&#29702;&#20989;&#25968;wev-&gt;handler&#22788;&#29702;&#20107;&#20214;&#12290;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1391751523917" ID="ID_536509620" MODIFIED="1391751550997" TEXT="/*ngx_add_conn*/">
+<node CREATED="1390400353189" FOLDED="true" LINK="#ID_1064190415" MODIFIED="1391861466231" TEXT="ngx_epoll_add_connection">
+<node CREATED="1390400148171" FOLDED="true" MODIFIED="1390400156458" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1390400161955" MODIFIED="1391861408693">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static ngx_int_t ngx_epoll_add_connection(ngx_connection_t *c)
     </p>
     <p>
       {
@@ -15216,13 +15090,133 @@
       }
     </p>
   </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1389579213030" FOLDED="true" LINK="http://www.pagefault.info/?p=46" MODIFIED="1389579581915" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389579219454" MODIFIED="1389580125988">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      ngx_epoll_add_connection(ngx_connection_t *c)
+    </p>
+    <p>
+      {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct epoll_event&#160;&#160;ee;
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ee.events = EPOLLIN|EPOLLOUT|EPOLLET;
+    </p>
+    <p>
+      //&#21516;&#26679;&#26159;&#23558;&#36830;&#25509;&#30340;read&#20107;&#20214;&#30340;instance&#26631;&#35760;&#21152;&#21040;&#25351;&#38024;&#30340;&#26411;&#23614;&#12290;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ee.data.ptr = (void *) ((uintptr_t) c | c-&gt;read-&gt;instance);
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_log_debug2(NGX_LOG_DEBUG_EVENT, c-&gt;log, 0,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;epoll add connection: fd:%d ev:%08XD&quot;, c-&gt;fd, ee.events);
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;if (epoll_ctl(ep, EPOLL_CTL_ADD, c-&gt;fd, &amp;ee) == -1) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_log_error(NGX_LOG_ALERT, c-&gt;log, ngx_errno,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;epoll_ctl(EPOLL_CTL_ADD, %d) failed&quot;, c-&gt;fd);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return NGX_ERROR;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;c-&gt;read-&gt;active = 1;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;c-&gt;write-&gt;active = 1;
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;return NGX_OK;
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1389080728395" MODIFIED="1389083268383">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      5&#12289;static ngx_int_t ngx_epoll_add_connection(ngx_connection_t *c);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      add_conn&#38057;&#23376;&#65292;&#35843;&#29992;epoll_ctl(ep, EPOLL_CTL_ADD, c-&gt;fd, &amp;ee)&#21516;&#26102;&#28155;&#21152;&#23545;&#19968;&#26465;&#36830;&#25509;&#30340;&#35835;&#20889;&#20107;&#20214;&#30340;&#30417;&#25511;&#65292;&#24182;&#35774;&#32622;&#20854;&#35835;&#20889;&#20107;&#20214;&#30340;&#29366;&#24577;active = 1&#65307;
+    </p>
+    <p>
+      
+    </p>
+  </body>
 </html></richcontent>
 </node>
 </node>
 </node>
+<node CREATED="1391751529662" ID="ID_1548845294" MODIFIED="1391751558835" TEXT="/*ngx_del_conn*/">
+<node CREATED="1390400764204" FOLDED="true" MODIFIED="1390400788681" TEXT="ngx_epoll_del_connection">
+<node CREATED="1389080811624" MODIFIED="1389083095381">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      6&#12289;static ngx_int_t ngx_epoll_del_connection(ngx_connection_t *c,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t flags);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      del_conn&#38057;&#23376;&#65292;&#35843;&#29992;epoll_ctl(ep, EPOLL_CTL_DEL, c-&gt;fd, &amp;ee)&#21516;&#26102;&#21024;&#38500;&#23545;&#19968;&#26465;&#36830;&#25509;&#30340;&#35835;&#20889;&#20107;&#20214;&#30340;&#30417;&#25511;&#65292;&#24182;&#35774;&#32622;&#20854;&#35835;&#20889;&#20107;&#20214;&#30340;&#29366;&#24577;active = 0&#65307;
+    </p>
+  </body>
+</html></richcontent>
 </node>
-<node CREATED="1391751529662" MODIFIED="1391751558835" TEXT="/*ngx_del_conn*/">
-<node CREATED="1390400764204" MODIFIED="1390400788681" TEXT="ngx_epoll_del_connection">
 <node CREATED="1390400148171" FOLDED="true" MODIFIED="1390400156458" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1390400161955" MODIFIED="1390400838193">
 <richcontent TYPE="NODE"><html>
@@ -15338,6 +15332,283 @@
   </body>
 </html></richcontent>
 </node>
+</node>
+</node>
+</node>
+<node CREATED="1391751529662" ID="ID_497093278" MODIFIED="1391861567040" TEXT="/*ngx_add_event*/">
+<node CREATED="1390400764204" FOLDED="true" LINK="#ID_1926278754" MODIFIED="1391861817542" TEXT="ngx_epoll_add_event">
+<node CREATED="1390400148171" FOLDED="true" MODIFIED="1390400156458" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1390400161955" MODIFIED="1391862337963">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static ngx_int_t
+    </p>
+    <p>
+      ngx_epoll_add_event(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags)
+    </p>
+    <p>
+      {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;op;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;uint32_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;events, prev;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_event_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*e;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_connection_t&#160;&#160;&#160;&#160;*c;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct epoll_event&#160;&#160;&#160;ee;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;c = ev-&gt;data;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;events = (uint32_t) event;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;if (event == NGX_READ_EVENT) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;e = c-&gt;write;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;prev = EPOLLOUT;
+    </p>
+    <p>
+      #if (NGX_READ_EVENT != EPOLLIN)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;events = EPOLLIN;
+    </p>
+    <p>
+      #endif
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;} else {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;e = c-&gt;read;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;prev = EPOLLIN;
+    </p>
+    <p>
+      #if (NGX_WRITE_EVENT != EPOLLOUT)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;events = EPOLLOUT;
+    </p>
+    <p>
+      #endif
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;if (e-&gt;active) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;op = EPOLL_CTL_MOD;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;events |= prev;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;} else {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;op = EPOLL_CTL_ADD;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ee.events = events | (uint32_t) flags;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ee.data.ptr = (void *) ((uintptr_t) c | ev-&gt;instance);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_log_debug3(NGX_LOG_DEBUG_EVENT, ev-&gt;log, 0, &#160;&quot;epoll add event: fd:%d op:%d ev:%08XD&quot;, c-&gt;fd, op, ee.events);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;if (epoll_ctl(ep, op, c-&gt;fd, &amp;ee) == -1) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ngx_log_error(NGX_LOG_ALERT, ev-&gt;log, ngx_errno, &#160;&quot;epoll_ctl(%d, %d) failed&quot;, op, c-&gt;fd);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return NGX_ERROR;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ev-&gt;active = 1;
+    </p>
+    <p>
+      #if 0
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ev-&gt;oneshot = (flags &amp; NGX_ONESHOT_EVENT) ? 1 : 0;
+    </p>
+    <p>
+      #endif
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;return NGX_OK;
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1389579213030" LINK="http://www.pagefault.info/?p=46" MODIFIED="1389579581915" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389579219454" MODIFIED="1389579847878">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#36825;&#20010;&#20989;&#25968;&#23601;&#26159;&#21152;&#20107;&#20214;&#21040;epoll&#20013;&#12290;&#28982;&#21518;&#35774;&#32622;&#23545;&#24212;&#30340;epoll data
+    </p>
+    <p>
+      static ngx_int_t
+    </p>
+    <p>
+      ngx_epoll_add_event(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags)
+    </p>
+    <p>
+      {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;op;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;uint32_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;events, prev;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_event_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*e;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_connection_t&#160;&#160;&#160;&#160;*c;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct epoll_event&#160;&#160;&#160;ee;
+    </p>
+    <p>
+      ............................................
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ee.events = events | (uint32_t) flags;
+    </p>
+    <p>
+      //&#26368;&#20851;&#38190;&#30340;&#19968;&#37096;&#20998;&#65292;&#21487;&#20197;&#30475;&#21040;&#35774;&#32622;connect &#25351;&#38024;&#30340;&#26368;&#21518;&#19968;&#20301;&#20026;ev-&gt;instance.
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ee.data.ptr = (void *) ((uintptr_t) c | ev-&gt;instance);
+    </p>
+    <p>
+      ............................
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1389080728395" MODIFIED="1389083501114">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      3&#12289;static ngx_int_t ngx_epoll_add_event(ngx_event_t *ev, ngx_int_t event,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t flags);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      add &#21644;enable&#38057;&#23376;&#65292;&#35843;&#29992;epoll_ctl(ep, EPOLL_CTL_MOD/EPOLL_CTL_ADD, c-&gt;fd, &amp;ee)&#28155;&#21152;&#23545;&#36830;&#25509;&#22871;&#25509;&#21475;&#30340;&#35835;&#20107;&#20214;&#25110;&#32773;&#20889;&#20107;&#20214;&#30417;&#25511;&#65292;&#24182;&#19988;&#35774;&#32622;&#20107;&#20214;&#30340;&#29366;&#24577;&#20301;&#65306;ev-&gt;action = 1&#65292;&#24403;&#28155;&#21152;&#35835;&#20107;&#20214;&#30340;&#26102;&#20505;&#20250;&#21028;&#26029;&#20889;&#20107;&#20214;&#26159;&#21542;&#24050;&#32463;&#35774;&#32622;&#65288;wev-&gt;action=1?&#65289;&#65292;&#20174;&#32780;&#20915;&#23450;op&#26159;&#21542;&#20351;&#29992;EPOLL_CTL_MOD&#65292;&#28155;&#21152;&#20889;&#20107;&#20214; &#20063;&#35201;&#21028;&#26029;&#35835;&#20107;&#20214;&#30340;&#29366;&#24577;&#65307;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1391865016606" ID="ID_1657925637" MODIFIED="1391865026430" TEXT="/*ngx_del_event*/">
+<node CREATED="1391865035254" FOLDED="true" MODIFIED="1391865049329" TEXT="ngx_epoll_del_event">
+<node CREATED="1389080728395" MODIFIED="1389083477414">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      4&#12289;static ngx_int_t ngx_epoll_del_event(ngx_event_t *ev, ngx_int_t event,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ngx_uint_t flags);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      del &#21644;disable&#38057;&#23376;&#65292;&#35843;&#29992;epoll_ctl(ep, EPOLL_CTL_MOD/EPOLL_CTL_DEL, c-&gt;fd, &amp;ee)&#21024;&#38500;&#23545;&#36830;&#25509;&#22871;&#25509;&#21475;&#30340;&#35835;&#20107;&#20214;&#25110;&#32773;&#20889;&#20107;&#20214;&#30340;&#30417;&#25511;&#65292;&#24182;&#19988;&#35774;&#32622;&#20107;&#20214;&#30340;&#29366;&#24577;&#20301;&#65306;ev-&gt;action = 0&#65292;&#24403;&#21024;&#38500;&#35835;&#20107;&#20214;&#30340;&#26102;&#20505;&#20250;&#21028;&#26029;&#20889;&#20107;&#20214;&#26159;&#21542;&#24050;&#32463;&#35774;&#32622;&#65288;wev-&gt;action=1?&#65289;&#65292;&#20174;&#32780;&#20915;&#23450;op&#26159;&#21542;&#20351;&#29992;EPOLL_CTL_MOD&#65292;&#21024;&#38500;&#20889;&#20107;&#20214; &#20063;&#35201;&#21028;&#26029;&#35835;&#20107;&#20214;&#30340;&#29366;&#24577;
+    </p>
+  </body>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -15459,7 +15730,7 @@
 </node>
 <node CREATED="1389594444537" ID="ID_721758468" LINK="#ID_218912306" MODIFIED="1391827218997" TEXT="/*init_process*/">
 <node CREATED="1389151285281" FOLDED="true" ID="ID_579592898" LINK="#ID_440555041" MODIFIED="1389591857479" TEXT="ngx_event_process_init">
-<node CREATED="1389345764637" FOLDED="true" LINK="http://www.pagefault.info/?p=201" MODIFIED="1389595382350" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
+<node CREATED="1389345764637" ID="ID_1926278754" LINK="http://www.pagefault.info/?p=201" MODIFIED="1389595382350" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1389345806379" ID="ID_1712714867" MODIFIED="1390526549650">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -16289,7 +16560,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1391781276980" LINK="#ID_1588041292" MODIFIED="1391781918163" TEXT="ngx_event_accept">
+<node CREATED="1391781276980" ID="ID_192294338" LINK="#ID_1588041292" MODIFIED="1391781918163" TEXT="ngx_event_accept">
 <icon BUILTIN="back"/>
 </node>
 <node CREATED="1390523995877" ID="ID_1222451264" LINK="#ID_1213533210" MODIFIED="1390524184519" TEXT="module-&gt;actions.init">
