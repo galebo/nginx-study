@@ -34,6 +34,8 @@ int main(int argc, char **argv) {
     _EXE_(testLog(pool,log));
     ngx_log_error(NGX_LOG_CRIT, log, 0, "===============testTimer================");
     _EXE_(testTimer(pool,log));
+    ngx_log_error(NGX_LOG_CRIT, log, 0, "===============testList ================");
+    _EXE_(testList(pool,log));
 
     ngx_log_error(NGX_LOG_CRIT, log, 0, "begin destroy pool");
 	ngx_destroy_pool(pool);
@@ -197,6 +199,15 @@ int testChain(ngx_pool_t *pool,ngx_log_t *log){
     return 0;
 }
 
+int testList(ngx_pool_t *pool,ngx_log_t *log){
+	ngx_list_t * list= ngx_list_create(poll,10,sizeof(ngx_str_t));
+
+	ngx_str_t * str1=ngx_list_push(list);ngx_str_set(str1, "hello world5");
+	ngx_str_t * str2=ngx_list_push(list);ngx_str_set(str2, "hello world5");
+	ngx_str_t * str3=ngx_list_push(list);ngx_str_set(str3, "hello world5");
+
+    return 0;
+}
 int testLog(ngx_pool_t *pool,ngx_log_t *log){
 
     ngx_log_error(NGX_LOG_CRIT , log, 0,"log level:%d", log->log_level);
