@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node COLOR="#338800" CREATED="1388815008672" MODIFIED="1390387317352" TEXT="nginx">
-<node CREATED="1389275126222" FOLDED="true" MODIFIED="1389275131039" POSITION="right" TEXT="&#x6587;&#x7ae0;">
+<node CREATED="1389275126222" MODIFIED="1389275131039" POSITION="right" TEXT="&#x6587;&#x7ae0;">
 <node CREATED="1389275135399" FOLDED="true" LINK="http://www.php100.com/html/itnews/PHPxinwen/2012/0103/9606.html" MODIFIED="1389599367258" TEXT="&#x5173;&#x4e8e;Apache&#x4e0e;Nginx&#x7684;&#x4f18;&#x52bf;&#x6bd4;&#x8f83;">
 <node CREATED="1389275146855" MODIFIED="1389599279158">
 <richcontent TYPE="NODE"><html>
@@ -488,6 +488,7 @@
 </html></richcontent>
 </node>
 </node>
+<node CREATED="1392009386370" MODIFIED="1392009388658" TEXT="&#x6709;&#x8fdb;&#x7a0b;&#x7ea7;&#x7684;&#x5185;&#x5b58;&#x6c60;&#x3001;connection&#x7ea7;&#x7684;&#x5185;&#x5b58;&#x6c60;&#x3001;request&#x7ea7;&#x7684;&#x5185;&#x5b58;&#x6c60;"/>
 </node>
 <node CREATED="1389073579240" MODIFIED="1389238336566" POSITION="right" TEXT="&#x53c2;&#x8003;">
 <node CREATED="1389073591719" LINK="http://blog.csdn.net/kenbinzhang?viewmode=contents " MODIFIED="1389073624444" TEXT="&#x5543;&#x997c;&#x7684;&#x6280;&#x672f;&#x535a;&#x5ba2;"/>
@@ -857,7 +858,7 @@
 <node CREATED="1390272454501" LINK="http://my.oschina.net/fqing" MODIFIED="1390272490375" TEXT="&#x90a3;&#x4e00;&#x5251;&#x7684;&#x98ce;&#x60c5;"/>
 <node CREATED="1390522979733" LINK="http://blog.csdn.net/xiajun07061225/article/category/1461389" MODIFIED="1390522997115" TEXT="&#x6c5f;&#x5357;&#x70df;&#x96e8;"/>
 </node>
-<node CREATED="1388930950170" MODIFIED="1389150103872" POSITION="right" TEXT="main">
+<node CREATED="1388930950170" FOLDED="true" MODIFIED="1389150103872" POSITION="right" TEXT="main">
 <node CREATED="1388930885650" FOLDED="true" LINK="http://blog.csdn.net/kenbinzhang/article/details/4681694" MODIFIED="1389070124192" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1388930898050" MODIFIED="1388930910629" TEXT="main&#x51fd;&#x6570;&#x7684;&#x5904;&#x7406;&#x8fc7;&#x7a0b;&#x53ef;&#x4ee5;&#x5206;&#x4e3a;&#x4ee5;&#x4e0b;&#x6b65;&#x9aa4;&#xff1a;&#xa;&#xa;1&#x3001;&#x4ece;&#x63a7;&#x5236;&#x53f0;&#x83b7;&#x53d6;&#x53c2;&#x6570;&#x5e76;&#x5904;&#x7406;:ngx_get_options(argc, argv)&#xff1b;&#xa;&#xa;2&#x3001;&#x7b80;&#x5355;&#x521d;&#x59cb;&#x5316;&#xff0c;&#x521d;&#x59cb;&#x5316;&#x4e00;&#x4e9b;&#x6570;&#x636e;&#x7ed3;&#x6784;&#x548c;&#x6a21;&#x5757;:ngx_debug_init(),ngx_time_init(),ngx_regex_init(),ngx_log_init(),ngx_ssl_init()&#xff1b;&#xa;&#xa;3&#x3001;&#x521d;&#x59cb;&#x5316;&#x5c40;&#x90e8;&#x7684;ngx_cycle_t init_cycle&#x7ed3;&#x6784;&#x4f53;&#x53d8;&#x91cf;:&#xa;    ngx_memzero(&amp;init_cycle, sizeof(ngx_cycle_t));&#xa;    init_cycle.log = log;&#xa;    ngx_cycle = &amp;init_cycle;&#xa;&#xa;    init_cycle.pool = ngx_create_pool(1024, log);&#xa;    if (init_cycle.pool == NULL) {&#xa;        return 1;&#xa;    }    &#xa;&#xa;4&#x3001;&#x4fdd;&#x5b58;&#x53c2;&#x6570;&#xff0c;&#x8bbe;&#x7f6e;&#x51e0;&#x4e2a;&#x5168;&#x5c40;&#x53d8;&#x91cf;&#xff1a;ngx_argc,ngx_os_argv,ngx_argv,ngx_os_environ&#xff1b;&#xa;&#xa;5&#x3001;&#x8c03;&#x7528;ngx_process_options&#xff0c;&#x8bbe;&#x7f6e;init_cycle&#x7684;&#x4e00;&#x4e9b;&#x5b57;&#x6bb5;&#xff0c;&#x8fd9;&#x4e9b;&#x5b57;&#x6bb5;&#x662f;&#x4ece;&#x63a7;&#x5236;&#x53f0;&#x7684;&#x547d;&#x4ee4;&#x4e2d;&#x53d6;&#x5f97;&#x7684;&#xff1a;conf_prefix&#xff08;config prefix path&#xff09;&#x3001;prefix&#xff08;prefix path:-p prefix&#xff09;&#x3001;conf_file&#xff08;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x8def;&#x5f84;:-c filenname&#xff09;&#x3001;conf_param(-g directives)&#xff0c;&#x53e6;&#x5916;&#x8fd8;&#x628a;init_cycle.log.log_level&#x8bbe;&#x7f6e;&#x4e3a;NGX_LOG_INFO&#xff1b;&#xa;&#xa;6&#x3001;&#x8c03;&#x7528;ngx_os_init&#xff0c;&#x8fd9;&#x4e2a;&#x8c03;&#x7528;&#x4f1a;&#x8bbe;&#x7f6e;&#x4e00;&#x4e9b;&#x5168;&#x5c40;&#x53d8;&#x91cf;&#xff0c;&#x8fd9;&#x4e9b;&#x5168;&#x5c40;&#x53d8;&#x91cf;&#x548c;&#x64cd;&#x4f5c;&#x7cfb;&#x7edf;&#x76f8;&#x5173;&#xff0c;&#x6bd4;&#x5982;:ngx_pagesize,ngx_cacheline_size,ngx_ncpu,ngx_cpuinfo(),ngx_max_sockets&#x7b49;&#xff1b;&#xa;&#xa;7&#x3001;&#x8c03;&#x7528;&#x521d;&#x59cb;&#x5316;&#x51fd;&#x6570;ngx_crc32_table_init()&#xff1b;&#xa;&#xa;8&#x3001;&#x8c03;&#x7528;ngx_set_inherited_sockets(&amp;init_cycle)&#xff0c;&#x521d;&#x59cb;&#x5316;init_cycle.listening&#xff0c;&#x8fd9;&#x662f;&#x4e00;&#x4e2a;ngx_listening_t&#x7684;&#x7ed3;&#x6784;&#x6570;&#x7ec4;&#xff0c;&#x5176;socket_fd&#x662f;&#x4ece;&#x73af;&#x5883;&#x53d8;&#x91cf;NGINX&#x4e2d;&#x8bfb;&#x53d6;&#x7684;&#xff1b;&#xa;&#xa;9&#x3001;&#x5bf9;&#x7cfb;&#x7edf;&#x6240;&#x6709;&#x6a21;&#x5757;&#x70b9;&#x4e00;&#x4e0b;&#x6570;&#xff0c;&#x7136;&#x540e;&#x8fdb;&#x5165;ngx_init_cycle&#x4f5c;&#x4e3b;&#x8981;&#x7684;&#x6a21;&#x5757;&#x76f8;&#x5173;&#x7684;&#x521d;&#x59cb;&#x5316;&#xff0c;init_cycle&#x4f5c;&#x4e3a;&#x65e7;&#x7684;&#x5168;&#x5c40;&#x8bbe;&#x7f6e;&#x4f20;&#x8fdb;&#x53bb;&#xff0c;&#x8fd9;&#x4e2a;&#x51fd;&#x6570;&#x4f1a;&#x521b;&#x5efa;&#x4e00;&#x4e0b;&#x65b0;&#x7684;ngx_cycle_t&#x53d8;&#x91cf;&#xff0c;&#x5e76;&#x8fd4;&#x56de;&#x5176;&#x6307;&#x9488;&#xff1a;&#xa;    ngx_max_module = 0;&#xa;    for (i = 0; ngx_modules[i]; i++) {&#xa;        ngx_modules[i]-&gt;index = ngx_max_module++;&#xa;    }    &#xa;&#xa;    cycle = ngx_init_cycle(&amp;init_cycle);&#xa;&#xa;10&#x3001;&#x4e0e;&#x4fe1;&#x53f7;&#x91cf;&#x76f8;&#x5173;&#x7684;&#x4e00;&#x4e9b;&#x64cd;&#x4f5c;&#x4ee3;&#x7801;&#xff1b;&#xa;&#xa;11&#x3001;&#x591a;&#x8fdb;&#x7a0b;&#x7684;&#x60c5;&#x51b5;&#x4e0b;&#xff0c;&#x8c03;&#x7528;ngx_master_process_cycle(cycle)&#xff0c;&#x5355;&#x8fdb;&#x7a0b;&#x60c5;&#x51b5;&#x4e0b;&#x8c03;&#x7528;ngx_single_process_cycle&#x5b8c;&#x6210;&#x6700;&#x540e;&#x7684;&#x542f;&#x52a8;&#x5de5;&#x4f5c;&#x3002;"/>
 </node>
@@ -2617,7 +2618,7 @@
 <node CREATED="1388924751415" MODIFIED="1388924753236" TEXT="&#x82e5;&#x65e0;&#x7ee7;&#x627f;sockets&#xff0c;&#x4e14;&#x8bbe;&#x7f6e;&#x4e86;&#x5b88;&#x62a4;&#x8fdb;&#x7a0b;&#x6807;&#x8bc6;&#xff0c;&#x5219;&#x8c03;&#x7528;ngx_daemon()&#x521b;&#x5efa;&#x5b88;&#x62a4;&#x8fdb;&#x7a0b;"/>
 </node>
 <node CREATED="1388815551105" MODIFIED="1388815552096" TEXT="ngx_open_pipes"/>
-<node BACKGROUND_COLOR="#47a433" COLOR="#080f05" CREATED="1388815601954" MODIFIED="1389591599404" STYLE="fork" TEXT="process_cycle">
+<node BACKGROUND_COLOR="#47a433" COLOR="#080f05" CREATED="1388815601954" FOLDED="true" MODIFIED="1389591599404" STYLE="fork" TEXT="process_cycle">
 <edge COLOR="#808080" STYLE="bezier" WIDTH="thin"/>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1388815607274" MODIFIED="1389591710581" TEXT="ngx_single_process_cycle"/>
@@ -6691,8 +6692,7 @@
       &#21363;&#23558;&#160;ngx_channel&#30340;NGX_READ_EVENT&#21152;&#19978;ngx_channel_handler&#22788;&#29702;&#20989;&#25968;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1391863168615" LINK="#ID_1899417687" MODIFIED="1391863264776" TEXT="ngx_add_channel_event"/>
 <node CREATED="1391863180790" LINK="#ID_1171672992" MODIFIED="1391863303431" TEXT="ngx_channel_handler"/>
@@ -8603,7 +8603,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1389082295120" ID="ID_951469658" MODIFIED="1389107602567" TEXT="ngx_connection_s">
+<node CREATED="1389082295120" FOLDED="true" ID="ID_951469658" MODIFIED="1389107602567" TEXT="ngx_connection_s">
 <icon BUILTIN="full-4"/>
 <node CREATED="1389080693298" FOLDED="true" MODIFIED="1389098608813" TEXT="&#x7ed3;&#x6784;&#x5206;&#x6790;">
 <node CREATED="1389082303128" MODIFIED="1391866664753">
@@ -8781,8 +8781,7 @@
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1389080781400" LINK="#ID_1804549620" MODIFIED="1391864145912" TEXT="&#x64cd;&#x4f5c;&#x51fd;&#x6570;"/>
@@ -9152,7 +9151,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1389082295120" MODIFIED="1391846866331" TEXT="ngx_event_s">
+<node CREATED="1389082295120" FOLDED="true" MODIFIED="1391846866331" TEXT="ngx_event_s">
 <icon BUILTIN="full-4"/>
 <node CREATED="1389080693298" MODIFIED="1390015861014" TEXT="&#x7ed3;&#x6784;&#x5206;&#x6790;">
 <node CREATED="1389082303128" MODIFIED="1390015873119">
@@ -10648,7 +10647,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1391863738189" ID="ID_1804549620" LINK="#ID_9135247" MODIFIED="1391863827375" POSITION="right" TEXT="&#x8fde;&#x63a5;&#x961f;&#x5217;&#x64cd;&#x4f5c;&#x51fd;&#x6570;">
+<node CREATED="1391863738189" FOLDED="true" ID="ID_1804549620" LINK="#ID_9135247" MODIFIED="1391863827375" POSITION="right" TEXT="&#x8fde;&#x63a5;&#x961f;&#x5217;&#x64cd;&#x4f5c;&#x51fd;&#x6570;">
 <node CREATED="1389080684894" LINK="#ID_1606222132" MODIFIED="1389106817573" TEXT="ngx_get_connection">
 <node CREATED="1389080728395" MODIFIED="1391866627094">
 <richcontent TYPE="NODE"><html>
@@ -10675,8 +10674,7 @@
       &#160;&#160;&#160;&#160;c-&gt;log = log&#65292;&#20854;&#20182;&#30340;&#37325;&#32622;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1389579213030" FOLDED="true" LINK="http://www.pagefault.info/?p=46" MODIFIED="1389579575947" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node CREATED="1389579219454" MODIFIED="1391864450380">
@@ -10809,8 +10807,7 @@
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -10893,7 +10890,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1389151355314" MODIFIED="1389151369535" POSITION="right" TEXT="&#x56de;&#x8c03;&#x51fd;&#x6570;">
+<node CREATED="1389151355314" FOLDED="true" MODIFIED="1389151369535" POSITION="right" TEXT="&#x56de;&#x8c03;&#x51fd;&#x6570;">
 <node CREATED="1389242699632" ID="ID_1118410517" LINK="#ID_1345550578" MODIFIED="1389447876152" TEXT="ngx_signal_handler">
 <node CREATED="1389242707048" FOLDED="true" MODIFIED="1389447876150" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
 <node BACKGROUND_COLOR="#ffff00" CREATED="1389242714057" MODIFIED="1389242724141">
@@ -15090,8 +15087,7 @@
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1389579213030" FOLDED="true" LINK="http://www.pagefault.info/?p=46" MODIFIED="1389579581915" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
@@ -15504,8 +15500,7 @@
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1389579213030" LINK="http://www.pagefault.info/?p=46" MODIFIED="1389579581915" TEXT="&#x6e90;&#x7801;&#x5206;&#x6790;">
