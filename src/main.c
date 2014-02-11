@@ -200,7 +200,7 @@ int testChain(ngx_pool_t *pool,ngx_log_t *log){
 }
 
 int testList(ngx_pool_t *pool,ngx_log_t *log){
-	ngx_list_t * list= ngx_list_create(poll,10,sizeof(ngx_str_t));
+	ngx_list_t * list= ngx_list_create(pool,10,sizeof(ngx_str_t));
 
 	ngx_str_t * str1=ngx_list_push(list);ngx_str_set(str1, "hello world5");
 	ngx_str_t * str2=ngx_list_push(list);ngx_str_set(str2, "hello world5");
@@ -279,8 +279,11 @@ static void _testTimer_print(ngx_event_t *ev)
 }
 
 
-void _testTimer_init(ngx_log_t *log)
+int  _testTimer_init(ngx_log_t *log)
 {
+	if(ngx_event_timer_init(log) == NGX_ERROR){
+		return NGX_ERROR;
+	}
     dummy.fd = (ngx_socket_t) -1;
 
     ngx_memzero(&ev, sizeof(ngx_event_t));
@@ -291,12 +294,28 @@ void _testTimer_init(ngx_log_t *log)
 
     ngx_add_timer(&ev, 1000);
 
-    while(count<10)
-    {
 
+    sigset_t           set;
+
+    sigemptyset(&set);
+    sigaddset(&set, SIGCHLD);
+    sigaddset(&set, SIGALRM);
+    sigaddset(&set, SIGIO);
+    sigaddset(&set, SIGINT);
+    sigaddset(&set, ngx_signal_value(NGX_RECONFIGURE_SIGNAL));
+    sigaddset(&set, ngx_signal_value(NGX_REOPEN_SIGNAL));
+    sigaddset(&set, ngx_signal_value(NGX_NOACCEPT_SIGNAL));
+    sigaddset(&set, ngx_signal_value(NGX_TERMINATE_SIGNAL));
+    sigaddset(&set, ngx_signal_value(NGX_SHUTDOWN_SIGNAL));
+    sigaddset(&set, ngx_signal_value(NGX_CHANGEBIN_SIGNAL));
+
+    while(1){
+        sigsuspend(&set);
     }
+
+    return NGX_OK;
 }
 int testTimer(ngx_pool_t *pool,ngx_log_t *log){
-	_testTimer_init(log);
+	_EXE_(_testTimer_init(log));
 	return NGX_OK;
 }
