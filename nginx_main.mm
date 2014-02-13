@@ -492,8 +492,8 @@
 </node>
 <node CREATED="1389073579240" MODIFIED="1389238336566" POSITION="right" TEXT="&#x53c2;&#x8003;">
 <node CREATED="1389073591719" LINK="http://blog.csdn.net/kenbinzhang?viewmode=contents " MODIFIED="1389073624444" TEXT="&#x5543;&#x997c;&#x7684;&#x6280;&#x672f;&#x535a;&#x5ba2;"/>
-<node CREATED="1389239945627" FOLDED="true" LINK="http://blog.csdn.net/Marcky/article/category/747446" MODIFIED="1389447897452" TEXT="Marcky">
-<node CREATED="1390607177749" FOLDED="true" MODIFIED="1391736967677" TEXT="Nginx&#x5b9a;&#x65f6;&#x5668;&#x7684;&#x5b9e;&#x73b0;&#x53ca;&#x5b9a;&#x65f6;&#x4e8b;&#x4ef6;&#x7684;&#x4f7f;&#x7528; ">
+<node CREATED="1389239945627" LINK="http://blog.csdn.net/Marcky/article/category/747446" MODIFIED="1389447897452" TEXT="Marcky">
+<node CREATED="1390607177749" FOLDED="true" LINK="http://blog.csdn.net/marcky/article/details/7623335" MODIFIED="1392123553753" TEXT="Nginx&#x5b9a;&#x65f6;&#x5668;&#x7684;&#x5b9e;&#x73b0;&#x53ca;&#x5b9a;&#x65f6;&#x4e8b;&#x4ef6;&#x7684;&#x4f7f;&#x7528; ">
 <node CREATED="1390607208818" MODIFIED="1390607218966">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -16592,6 +16592,23 @@
     </p>
   </body>
 </html></richcontent>
+</node>
+</node>
+<node CREATED="1392124909867" MODIFIED="1392124919798" POSITION="left" TEXT="&#x57fa;&#x7840;&#x7ed3;&#x6784;">
+<node CREATED="1392124924793" MODIFIED="1392124926977" TEXT="base">
+<node CREATED="1392124947745" MODIFIED="1392124954335" TEXT="ngx_pool_t"/>
+<node CREATED="1392124957537" MODIFIED="1392124962445" TEXT="ngx_log_t"/>
+</node>
+<node CREATED="1392124937633" MODIFIED="1392124945847" TEXT="common">
+<node CREATED="1392124957537" MODIFIED="1392125370947" TEXT="&#x5b57;&#x7b26;&#x4e32;ngx_str_t"/>
+<node CREATED="1392124957537" MODIFIED="1392125338887" TEXT="ngx_buf_t"/>
+<node CREATED="1392124957537" MODIFIED="1392125356129" TEXT="ngx_chain_t"/>
+<node CREATED="1392124957537" MODIFIED="1392125384308" TEXT="ngx_array_t"/>
+<node CREATED="1392124957537" MODIFIED="1392125398597" TEXT="&#x94fe;&#x8868;ngx_list_t"/>
+<node CREATED="1392125400801" MODIFIED="1392125404381" TEXT="&#x961f;&#x5217;ngx_queue_t"/>
+<node CREATED="1392124957537" MODIFIED="1392125331203" TEXT="ngx_hash_t"/>
+<node CREATED="1392124957537" MODIFIED="1392125290596" TEXT="&#x7ea2;&#x9ed1;&#x6811;ngx_rbtree_t"/>
+<node CREATED="1392124957537" MODIFIED="1392125311404" TEXT="radix&#x6811;ngx_radix_tree_t"/>
 </node>
 </node>
 </node>
