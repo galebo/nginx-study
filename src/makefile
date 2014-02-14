@@ -1,5 +1,5 @@
 NGINX_SRC=../../tengine
-all:main epoll
+all:main epoll timer
 
 main:main.c
 	gcc -g -o main  main.c \
@@ -142,3 +142,5 @@ clean:
 	rm main
 epoll:epoll.c
 	gcc -Wall -o epoll epoll.c
+timer:timer.c
+	gcc -Wall -o timer timer.c
